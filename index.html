@@ -217,6 +217,56 @@ h2{
 .legal p{color:var(--muted);font-size:13px;line-height:1.7;max-width:760px;}
 .legal h2{margin-top:26px;}
 
+/* ---------- graphique bougies ---------- */
+.candle-wrap{background:var(--surface);border:1px solid var(--border);padding:14px;}
+.candle-wrap svg{width:100%;height:auto;display:block;}
+.candle-meta{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px;flex-wrap:wrap;gap:6px;}
+
+/* ---------- simulateur d'ouverture ---------- */
+.sim-head{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:0 0 16px;}
+.sim-head img{height:84px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.6));}
+.sim-stats{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 16px;}
+.sim-stats .blk .lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;}
+.sim-stats .blk .v{font-family:'IBM Plex Mono',monospace;font-size:19px;font-weight:600;}
+.sim-stats .blk .v.pos{color:var(--green);} .sim-stats .blk .v.neg{color:var(--red);}
+.roul-wrap{position:relative;background:var(--surface);border:1px solid var(--border);overflow:hidden;margin:0 0 16px;}
+.roul{display:flex;will-change:transform;}
+.rtile{
+  flex:0 0 130px;height:120px;border-right:1px solid var(--border);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:8px;gap:4px;background:var(--surface);
+}
+.rtile img{max-height:62px;object-fit:contain;}
+.rtile .rn{font-size:9px;color:var(--muted);text-align:center;line-height:1.2;font-family:'IBM Plex Mono',monospace;
+  overflow:hidden;max-height:22px;}
+.rtile .rbar{height:3px;width:100%;}
+.roul-marker{
+  position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);z-index:2;
+  box-shadow:0 0 10px rgba(228,174,57,.8);
+}
+.reveal{
+  border:1px solid var(--border);background:var(--surface);padding:20px;display:flex;gap:20px;
+  align-items:center;flex-wrap:wrap;margin:0 0 16px;
+}
+.reveal img{height:110px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.65));}
+.reveal .rv-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;}
+.reveal .rv-sub{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
+.reveal .rv-price{font-family:'IBM Plex Mono',monospace;font-size:22px;color:var(--gold);font-weight:600;}
+.bigbtn{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;letter-spacing:.04em;
+  background:var(--gold);border:none;color:#0D0F12;padding:13px 34px;cursor:pointer;
+}
+.bigbtn:disabled{opacity:.45;cursor:not-allowed;}
+.bigbtn.ghost{background:transparent;border:1px solid var(--gold-dim);color:var(--gold);}
+.odds{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);line-height:1.8;}
+.odds b{color:var(--text);}
+.modal-ov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:100;display:flex;align-items:center;justify-content:center;padding:16px;}
+.modal{background:var(--surface);border:1px solid var(--gold-dim);max-width:430px;padding:26px;text-align:center;}
+.modal .cnt{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:700;color:var(--gold);margin:12px 0;}
+.pull-hist{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.pull-hist .ph{width:54px;text-align:center;}
+.pull-hist .ph img{height:34px;object-fit:contain;}
+.pull-hist .ph .b{height:2px;}
+
 footer.site{
   border-top:1px solid var(--border);margin-top:30px;
 }
@@ -240,6 +290,7 @@ footer.site .inner{
       <a href="#/cat/Couteaux" data-r="cat:Couteaux">Couteaux</a>
       <a href="#/cat/Gants" data-r="cat:Gants">Gants</a>
       <a href="#/collections" data-r="collections">Collections</a>
+      <a href="#/ouverture" data-r="ouverture">Ouvrir</a>
       <a href="#/vendre" data-r="vendre">Vendre</a>
     </nav>
     <div class="header-search">
@@ -281,6 +332,7 @@ let CAT = null;          // catalog.json
 let PRICES = {};         // name -> record de prices.json (suivi Steam détaillé)
 let SP = {};             // market_hash_name -> prix Skinport (toutes variantes)
 let SP_AT = null;
+let SPH = null;          // skinport_history.json {dates:[], series:{}}
 let GENERATED_AT = null;
 
 const app = document.getElementById('app');
@@ -351,6 +403,62 @@ function sparkline(history){
 }
 const RARITY_ORDER = {"Consumer Grade":0,"Industrial Grade":1,"Mil-Spec Grade":2,"Restricted":3,"Classified":4,"Covert":5,"Contraband":6,"Extraordinary":5};
 function rarityRank(s){ return RARITY_ORDER[s.r] ?? 2; }
+
+/* ---------- graphique en bougies (OHLC journalier) ---------- */
+function candleChart(points, sourceLabel){
+  /* points: [{t: iso, p: prix}] -> bougies par jour */
+  if(!points || points.length < 2) return '';
+  const byDay = {};
+  points.forEach(pt=>{
+    const day = pt.t.slice(0,10);
+    (byDay[day] = byDay[day] || []).push(pt.p);
+  });
+  const days = Object.keys(byDay).sort();
+  const candles = days.map(d=>{
+    const ps = byDay[d];
+    return {d, o:ps[0], c:ps[ps.length-1], h:Math.max(...ps), l:Math.min(...ps)};
+  });
+  if(!candles.length) return '';
+  const W=600, H=190, padL=8, padR=54, padT=10, padB=20;
+  const lo = Math.min(...candles.map(c=>c.l)), hi = Math.max(...candles.map(c=>c.h));
+  const range = (hi-lo)||1;
+  const y = v => padT + (1-(v-lo)/range)*(H-padT-padB);
+  const n = candles.length;
+  const slot = (W-padL-padR)/Math.max(n,10);
+  const bw = Math.max(3, Math.min(16, slot*0.6));
+  let svg = '';
+  candles.forEach((c,i)=>{
+    const cx = padL + slot*(i+0.5);
+    const up = c.c >= c.o;
+    const col = up ? '#5FB88F' : '#E6544F';
+    svg += `<line x1="${cx}" x2="${cx}" y1="${y(c.h)}" y2="${y(c.l)}" stroke="${col}" stroke-width="1"/>`;
+    const top = y(Math.max(c.o,c.c)), bot = y(Math.min(c.o,c.c));
+    svg += `<rect x="${cx-bw/2}" y="${top}" width="${bw}" height="${Math.max(1.5,bot-top)}" fill="${col}"/>`;
+  });
+  const last = candles[candles.length-1].c;
+  svg += `<line x1="${padL}" x2="${W-padR}" y1="${y(last)}" y2="${y(last)}" stroke="#E4AE39" stroke-width="0.6" stroke-dasharray="3 3"/>`;
+  svg += `<text x="${W-padR+4}" y="${y(last)+3.5}" fill="#E4AE39" font-size="10" font-family="monospace">${fmtEUR(last)}</text>`;
+  svg += `<text x="${W-padR+4}" y="${y(hi)+8}" fill="#7A8290" font-size="9" font-family="monospace">${fmtEUR(hi)}</text>`;
+  svg += `<text x="${W-padR+4}" y="${y(lo)}" fill="#7A8290" font-size="9" font-family="monospace">${fmtEUR(lo)}</text>`;
+  const first = candles[0], delta = last - first.o;
+  const pct = first.o ? (delta/first.o*100) : 0;
+  return `<div class="candle-wrap">
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">${svg}</svg>
+    <div class="candle-meta">
+      <span>${candles.length} jour${candles.length>1?'s':''} · 1 bougie = 1 jour · source : ${sourceLabel}</span>
+      <span style="color:${delta>=0?'#5FB88F':'#E6544F'}">${delta>=0?'▲':'▼'} ${fmtEUR(Math.abs(delta))} (${pct>=0?'+':''}${pct.toFixed(1)}%)</span>
+    </div>
+  </div>`;
+}
+/* série skinport d'un item -> points {t,p} */
+function spSeries(name){
+  if(!SPH || !SPH.series || !SPH.series[name]) return [];
+  const out = [];
+  SPH.series[name].forEach((p,i)=>{
+    if(p!==null && p!==undefined && SPH.dates[i]) out.push({t:SPH.dates[i], p});
+  });
+  return out;
+}
 
 function adSlot(id){
   /* Emplacement AdSense — voir README.md > "Activer les publicités" */
@@ -678,9 +786,280 @@ function viewItem(id){
         </div>
       </div>
     </div>
+    ${(()=>{
+      const steamPts = (rec && rec.history && rec.history.length>=2) ? rec.history : null;
+      const spPts = spSeries(s.n);
+      const chart = steamPts && steamPts.length >= spPts.length
+        ? candleChart(steamPts, 'Steam Market (item suivi)')
+        : candleChart(spPts, 'Skinport (Field-Tested)');
+      return chart
+        ? `<h2>Évolution du prix</h2>${chart}`
+        : `<h2>Évolution du prix</h2><p class="intro" style="font-size:12.5px">Le graphique en bougies apparaîtra
+           dès que l'historique aura accumulé au moins deux relevés pour cet item (le robot passe toutes les 6h) —
+           reviens d'ici un jour ou deux.</p>`;
+    })()}
     ${adSlot('ad-slot-bottom')}
     ${similar.length ? `<h2>Autres skins ${esc(s.w)}</h2>${pagedGrid(similar, skinCard)}` : ''}
   `;
+}
+
+/* =================================================================
+   SIMULATEUR D'OUVERTURE DE CAISSES
+   Odds officielles Valve (divulguées pour la Chine, 2017) :
+   Mil-Spec 79.92% · Restricted 15.98% · Classified 3.20% ·
+   Covert 0.64% · Item rare spécial (couteau/gant) 0.26%
+   Aucun objet réel n'est gagné — simulateur éducatif.
+   ================================================================= */
+const SIM_ODDS = [
+  ["Mil-Spec Grade", 0.7992],
+  ["Restricted",     0.1598],
+  ["Classified",     0.0320],
+  ["Covert",         0.0064],
+  ["__special__",    0.0026],
+];
+const WEAR_ODDS = [["Factory New",.03],["Minimal Wear",.24],["Field-Tested",.33],["Well-Worn",.24],["Battle-Scarred",.16]];
+const KEY_PRICE = 2.35;
+const DAILY_FREE = 10;
+const AD_BONUS = 5;
+const AD_SECONDS = 15;
+
+function casePools(caseName){
+  const items = CAT.skins.filter(s=>s.cr.includes(caseName));
+  const pools = {};
+  items.forEach(s=>{
+    const tier = (s.c==='Couteaux'||s.c==='Gants') ? '__special__' : s.r;
+    (pools[tier] = pools[tier] || []).push(s);
+  });
+  return pools;
+}
+function drawFromCase(caseName){
+  const pools = casePools(caseName);
+  const avail = SIM_ODDS.filter(([t])=>pools[t] && pools[t].length);
+  const total = avail.reduce((a,[,w])=>a+w, 0);
+  let r = Math.random()*total;
+  let tier = avail[avail.length-1][0];
+  for(const [t,w] of avail){ if(r < w){ tier = t; break; } r -= w; }
+  const pool = pools[tier];
+  const item = pool[Math.floor(Math.random()*pool.length)];
+  let r2 = Math.random(), wear = 'Field-Tested';
+  for(const [w,p] of WEAR_ODDS){ if(r2 < p){ wear = w; break; } r2 -= p; }
+  const st = item.st && Math.random() < 0.10;
+  const variant = `${st?'StatTrak™ ':''}${item.n} (${wear})`;
+  const price = sp(variant) ?? sp(`${item.n} (${wear})`) ?? sp(`${item.n} (Field-Tested)`) ?? sp(item.n) ?? null;
+  return {item, wear, st, price, special: (item.c==='Couteaux'||item.c==='Gants')};
+}
+
+/* état localStorage */
+function simDaily(){
+  const today = new Date().toISOString().slice(0,10);
+  let d = {};
+  try{ d = JSON.parse(localStorage.getItem('cs2t_daily')||'{}'); }catch(e){}
+  if(d.date !== today) d = {date: today, left: DAILY_FREE};
+  return d;
+}
+function simDailySave(d){ localStorage.setItem('cs2t_daily', JSON.stringify(d)); }
+function simStats(){
+  let s = {};
+  try{ s = JSON.parse(localStorage.getItem('cs2t_sim')||'{}'); }catch(e){}
+  return {opens: s.opens||0, spent: s.spent||0, value: s.value||0};
+}
+function simStatsSave(s){ localStorage.setItem('cs2t_sim', JSON.stringify(s)); }
+function simPulls(){
+  try{ return JSON.parse(localStorage.getItem('cs2t_pulls')||'[]'); }catch(e){ return []; }
+}
+function simPullsSave(p){ localStorage.setItem('cs2t_pulls', JSON.stringify(p.slice(-10))); }
+
+function simCaseCard(c){
+  const p = sp(c.n) ?? bestPrice(PRICES[c.n]);
+  return `<a class="icard" href="#/ouvrir/${encodeURIComponent(c.n)}">
+    <div class="rar" style="background:var(--gold)"></div>
+    <div class="thumb"><img loading="lazy" src="${esc(c.img)}" alt="${esc(c.n)}"></div>
+    <div class="meta">
+      <div class="iname">${esc(c.n)}</div>
+      <div class="isub">${CAT.skins.filter(s=>s.cr.includes(c.n)).length} items possibles</div>
+      <div class="iprice">${p!==null&&p!==undefined ? 'coût simulé : '+fmtEUR(p+KEY_PRICE) : 'Ouvrir →'}</div>
+    </div>
+  </a>`;
+}
+
+function viewOpening(){
+  const d = simDaily();
+  const cases = [...CAT.cases].reverse().filter(c=>CAT.skins.some(s=>s.cr.includes(c.n)));
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / Ouverture de caisses</p>
+    <h1>Ouvre des caisses — gratuitement</h1>
+    <p class="intro">Simulateur d'ouverture avec les <b>probabilités officielles Valve</b> et les vrais prix du marché :
+    tu vois exactement ce que tu aurais obtenu (et perdu ou gagné) si tu avais ouvert la caisse pour de vrai.
+    ${DAILY_FREE} ouvertures gratuites par jour${' '}; aucune inscription, aucun objet réel n'est gagné ni misé.</p>
+    <p class="updated">Ouvertures restantes aujourd'hui : <b>${d.left}</b></p>
+    ${adSlot('ad-slot-top')}
+    <div class="grid">${cases.map(simCaseCard).join('')}</div>
+  `;
+}
+
+function viewOpenCase(caseName){
+  const c = CAT.cases.find(x=>x.n===caseName);
+  if(!c) return `<p class="empty">Caisse introuvable.</p>`;
+  const pools = casePools(caseName);
+  if(!Object.keys(pools).length) return `<p class="empty">Contenu inconnu pour cette caisse.</p>`;
+  const casePrice = sp(c.n) ?? bestPrice(PRICES[c.n]) ?? 0;
+  const d = simDaily();
+  const stats = simStats();
+  const pulls = simPulls();
+  const profit = stats.value - stats.spent;
+
+  const oddsHtml = SIM_ODDS.filter(([t])=>pools[t]).map(([t,w])=>{
+    const label = t==='__special__' ? 'Rare spécial (couteau/gant)' : t;
+    return `<b>${(w*100).toFixed(2).replace('.',',')} %</b> ${label} (${pools[t].length} items)`;
+  }).join(' · ');
+
+  setTimeout(()=>{
+    const btn = document.getElementById('openBtn');
+    const adBtn = document.getElementById('adBtn');
+    if(btn) btn.addEventListener('click', ()=>runOpen(caseName, casePrice));
+    if(adBtn) adBtn.addEventListener('click', ()=>adGate());
+  },0);
+
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / <a href="#/ouverture">Ouverture</a> / ${esc(c.n)}</p>
+    <div class="sim-head">
+      <img src="${esc(c.img)}" alt="">
+      <div>
+        <h1 style="margin:0 0 4px">${esc(c.n)}</h1>
+        <div class="odds">Coût réel simulé par ouverture : <b>${fmtEUR(casePrice + KEY_PRICE)}</b> (caisse ${fmtEUR(casePrice)} + clé ${fmtEUR(KEY_PRICE)})</div>
+      </div>
+    </div>
+    <div class="sim-stats">
+      <div class="blk"><div class="lbl">Ouvertures restantes</div><div class="v" id="leftCnt">${d.left}</div></div>
+      <div class="blk"><div class="lbl">Total ouvert (toi)</div><div class="v" id="statOpens">${stats.opens}</div></div>
+      <div class="blk"><div class="lbl">Dépensé (simulé)</div><div class="v" id="statSpent">${fmtEUR(stats.spent)}</div></div>
+      <div class="blk"><div class="lbl">Valeur obtenue</div><div class="v" id="statValue">${fmtEUR(stats.value)}</div></div>
+      <div class="blk"><div class="lbl">Bilan</div><div class="v ${profit>=0?'pos':'neg'}" id="statProfit">${profit>=0?'+':''}${fmtEUR(profit)}</div></div>
+    </div>
+    <div class="roul-wrap" id="roulWrap" style="display:none">
+      <div class="roul-marker"></div>
+      <div class="roul" id="roul"></div>
+    </div>
+    <div id="revealZone"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin:0 0 14px" id="btnZone">
+      <button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>Ouvrir la caisse</button>
+      ${d.left<=0?`<button class="bigbtn ghost" id="adBtn">▶ Regarder une pub (${AD_SECONDS}s) = +${AD_BONUS} ouvertures</button>`:''}
+    </div>
+    <div class="odds" style="margin-bottom:14px">Probabilités officielles : ${oddsHtml} · StatTrak™ 10 % · Simulateur — aucun objet réel n'est gagné.</div>
+    ${pulls.length?`<div class="lbl" style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase">Tes 10 derniers tirages</div>
+    <div class="pull-hist">${pulls.map(p=>`<div class="ph" title="${esc(p.n)}"><img loading="lazy" src="${esc(p.img)}"><div class="b" style="background:${esc(p.rc)}"></div></div>`).join('')}</div>`:''}
+    ${adSlot('ad-slot-bottom')}
+  `;
+}
+
+function runOpen(caseName, casePrice){
+  const d = simDaily();
+  if(d.left <= 0){ render(); return; }
+  const btn = document.getElementById('openBtn');
+  if(btn) btn.disabled = true;
+
+  const result = drawFromCase(caseName);
+  const pools = casePools(caseName);
+  const allItems = Object.values(pools).flat();
+
+  /* construit la bande de roulette : 60 tuiles, la gagnante en position 52 */
+  const N = 60, WIN = 52, TILE = 130;
+  const strip = [];
+  for(let i=0;i<N;i++){
+    strip.push(i===WIN ? result.item : allItems[Math.floor(Math.random()*allItems.length)]);
+  }
+  const roulWrap = document.getElementById('roulWrap');
+  const roul = document.getElementById('roul');
+  roulWrap.style.display = 'block';
+  roul.style.transition = 'none';
+  roul.style.transform = 'translateX(0)';
+  roul.innerHTML = strip.map(s=>`<div class="rtile">
+    <img loading="lazy" src="${esc(s.img)}"><div class="rn">${esc(s.n)}</div>
+    <div class="rbar" style="background:${esc(s.rc)}"></div>
+  </div>`).join('');
+  document.getElementById('revealZone').innerHTML = '';
+
+  const wrapW = roulWrap.clientWidth;
+  const target = WIN*TILE + TILE/2 - wrapW/2 + (Math.random()*60-30);
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      roul.style.transition = 'transform 5.2s cubic-bezier(0.06,0.8,0.12,1)';
+      roul.style.transform = `translateX(${-target}px)`;
+    });
+  });
+
+  setTimeout(()=>{
+    /* comptabilise */
+    const dd = simDaily(); dd.left -= 1; simDailySave(dd);
+    const st = simStats();
+    st.opens += 1; st.spent += casePrice + KEY_PRICE; st.value += (result.price||0);
+    simStatsSave(st);
+    const pulls = simPulls();
+    pulls.push({n: result.item.n, img: result.item.img, rc: result.item.rc});
+    simPullsSave(pulls);
+
+    const zone = document.getElementById('revealZone');
+    zone.innerHTML = `<div class="reveal" style="border-color:${esc(result.item.rc)};box-shadow:0 0 26px ${esc(result.item.rc)}33">
+      <img src="${esc(result.item.img)}" alt="">
+      <div style="flex:1;min-width:200px">
+        <div class="rv-name" style="color:${esc(result.item.rc)}">${result.special?'✦ ':''}${esc(result.item.n)}</div>
+        <div class="rv-sub">${result.st?'StatTrak™ · ':''}${esc(result.wear)} · ${esc(result.item.r)}</div>
+        <div class="rv-price">${result.price!==null?fmtEUR(result.price):'prix inconnu'}</div>
+        <div class="rv-sub">coût de l'ouverture : ${fmtEUR(casePrice+KEY_PRICE)} → ${result.price!==null?(result.price>=casePrice+KEY_PRICE?'<span style="color:var(--green)">rentable ✔</span>':'<span style="color:var(--red)">à perte ✘</span>'):''}</div>
+        <div style="margin-top:8px"><a class="chip" href="#/item/${encodeURIComponent(result.item.i)}">Voir la fiche →</a></div>
+      </div>
+    </div>`;
+    updateSimHud(caseName, casePrice);
+  }, 5400);
+}
+
+/* met à jour les compteurs sans re-rendre la page (préserve la roulette + reveal) */
+function updateSimHud(caseName, casePrice){
+  const d = simDaily();
+  const st = simStats();
+  const profit = st.value - st.spent;
+  const set = (id, v) => { const el = document.getElementById(id); if(el) el.textContent = v; };
+  set('leftCnt', d.left);
+  set('statOpens', st.opens);
+  set('statSpent', fmtEUR(st.spent));
+  set('statValue', fmtEUR(st.value));
+  const pf = document.getElementById('statProfit');
+  if(pf){ pf.textContent = (profit>=0?'+':'') + fmtEUR(profit); pf.className = 'v ' + (profit>=0?'pos':'neg'); }
+  const zone = document.getElementById('btnZone');
+  if(zone){
+    zone.innerHTML = `<button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>Ouvrir la caisse</button>
+      ${d.left<=0?`<button class="bigbtn ghost" id="adBtn">▶ Regarder une pub (${AD_SECONDS}s) = +${AD_BONUS} ouvertures</button>`:''}`;
+    const btn = document.getElementById('openBtn');
+    const adBtn = document.getElementById('adBtn');
+    if(btn) btn.addEventListener('click', ()=>runOpen(caseName, casePrice));
+    if(adBtn) adBtn.addEventListener('click', ()=>adGate());
+  }
+}
+
+function adGate(){
+  /* Emplacement "pub récompensée" : le compte à rebours simule l'endroit où
+     une vraie rewarded ad (Google Ad Manager / AdSense H5) sera branchée. */
+  const ov = document.createElement('div');
+  ov.className = 'modal-ov';
+  ov.innerHTML = `<div class="modal">
+    <div class="lbl" style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em">Publicité — emplacement réservé</div>
+    <div class="cnt" id="adCnt">${AD_SECONDS}</div>
+    <p class="intro" style="font-size:12px">Quand la régie publicitaire sera activée, une vidéo se jouera ici.
+    Reste sur la page jusqu'à la fin du compte à rebours pour recevoir +${AD_BONUS} ouvertures.</p>
+  </div>`;
+  document.body.appendChild(ov);
+  let left = AD_SECONDS;
+  const iv = setInterval(()=>{
+    left -= 1;
+    const el = document.getElementById('adCnt');
+    if(el) el.textContent = left;
+    if(left <= 0){
+      clearInterval(iv);
+      ov.remove();
+      const d = simDaily(); d.left += AD_BONUS; simDailySave(d);
+      render();
+    }
+  }, 1000);
 }
 
 function viewVendre(){
@@ -764,6 +1143,8 @@ function render(route, extra){
   else if(head==='collections'){ html = viewCollections(); navKey = 'collections'; }
   else if(head==='collection'){ html = viewCollection(arg); }
   else if(head==='item'){ html = viewItem(arg); }
+  else if(head==='ouverture'){ html = viewOpening(); navKey = 'ouverture'; }
+  else if(head==='ouvrir'){ html = viewOpenCase(arg); navKey = 'ouverture'; }
   else if(head==='vendre'){ html = viewVendre(); navKey = 'vendre'; }
   else if(head==='confidentialite'){ html = viewPrivacy(); }
   else if(head==='recherche'){ html = viewSearch(arg); }
@@ -786,10 +1167,11 @@ document.getElementById('q').addEventListener('keydown', e=>{
 /* ---------- chargement ---------- */
 async function boot(){
   try{
-    const [catRes, priceRes, spRes] = await Promise.all([
+    const [catRes, priceRes, spRes, sphRes] = await Promise.all([
       fetch('./catalog.json'),
       fetch('./prices.json', {cache:'no-store'}),
       fetch('./skinport_all.json', {cache:'no-store'}).catch(()=>null),
+      fetch('./skinport_history.json', {cache:'no-store'}).catch(()=>null),
     ]);
     CAT = await catRes.json();
     const pdata = await priceRes.json().catch(()=>({items:[]}));
@@ -797,6 +1179,10 @@ async function boot(){
     if(spRes && spRes.ok){
       const spdata = await spRes.json().catch(()=>null);
       if(spdata && spdata.prices){ SP = spdata.prices; SP_AT = spdata.generated_at; }
+    }
+    if(sphRes && sphRes.ok){
+      const sphdata = await sphRes.json().catch(()=>null);
+      if(sphdata && sphdata.dates){ SPH = sphdata; }
     }
     (pdata.items||[]).forEach(it=>{
       PRICES[it.display] = it;   // "AK-47 | Redline", "Karambit"…

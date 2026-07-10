@@ -27,6 +27,8 @@ STEAM_CURRENCY = 3  # EUR
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "..", "prices.json")
 CATALOG_FILE = os.path.join(os.path.dirname(__file__), "..", "catalog.json")
 SKINPORT_DUMP_FILE = os.path.join(os.path.dirname(__file__), "..", "skinport_all.json")
+SP_HISTORY_FILE = os.path.join(os.path.dirname(__file__), "..", "skinport_history.json")
+SP_HISTORY_MAX_POINTS = 120  # ~30 jours à 4 runs/jour
 MAX_HISTORY_POINTS = 90  # ~1 point par run ; ajuste selon la fréquence du workflow
 REQUEST_DELAY = 3  # secondes entre deux appels Steam, pour éviter le rate-limit (429)
 
@@ -353,6 +355,52 @@ def write_skinport_dump(skinport_data: dict):
     print(f"skinport_all.json écrit ({len(prices)} variantes d'items).")
 
 
+def update_skinport_history(skinport_data: dict):
+    """Alimente skinport_history.json : une colonne de prix par run pour chaque
+    item du catalogue (variante Field-Tested si elle existe, sinon le nom brut —
+    couteaux vanilla, caisses). Format colonne pour rester compact :
+    {"dates": [iso...], "series": {"AK-47 | Redline": [12.3, null, ...]}}
+    C'est cette série qui alimente les graphiques en bougies des fiches."""
+    if not skinport_data:
+        print("[Skinport] Pas de données — historique inchangé.")
+        return
+    try:
+        with open(CATALOG_FILE, "r", encoding="utf-8") as f:
+            catalog = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return
+
+    try:
+        with open(SP_HISTORY_FILE, "r", encoding="utf-8") as f:
+            hist = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        hist = {"dates": [], "series": {}}
+
+    names = [s["n"] for s in catalog.get("skins", [])] + [c["n"] for c in catalog.get("cases", [])]
+    now_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    hist["dates"].append(now_iso)
+
+    n_cols = len(hist["dates"])
+    for name in names:
+        item = skinport_data.get(f"{name} (Field-Tested)") or skinport_data.get(name)
+        price = item.get("min_price") if item else None
+        serie = hist["series"].get(name, [])
+        # aligne la série sur le nombre de colonnes (None pour les runs manqués)
+        serie += [None] * (n_cols - 1 - len(serie))
+        serie.append(price)
+        hist["series"][name] = serie
+
+    # tronque au maximum de points
+    if len(hist["dates"]) > SP_HISTORY_MAX_POINTS:
+        cut = len(hist["dates"]) - SP_HISTORY_MAX_POINTS
+        hist["dates"] = hist["dates"][cut:]
+        hist["series"] = {k: v[cut:] for k, v in hist["series"].items()}
+
+    with open(SP_HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(hist, f, separators=(",", ":"), ensure_ascii=False)
+    print(f"skinport_history.json : {len(hist['dates'])} points × {len(hist['series'])} items.")
+
+
 # ============================================================
 # TELEGRAM (optionnel)
 # ============================================================
@@ -387,6 +435,7 @@ def main():
 
     skinport_data = get_skinport_prices()
     write_skinport_dump(skinport_data)
+    update_skinport_history(skinport_data)
     now_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     output_items = []
