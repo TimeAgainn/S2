@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T00:00:00+00:00",
+  "generated_at": "2026-07-10T15:44:35+00:00",
   "items": [
     {
       "id": "breakout",
@@ -7,12 +7,19 @@
       "display": "Operation Breakout",
       "status": "Gel des drops : déc. 2025",
       "blurb": "Contient le Couteau Papillon. Caisse d'opération discontinuée depuis 2016 ; offre définitivement figée depuis le gel Valve de décembre 2025.",
-      "steam_price": 7.2,
-      "steam_volume": null,
-      "skinport_price": 7.1,
-      "last_checked": "2026-07-08T00:00:00+00:00",
+      "steam_price": 10.44,
+      "steam_volume": "2,208",
+      "skinport_price": null,
+      "last_checked": "2026-07-10T15:44:35+00:00",
       "history": [
-        { "t": "2026-07-08T00:00:00+00:00", "p": 7.2 }
+        {
+          "t": "2026-07-08T00:00:00+00:00",
+          "p": 7.2
+        },
+        {
+          "t": "2026-07-10T15:44:35+00:00",
+          "p": 10.44
+        }
       ]
     },
     {
@@ -21,12 +28,19 @@
       "display": "Operation Phoenix",
       "status": "Gel des drops : déc. 2025",
       "blurb": "Contient les 5 couteaux originaux (Karambit, M9 Bayonet, Bayonet, Flip, Gut) en finitions Fade / Crimson Web / Case Hardened, plus AWP Asiimov et AK-47 Redline.",
-      "steam_price": 3.7,
-      "steam_volume": null,
-      "skinport_price": 3.65,
-      "last_checked": "2026-07-08T00:00:00+00:00",
+      "steam_price": 4.99,
+      "steam_volume": "1,212",
+      "skinport_price": null,
+      "last_checked": "2026-07-10T15:44:35+00:00",
       "history": [
-        { "t": "2026-07-08T00:00:00+00:00", "p": 3.7 }
+        {
+          "t": "2026-07-08T00:00:00+00:00",
+          "p": 3.7
+        },
+        {
+          "t": "2026-07-10T15:44:35+00:00",
+          "p": 4.99
+        }
       ]
     },
     {
@@ -35,12 +49,15 @@
       "display": "Recoil Case",
       "status": "Sortie du pool actif : mars 2026",
       "blurb": "Partage le pool de gants d'Operation Broken Fang pour une fraction du prix. Vient tout juste de sortir du pool actif — rareté toute récente.",
-      "steam_price": 0.35,
-      "steam_volume": null,
+      "steam_price": null,
+      "steam_volume": "22,444",
       "skinport_price": null,
-      "last_checked": "2026-07-08T00:00:00+00:00",
+      "last_checked": "2026-07-10T15:44:35+00:00",
       "history": [
-        { "t": "2026-07-08T00:00:00+00:00", "p": 0.35 }
+        {
+          "t": "2026-07-08T00:00:00+00:00",
+          "p": 0.35
+        }
       ]
     },
     {
@@ -49,12 +66,19 @@
       "display": "Glove Case (2016)",
       "status": "Référence",
       "blurb": "La toute première caisse de gants. Sert de point de comparaison : plus chère que les autres, pas une caisse d'opération.",
-      "steam_price": 14.0,
-      "steam_volume": null,
+      "steam_price": 18.13,
+      "steam_volume": "1,460",
       "skinport_price": null,
-      "last_checked": "2026-07-08T00:00:00+00:00",
+      "last_checked": "2026-07-10T15:44:35+00:00",
       "history": [
-        { "t": "2026-07-08T00:00:00+00:00", "p": 14.0 }
+        {
+          "t": "2026-07-08T00:00:00+00:00",
+          "p": 14.0
+        },
+        {
+          "t": "2026-07-10T15:44:35+00:00",
+          "p": 18.13
+        }
       ]
     }
   ]
