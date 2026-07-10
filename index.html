@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suivi des caisses CS2 discontinuées — prix Steam &amp; Skinport</title>
-<meta name="description" content="Suivi des prix de caisses CS2 discontinuées (Operation Breakout, Operation Phoenix, Recoil Case...) sur Steam Market et Skinport, mis à jour automatiquement.">
+<title>Suivi des prix CS2 — caisses, couteaux, gants & skins (Steam &amp; Skinport)</title>
+<meta name="description" content="Suivi des prix de caisses, couteaux, gants et skins d'armes CS2 sur Steam Market et Skinport, mis à jour automatiquement plusieurs fois par jour.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
@@ -19,7 +19,7 @@ body{
   background:radial-gradient(1200px 500px at 15% -10%, #1a1710 0%, transparent 60%), var(--bg);
   color:var(--text); font-family:'Inter',sans-serif; min-height:100vh; padding:28px 16px 60px;
 }
-.wrap{max-width:960px;margin:0 auto;}
+.wrap{max-width:1180px;margin:0 auto;}
 .eyebrow{
   font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--gold);
   text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:6px;
@@ -29,20 +29,49 @@ h1{
   font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
   font-size:clamp(28px,6vw,40px);margin:0 0 8px;line-height:1.05;
 }
-.intro{color:var(--muted);font-size:14px;max-width:640px;line-height:1.6;margin:0 0 6px;}
-.updated{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);margin:0 0 26px;}
+.intro{color:var(--muted);font-size:14px;max-width:720px;line-height:1.6;margin:0 0 6px;}
+.updated{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);margin:0 0 20px;}
 .updated b{color:var(--gold);}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+/* --- emplacement pub (haut de page) ---
+   Une fois ton compte AdSense approuvé : colle ton script <script async src="...adsbygoogle.js?client=ca-pub-XXXX">
+   dans <head>, puis remplace le contenu de #ad-slot-top par ton <ins class="adsbygoogle">.
+   Voir README.md > "Activer les publicités". */
+.ad-slot{
+  border:1px dashed var(--border); color:var(--muted); font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px; text-align:center; padding:10px; margin:0 0 22px; letter-spacing:.04em;
+}
+
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px;}
+.search{
+  background:var(--surface); border:1px solid var(--border); color:var(--text);
+  font-family:'Inter',sans-serif; font-size:13px; padding:9px 12px; flex:1 1 220px; min-width:180px;
+}
+.search:focus{outline:none;border-color:var(--gold-dim);}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;}
+.tab{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;
+  background:var(--surface); border:1px solid var(--border); color:var(--muted);
+  padding:8px 12px; cursor:pointer;
+}
+.tab:hover{color:var(--text);}
+.tab.active{color:var(--bg);background:var(--gold);border-color:var(--gold);}
+.count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin:0 0 16px;}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;}
 .card{background:var(--surface);border:1px solid var(--border);padding:0 0 16px;}
 .card-top{height:3px;background:var(--gold);}
 .card-head{padding:16px 16px 6px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
-.card-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:21px;text-transform:uppercase;line-height:1.05;}
+.card-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;line-height:1.05;}
 .tag{
   font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);
-  border:1px solid var(--border);padding:2px 6px;white-space:nowrap;letter-spacing:.03em;
+  border:1px solid var(--border); padding:2px 6px;white-space:nowrap;letter-spacing:.03em;
 }
 .tag.frozen{color:var(--gold);border-color:var(--gold-dim);}
+.card-cat{
+  font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.08em;padding:16px 16px 0;
+}
 .card-body{padding:0 16px;}
 .blurb{font-size:12.5px;color:var(--muted);line-height:1.55;margin:4px 0 14px;}
 .prices{display:flex;gap:18px;margin-bottom:10px;flex-wrap:wrap;}
@@ -58,7 +87,7 @@ h1{
 .empty{color:var(--muted);font-size:12px;}
 
 footer{
-  max-width:960px;margin:30px auto 0;color:var(--muted);font-size:11.5px;
+  max-width:1180px;margin:30px auto 0;color:var(--muted);font-size:11.5px;
   line-height:1.6;border-top:1px solid var(--border);padding-top:16px;
 }
 </style>
@@ -66,13 +95,31 @@ footer{
 <body>
 <div class="wrap">
   <div class="eyebrow">Mis à jour automatiquement</div>
-  <h1>Caisses CS2 discontinuées</h1>
-  <p class="intro">Suivi des caisses CS2 dont l'offre est figée — plus aucun nouveau drop possible depuis la fermeture de leur pool. Prix Steam Market et Skinport, rafraîchis toutes les quelques heures.</p>
+  <h1>Prix des caisses, couteaux, gants &amp; skins CS2</h1>
+  <p class="intro">Suivi des prix d'une large sélection d'items CS2 — caisses actives et discontinuées, couteaux et gants (finition Vanilla), skins d'armes populaires — sur Steam Market et Skinport, rafraîchis plusieurs fois par jour.</p>
   <p class="updated">Dernière vérification : <b id="updatedAt">—</b></p>
+
+  <!-- Emplacement pub #1 (bannière haute). Vide tant qu'AdSense n'est pas activé. -->
+  <div class="ad-slot" id="ad-slot-top">Emplacement publicitaire</div>
+
+  <div class="controls">
+    <input class="search" id="search" type="text" placeholder="Rechercher un item (ex. Karambit, AK-47, Dragon Lore...)">
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-cat="all">Tout</button>
+      <button class="tab" data-cat="Caisses">Caisses</button>
+      <button class="tab" data-cat="Couteaux">Couteaux</button>
+      <button class="tab" data-cat="Gants">Gants</button>
+      <button class="tab" data-cat="Armes">Armes</button>
+    </div>
+  </div>
+  <p class="count" id="count"></p>
 
   <div class="grid" id="grid">
     <p class="empty">Chargement des prix…</p>
   </div>
+
+  <!-- Emplacement pub #2 (bannière basse). -->
+  <div class="ad-slot" id="ad-slot-bottom">Emplacement publicitaire</div>
 
   <footer>
     Prix indicatifs, à titre informatif — pas un conseil d'investissement. Sources : API publique Steam Community Market et API officielle Skinport. Généré automatiquement, voir le dépôt source pour la méthodologie.
@@ -80,6 +127,10 @@ footer{
 </div>
 
 <script>
+let ALL_ITEMS = [];
+let currentCat = 'all';
+let currentSearch = '';
+
 function fmtEUR(n){
   if(n === null || n === undefined || isNaN(n)) return "—";
   return n.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}) + " €";
@@ -113,50 +164,87 @@ function sparkline(history){
   </svg>`;
 }
 
+function cardHTML(it){
+  return `
+    <div class="card-top"></div>
+    <div class="card-cat">${it.category || ''}</div>
+    <div class="card-head">
+      <div class="card-name">${it.display}</div>
+      <div class="tag ${it.status && it.status.toLowerCase().includes('référence') ? '' : 'frozen'}">${it.status || ''}</div>
+    </div>
+    <div class="card-body">
+      <p class="blurb">${it.blurb || ''}</p>
+      ${sparkline(it.history)}
+      <div class="prices">
+        <div class="price-block">
+          <div class="src">Steam</div>
+          <div class="val">${fmtEUR(it.steam_price)}</div>
+        </div>
+        <div class="price-block">
+          <div class="src">Skinport</div>
+          <div class="val">${fmtEUR(it.skinport_price)}</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="link-row">
+        <a href="${steamUrl(it.name)}" target="_blank" rel="noopener">Voir sur Steam Market →</a>
+      </div>
+    </div>
+  `;
+}
+
+function render(){
+  const grid = document.getElementById('grid');
+  const q = currentSearch.trim().toLowerCase();
+
+  const filtered = ALL_ITEMS.filter(it=>{
+    const matchesCat = currentCat === 'all' || it.category === currentCat;
+    const matchesSearch = !q || it.display.toLowerCase().includes(q);
+    return matchesCat && matchesSearch;
+  });
+
+  document.getElementById('count').textContent = `${filtered.length} item${filtered.length > 1 ? 's' : ''}`;
+
+  grid.innerHTML = '';
+  if(filtered.length === 0){
+    grid.innerHTML = '<p class="empty">Aucun item ne correspond à ta recherche.</p>';
+    return;
+  }
+  filtered.forEach(it=>{
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = cardHTML(it);
+    grid.appendChild(card);
+  });
+}
+
 async function load(){
   try{
     const res = await fetch('./prices.json', {cache:'no-store'});
     const data = await res.json();
     document.getElementById('updatedAt').textContent = fmtDate(data.generated_at);
-
-    const grid = document.getElementById('grid');
-    grid.innerHTML = '';
-
-    data.items.forEach(it=>{
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <div class="card-top"></div>
-        <div class="card-head">
-          <div class="card-name">${it.display}</div>
-          <div class="tag ${it.status && it.status.toLowerCase().includes('référence') ? '' : 'frozen'}">${it.status || ''}</div>
-        </div>
-        <div class="card-body">
-          <p class="blurb">${it.blurb || ''}</p>
-          ${sparkline(it.history)}
-          <div class="prices">
-            <div class="price-block">
-              <div class="src">Steam</div>
-              <div class="val">${fmtEUR(it.steam_price)}</div>
-            </div>
-            <div class="price-block">
-              <div class="src">Skinport</div>
-              <div class="val">${fmtEUR(it.skinport_price)}</div>
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="link-row">
-            <a href="${steamUrl(it.name)}" target="_blank" rel="noopener">Voir sur Steam Market →</a>
-          </div>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
+    ALL_ITEMS = data.items || [];
+    render();
   }catch(e){
     document.getElementById('grid').innerHTML = '<p class="empty">Impossible de charger prices.json — vérifie que le fichier existe à la racine du site.</p>';
     console.error(e);
   }
 }
+
+document.getElementById('search').addEventListener('input', (e)=>{
+  currentSearch = e.target.value;
+  render();
+});
+
+document.getElementById('tabs').addEventListener('click', (e)=>{
+  const btn = e.target.closest('.tab');
+  if(!btn) return;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  currentCat = btn.dataset.cat;
+  render();
+});
+
 load();
 </script>
 </body>

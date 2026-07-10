@@ -1,10 +1,12 @@
 name: Update CS2 prices
 
-# Se déclenche automatiquement toutes les 4h, + à la main depuis l'onglet Actions,
+# Se déclenche automatiquement toutes les 6h, + à la main depuis l'onglet Actions,
 # + à chaque push sur main (pratique pour tester juste après avoir modifié le script).
+# Intervalle allongé (4h -> 6h) car le catalogue est passé à ~190 items : avec
+# 3s de délai entre deux appels Steam, un run complet prend ~15-20 minutes.
 on:
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch: {}
   push:
     branches: [main]

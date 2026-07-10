@@ -1,0 +1,7 @@
+# Fichier requis par Google AdSense pour vérifier que ce site est autorisé
+# à afficher tes annonces (anti-fraude / "authorized sellers").
+#
+# Une fois ton compte AdSense approuvé, remplace la ligne ci-dessous par
+# celle donnée dans AdSense > Sites > "ads.txt" (elle contient ton vrai
+# pub-ID). Format attendu :
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

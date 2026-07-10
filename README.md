@@ -1,7 +1,9 @@
 # CS2 Price Tracker — Site public
 
-Site statique qui affiche le prix de caisses CS2 discontinuées, mis à jour
-automatiquement toutes les 4h par un workflow GitHub Actions.
+Site statique façon csgoskins.gg qui affiche le prix d'une large sélection
+d'items CS2 (caisses actives et discontinuées, couteaux, gants, skins
+d'armes populaires — environ 190 items), mis à jour automatiquement toutes
+les 6h par un workflow GitHub Actions.
 
 **Structure :**
 ```
@@ -28,7 +30,8 @@ Ton site sera en ligne en 1-2 minutes à une adresse du type
 ### 3. Vérifier que le workflow tourne
 Onglet **Actions** du dépôt → tu dois voir "Update CS2 prices" → clique
 **Run workflow** pour le lancer une première fois manuellement plutôt que
-d'attendre le prochain créneau de 4h.
+d'attendre le prochain créneau de 6h. Avec ~190 items et 3s de délai entre
+deux appels Steam, un run complet prend 15-20 minutes.
 
 ### 4. (Optionnel) Garder les alertes Telegram
 Si tu veux que ce même script t'envoie aussi des alertes Telegram (comme le
@@ -51,8 +54,30 @@ Steam Market, d'un `display` (nom affiché), d'un `status` et d'un `blurb`
 répété sur plusieurs pages, qui aide au référencement Google).
 
 Après une modification du script, le push sur `main` déclenche automatiquement
-une exécution immédiate (en plus du cron toutes les 4h) grâce au `push:` dans
+une exécution immédiate (en plus du cron toutes les 6h) grâce au `push:` dans
 le workflow.
+
+Les items sont regroupés par `category` (`Caisses`, `Couteaux`, `Gants`,
+`Armes`) — c'est ce champ qui alimente les filtres sur la page. Pour ajouter
+un nouveau skin d'arme, ajoute simplement une entrée dans le dict
+`WEAPON_SKINS` du script.
+
+## Activer les publicités (AdSense)
+
+Le site a deux emplacements pub prêts (`#ad-slot-top` et `#ad-slot-bottom`
+dans `index.html`), vides par défaut. Une fois ta candidature Google AdSense
+approuvée :
+
+1. Dans AdSense, crée une unité publicitaire et récupère le snippet
+   `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX">`
+   → colle-le dans `<head>` de `index.html`.
+2. Remplace le contenu de `#ad-slot-top` / `#ad-slot-bottom` par le bloc
+   `<ins class="adsbygoogle">...</ins>` fourni par AdSense, suivi de
+   `<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>`.
+3. Édite `ads.txt` à la racine du repo : remplace le commentaire par la
+   ligne exacte donnée dans AdSense → Sites → "ads.txt" (contient ton
+   vrai `pub-XXXXXXXXXXXXXXXX`). Sans ce fichier correct, AdSense refuse
+   de servir des annonces sur le domaine.
 
 ## Prochaines étapes réalistes
 
