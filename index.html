@@ -9,14 +9,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root{
-  --bg:#0D0F12; --surface:#15181D; --surface2:#1C2029; --border:#272C34;
-  --text:#EDEAE3; --muted:#7A8290; --gold:#E4AE39; --gold-dim:#8a6d2a;
-  --red:#E6544F; --green:#5FB88F;
+  --bg:#070B14; --surface:#0D1420; --surface2:#131C2E; --border:#1D2A44;
+  --text:#E8F0FF; --muted:#6B7A99; --gold:#38E1FF; --gold-dim:#1B7A94;
+  --red:#FF4D6D; --green:#3DF0A8;
+  --glow:radial-gradient(1200px 500px at 15% -10%, #0e1e33 0%, transparent 60%), radial-gradient(900px 400px at 90% 0%, #1a0e2e 0%, transparent 55%);
+  --header-bg:rgba(7,11,20,.92);
+  --thumb1:#16233a; --thumb2:#182741;
+  --btn-text:#06121A;
+  --shadow-strength:.5; --shadow-strength-big:.65;
+}
+:root[data-theme="light"]{
+  --bg:#F5F3EE; --surface:#FFFFFF; --surface2:#EFECE4; --border:#DFD9CB;
+  --text:#1A1B1E; --muted:#8A8578; --gold:#C2410C; --gold-dim:#9A3412;
+  --red:#DC2626; --green:#047857;
+  --glow:radial-gradient(1200px 500px at 15% -10%, #EDE4D3 0%, transparent 60%);
+  --header-bg:rgba(245,243,238,.94);
+  --thumb1:#F0EDE5; --thumb2:#EAE6DB;
+  --btn-text:#FFFFFF;
+  --shadow-strength:.15; --shadow-strength-big:.22;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
 body{
-  background:radial-gradient(1200px 500px at 15% -10%, #1a1710 0%, transparent 60%), var(--bg);
+  background:var(--glow), var(--bg);
   color:var(--text); font-family:'Inter',sans-serif; min-height:100vh;
 }
 a{color:inherit;}
@@ -24,7 +39,7 @@ img{max-width:100%;}
 
 /* ---------- header / nav ---------- */
 header.site{
-  position:sticky;top:0;z-index:50;background:rgba(13,15,18,.92);backdrop-filter:blur(8px);
+  position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--border);
 }
 .nav-wrap{max-width:1180px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:18px;height:58px;}
@@ -41,6 +56,8 @@ nav.main a{
 }
 nav.main a:hover{color:var(--text);}
 nav.main a.active{color:var(--gold);}
+nav.main a.freetab{color:var(--green);font-weight:600;animation:pulseTab 1.6s infinite;}
+@keyframes pulseTab{0%,100%{opacity:1}50%{opacity:.55}}
 .header-search{position:relative;}
 .header-search input{
   background:var(--surface);border:1px solid var(--border);color:var(--text);
@@ -54,6 +71,65 @@ nav.main a.active{color:var(--gold);}
 }
 .steam-btn:hover{border-color:#66c0f4;color:#fff;}
 .steam-btn .dot{width:7px;height:7px;border-radius:50%;background:#66c0f4;display:inline-block;}
+.theme-btn{
+  background:var(--surface);border:1px solid var(--border);color:var(--text);cursor:pointer;
+  font-size:15px;padding:7px 10px;line-height:1;
+}
+.theme-btn:hover{border-color:var(--gold-dim);}
+
+/* ---------- autocomplete recherche ---------- */
+.sugg{
+  position:absolute;top:calc(100% + 4px);right:0;width:340px;max-height:430px;overflow-y:auto;
+  background:var(--surface);border:1px solid var(--border);z-index:60;display:none;
+  box-shadow:0 12px 30px rgba(0,0,0,var(--shadow-strength-big));
+}
+.sugg.open{display:block;}
+.sugg .sg{
+  display:flex;align-items:center;gap:10px;padding:8px 10px;cursor:pointer;text-decoration:none;
+  border-bottom:1px solid var(--border);
+}
+.sugg .sg:hover{background:var(--surface2);}
+.sugg .sg img{width:44px;height:33px;object-fit:contain;flex:none;}
+.sugg .sg .sgt{flex:1;min-width:0;}
+.sugg .sg .sgn{font-size:12.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.sugg .sg .sgs{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);}
+.sugg .sg .sgp{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);flex:none;}
+.sugg .more{display:block;text-align:center;padding:9px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--gold);text-decoration:none;}
+
+/* ---------- boutons de période (bougies) ---------- */
+.rangebar{display:flex;gap:6px;margin:0 0 10px;flex-wrap:wrap;}
+.rbtn{
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;background:var(--surface);color:var(--muted);
+  border:1px solid var(--border);padding:6px 12px;cursor:pointer;text-transform:uppercase;letter-spacing:.04em;
+}
+.rbtn.active{color:var(--btn-text);background:var(--gold);border-color:var(--gold);}
+.rbtn:hover:not(.active){color:var(--text);}
+
+/* ---------- caisses gratuites ---------- */
+.free-hero{border:1px solid var(--gold-dim);background:var(--surface);padding:22px;margin:0 0 20px;}
+.jackpot{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--green);}
+.freecard .thumb{position:relative;}
+.freecard .jp{
+  position:absolute;top:8px;left:8px;font-family:'IBM Plex Mono',monospace;font-size:9px;
+  background:var(--gold);color:var(--btn-text);padding:2px 7px;font-weight:600;letter-spacing:.05em;z-index:1;
+}
+
+/* ---------- badges paiement ---------- */
+.payrow{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 4px;}
+.pay{
+  height:44px;min-width:74px;padding:0 14px;display:flex;align-items:center;justify-content:center;
+  background:#fff;border:1px solid var(--border);gap:6px;
+}
+.pay.dark{background:#000;}
+.pay .visa{font-style:italic;font-weight:800;font-size:19px;color:#1434CB;letter-spacing:-.5px;font-family:'Inter',sans-serif;}
+.pay .mc{display:flex;}
+.pay .mc i{width:22px;height:22px;border-radius:50%;display:block;}
+.pay .mc i:first-child{background:#EB001B;}
+.pay .mc i:last-child{background:#F79E1B;margin-left:-9px;opacity:.9;}
+.pay .ap{color:#fff;font-weight:600;font-size:16px;font-family:'Inter',sans-serif;}
+.pay .btc{width:24px;height:24px;border-radius:50%;background:#F7931A;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+.pay .lbl2{font-size:12px;font-weight:600;color:#333;}
+.pay.dark .lbl2{color:#eee;}
 
 .wrap{max-width:1180px;margin:0 auto;padding:26px 16px 60px;}
 
@@ -97,9 +173,9 @@ h2{
 .icard .rar{height:3px;}
 .icard .thumb{
   aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:10px;
-  background:radial-gradient(75% 75% at 50% 45%, #1e222a 0%, var(--surface) 100%);
+  background:radial-gradient(75% 75% at 50% 45%, var(--thumb1) 0%, var(--surface) 100%);
 }
-.icard .thumb img{max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(0,0,0,.5));}
+.icard .thumb img{max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(0,0,0,var(--shadow-strength)));}
 .icard .meta{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1;}
 .icard .iname{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;line-height:1.1;text-transform:uppercase;}
 .icard .isub{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;}
@@ -115,7 +191,7 @@ h2{
 .tile .tname{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;}
 .tile .tcount{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);}
 .tile .timg{height:90px;display:flex;align-items:center;justify-content:center;}
-.tile .timg img{max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5));}
+.tile .timg img{max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,var(--shadow-strength)));}
 
 .morebar{text-align:center;margin:22px 0 0;}
 .morebtn{
@@ -136,17 +212,17 @@ h2{
 .detail{display:grid;grid-template-columns:minmax(300px,1.15fr) 1fr;gap:26px;align-items:start;}
 @media(max-width:820px){.detail{grid-template-columns:1fr;}}
 .inspect{
-  background:radial-gradient(80% 80% at 50% 42%, #21262f 0%, var(--surface) 100%);
+  background:radial-gradient(80% 80% at 50% 42%, var(--thumb2) 0%, var(--surface) 100%);
   border:1px solid var(--border);position:relative;perspective:900px;overflow:hidden;
 }
 .inspect .stage{
   aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:28px;
   transform-style:preserve-3d;transition:transform .12s ease-out;will-change:transform;
 }
-.inspect img{max-height:100%;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,.65));pointer-events:none;transform:translateZ(40px);}
+.inspect img{max-height:100%;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,var(--shadow-strength-big)));pointer-events:none;transform:translateZ(40px);}
 .inspect .glare{
   position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .2s;
-  background:radial-gradient(400px 260px at var(--gx,50%) var(--gy,50%), rgba(255,235,190,.14) 0%, transparent 70%);
+  background:radial-gradient(400px 260px at var(--gx,50%) var(--gy,50%), rgba(160,225,255,.14) 0%, transparent 70%);
 }
 .inspect:hover .glare{opacity:1;}
 .inspect .hint{
@@ -158,7 +234,7 @@ h2{
   font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.04em;
   border:1px solid var(--border);padding:3px 8px;color:var(--muted);text-transform:uppercase;
 }
-.badge.rar{border-color:transparent;color:#0D0F12;font-weight:600;}
+.badge.rar{border-color:transparent;color:#fff;font-weight:600;}
 .badge.st{color:#CF6A32;border-color:#CF6A32;}
 .dsec{margin:0 0 18px;}
 .dsec .lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;}
@@ -224,7 +300,7 @@ h2{
 
 /* ---------- simulateur d'ouverture ---------- */
 .sim-head{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:0 0 16px;}
-.sim-head img{height:84px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.6));}
+.sim-head img{height:84px;filter:drop-shadow(0 8px 14px rgba(0,0,0,var(--shadow-strength-big)));}
 .sim-stats{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 16px;}
 .sim-stats .blk .lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;}
 .sim-stats .blk .v{font-family:'IBM Plex Mono',monospace;font-size:19px;font-weight:600;}
@@ -241,19 +317,19 @@ h2{
 .rtile .rbar{height:3px;width:100%;}
 .roul-marker{
   position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);z-index:2;
-  box-shadow:0 0 10px rgba(228,174,57,.8);
+  box-shadow:0 0 10px var(--gold);
 }
 .reveal{
   border:1px solid var(--border);background:var(--surface);padding:20px;display:flex;gap:20px;
   align-items:center;flex-wrap:wrap;margin:0 0 16px;
 }
-.reveal img{height:110px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.65));}
+.reveal img{height:110px;filter:drop-shadow(0 10px 18px rgba(0,0,0,var(--shadow-strength-big)));}
 .reveal .rv-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;}
 .reveal .rv-sub{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
 .reveal .rv-price{font-family:'IBM Plex Mono',monospace;font-size:22px;color:var(--gold);font-weight:600;}
 .bigbtn{
   font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;letter-spacing:.04em;
-  background:var(--gold);border:none;color:#0D0F12;padding:13px 34px;cursor:pointer;
+  background:var(--gold);border:none;color:var(--btn-text);padding:13px 34px;cursor:pointer;
 }
 .bigbtn:disabled{opacity:.45;cursor:not-allowed;}
 .bigbtn.ghost{background:transparent;border:1px solid var(--gold-dim);color:var(--gold);}
@@ -291,11 +367,14 @@ footer.site .inner{
       <a href="#/cat/Gants" data-r="cat:Gants">Gants</a>
       <a href="#/collections" data-r="collections">Collections</a>
       <a href="#/ouverture" data-r="ouverture">Ouvrir</a>
+      <a href="#/gratuit" data-r="gratuit" class="freetab">🎁 Gratuit</a>
       <a href="#/vendre" data-r="vendre">Vendre</a>
     </nav>
     <div class="header-search">
-      <input id="q" type="text" placeholder="Rechercher… (↵)">
+      <input id="q" type="text" placeholder="Rechercher… (↵)" autocomplete="off">
+      <div class="sugg" id="sugg"></div>
     </div>
+    <button class="theme-btn" id="themeBtn" title="Basculer clair/sombre">🌙</button>
     <a class="steam-btn" href="#/vendre" title="Connexion Steam — bientôt disponible"><span class="dot"></span>Connexion Steam</a>
   </div>
 </header>
@@ -404,25 +483,39 @@ function sparkline(history){
 const RARITY_ORDER = {"Consumer Grade":0,"Industrial Grade":1,"Mil-Spec Grade":2,"Restricted":3,"Classified":4,"Covert":5,"Contraband":6,"Extraordinary":5};
 function rarityRank(s){ return RARITY_ORDER[s.r] ?? 2; }
 
-/* ---------- graphique en bougies (OHLC journalier) ---------- */
-function candleChart(points, sourceLabel){
-  /* points: [{t: iso, p: prix}] -> bougies par jour */
+/* ---------- graphique en bougies (périodes 1J/1S/1M/1A/Max) ---------- */
+const CHART_RANGES = [["1J",1],["1S",7],["1M",30],["1A",365],["Max",Infinity]];
+function bucketKey(iso, range, spanDays){
+  if(range==='1J') return iso.slice(0,13);                        // 1 bougie / heure
+  if(range==='1S') return iso.slice(0,10) + 'T' + String(Math.floor(+iso.slice(11,13)/6)*6).padStart(2,'0'); // /6h
+  if(range==='1M') return iso.slice(0,10);                        // / jour
+  if(range==='1A') { const d=new Date(iso); const onejan=new Date(d.getFullYear(),0,1);
+    return d.getFullYear()+'-S'+String(Math.ceil((((d-onejan)/86400000)+onejan.getDay()+1)/7)).padStart(2,'0'); } // / semaine
+  return spanDays>400 ? iso.slice(0,7) : iso.slice(0,10);         // Max : /mois si long, sinon /jour
+}
+function candleChart(points, sourceLabel, range){
+  range = range || 'Max';
   if(!points || points.length < 2) return '';
-  const byDay = {};
-  points.forEach(pt=>{
-    const day = pt.t.slice(0,10);
-    (byDay[day] = byDay[day] || []).push(pt.p);
+  const days = CHART_RANGES.find(r=>r[0]===range)[1];
+  const cutoff = days===Infinity ? 0 : Date.now() - days*86400000;
+  const pts = points.filter(pt=>new Date(pt.t).getTime() >= cutoff);
+  if(pts.length < 2) return '';
+  const spanDays = (new Date(pts[pts.length-1].t) - new Date(pts[0].t))/86400000;
+  const byB = {};
+  pts.forEach(pt=>{
+    const k = bucketKey(pt.t, range, spanDays);
+    (byB[k] = byB[k] || []).push(pt.p);
   });
-  const days = Object.keys(byDay).sort();
-  const candles = days.map(d=>{
-    const ps = byDay[d];
+  const keys = Object.keys(byB).sort();
+  const candles = keys.map(d=>{
+    const ps = byB[d];
     return {d, o:ps[0], c:ps[ps.length-1], h:Math.max(...ps), l:Math.min(...ps)};
   });
   if(!candles.length) return '';
   const W=600, H=190, padL=8, padR=54, padT=10, padB=20;
   const lo = Math.min(...candles.map(c=>c.l)), hi = Math.max(...candles.map(c=>c.h));
-  const range = (hi-lo)||1;
-  const y = v => padT + (1-(v-lo)/range)*(H-padT-padB);
+  const vrange = (hi-lo)||1;
+  const y = v => padT + (1-(v-lo)/vrange)*(H-padT-padB);
   const n = candles.length;
   const slot = (W-padL-padR)/Math.max(n,10);
   const bw = Math.max(3, Math.min(16, slot*0.6));
@@ -436,16 +529,16 @@ function candleChart(points, sourceLabel){
     svg += `<rect x="${cx-bw/2}" y="${top}" width="${bw}" height="${Math.max(1.5,bot-top)}" fill="${col}"/>`;
   });
   const last = candles[candles.length-1].c;
-  svg += `<line x1="${padL}" x2="${W-padR}" y1="${y(last)}" y2="${y(last)}" stroke="#E4AE39" stroke-width="0.6" stroke-dasharray="3 3"/>`;
-  svg += `<text x="${W-padR+4}" y="${y(last)+3.5}" fill="#E4AE39" font-size="10" font-family="monospace">${fmtEUR(last)}</text>`;
-  svg += `<text x="${W-padR+4}" y="${y(hi)+8}" fill="#7A8290" font-size="9" font-family="monospace">${fmtEUR(hi)}</text>`;
-  svg += `<text x="${W-padR+4}" y="${y(lo)}" fill="#7A8290" font-size="9" font-family="monospace">${fmtEUR(lo)}</text>`;
+  svg += `<line x1="${padL}" x2="${W-padR}" y1="${y(last)}" y2="${y(last)}" stroke="var(--gold)" stroke-width="0.6" stroke-dasharray="3 3"/>`;
+  svg += `<text x="${W-padR+4}" y="${y(last)+3.5}" fill="var(--gold)" font-size="10" font-family="monospace">${fmtEUR(last)}</text>`;
+  svg += `<text x="${W-padR+4}" y="${y(hi)+8}" fill="var(--muted)" font-size="9" font-family="monospace">${fmtEUR(hi)}</text>`;
+  svg += `<text x="${W-padR+4}" y="${y(lo)}" fill="var(--muted)" font-size="9" font-family="monospace">${fmtEUR(lo)}</text>`;
   const first = candles[0], delta = last - first.o;
   const pct = first.o ? (delta/first.o*100) : 0;
   return `<div class="candle-wrap">
     <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">${svg}</svg>
     <div class="candle-meta">
-      <span>${candles.length} jour${candles.length>1?'s':''} · 1 bougie = 1 jour · source : ${sourceLabel}</span>
+      <span>${candles.length} bougie${candles.length>1?'s':''} (${range==='1J'?'1 h':range==='1S'?'6 h':range==='1A'?'1 sem.':'1 jour'}/bougie) · source : ${sourceLabel}</span>
       <span style="color:${delta>=0?'#5FB88F':'#E6544F'}">${delta>=0?'▲':'▼'} ${fmtEUR(Math.abs(delta))} (${pct>=0?'+':''}${pct.toFixed(1)}%)</span>
     </div>
   </div>`;
@@ -789,14 +882,26 @@ function viewItem(id){
     ${(()=>{
       const steamPts = (rec && rec.history && rec.history.length>=2) ? rec.history : null;
       const spPts = spSeries(s.n);
-      const chart = steamPts && steamPts.length >= spPts.length
-        ? candleChart(steamPts, 'Steam Market (item suivi)')
-        : candleChart(spPts, 'Skinport (Field-Tested)');
-      return chart
-        ? `<h2>Évolution du prix</h2>${chart}`
-        : `<h2>Évolution du prix</h2><p class="intro" style="font-size:12.5px">Le graphique en bougies apparaîtra
-           dès que l'historique aura accumulé au moins deux relevés pour cet item (le robot passe toutes les 6h) —
-           reviens d'ici un jour ou deux.</p>`;
+      const use = steamPts && steamPts.length >= spPts.length
+        ? {pts: steamPts, label: 'Steam Market (item suivi)'}
+        : {pts: spPts, label: 'Skinport (Field-Tested)'};
+      window._chart = use;
+      const bar = `<div class="rangebar">${CHART_RANGES.map(([r])=>
+        `<button class="rbtn ${r==='Max'?'active':''}" data-range="${r}">${r}</button>`).join('')}</div>`;
+      setTimeout(()=>{
+        document.querySelectorAll('.rbtn').forEach(b=>b.addEventListener('click', ()=>{
+          document.querySelectorAll('.rbtn').forEach(x=>x.classList.remove('active'));
+          b.classList.add('active');
+          const html = candleChart(window._chart.pts, window._chart.label, b.dataset.range);
+          document.getElementById('chartZone').innerHTML = html ||
+            '<p class="intro" style="font-size:12.5px">Pas encore assez d\'historique sur cette période — le robot enregistre les prix plusieurs fois par heure, reviens un peu plus tard.</p>';
+        }));
+      },0);
+      const chart = candleChart(use.pts, use.label, 'Max');
+      return `<h2>Évolution du prix</h2>${bar}<div id="chartZone">${chart ||
+        `<p class="intro" style="font-size:12.5px">Le graphique en bougies apparaîtra dès que l'historique aura
+         accumulé au moins deux relevés pour cet item — les prix sont maintenant relevés plusieurs fois par heure,
+         reviens d'ici quelques heures.</p>`}</div>`;
     })()}
     ${adSlot('ad-slot-bottom')}
     ${similar.length ? `<h2>Autres skins ${esc(s.w)}</h2>${pagedGrid(similar, skinCard)}` : ''}
@@ -952,15 +1057,154 @@ function viewOpenCase(caseName){
   `;
 }
 
-function runOpen(caseName, casePrice){
+function viewFreebies(){
+  const d = simDaily();
+  const byName = Object.fromEntries(CAT.skins.map(s=>[s.n,s]));
+  const cards = FREE_CASES.map(def=>{
+    const jp = byName[def.jackpot];
+    const jpPrice = jp ? (sp(`${def.jackpot} (Factory New)`) ?? sp(`${def.jackpot} (Field-Tested)`) ?? sp(def.jackpot)) : null;
+    return `<a class="icard freecard" href="#/gratuit/${def.id}">
+      <div class="rar" style="background:${esc(jp?jp.rc:'#38E1FF')}"></div>
+      <div class="thumb"><span class="jp">JACKPOT ${def.drops[0][1].toString().replace('.',',')} %</span>
+        <img loading="lazy" src="${esc(jp?jp.img:'')}" alt=""></div>
+      <div class="meta">
+        <div class="iname">${esc(def.title)}</div>
+        <div class="isub">${esc(def.tagline)}</div>
+        <div class="jackpot">JACKPOT : ${esc(def.jackpot)}${jpPrice?' · '+fmtEUR(jpPrice):''}</div>
+        <div class="iprice" style="color:var(--green)">GRATUIT — Ouvrir →</div>
+      </div>
+    </a>`;
+  }).join('');
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / Caisses gratuites</p>
+    <h1>🎁 Caisses gratuites</h1>
+    <div class="free-hero">
+      <p class="intro" style="margin:0">5 caisses exclusives, <b>100 % gratuites</b>, avec un jackpot de folie dans chacune —
+      jusqu'à l'<b>AWP Dragon Lore</b> et le <b>M4A4 Howl</b>. ${DAILY_FREE} ouvertures offertes par jour,
+      et tu peux en regagner en regardant une pub. Simulateur : aucun objet réel n'est gagné, mais les prix affichés sont les vrais.</p>
+    </div>
+    <p class="updated">Ouvertures restantes aujourd'hui : <b>${d.left}</b></p>
+    <div class="grid big">${cards}</div>
+    ${adSlot('ad-slot-bottom')}
+  `;
+}
+
+function viewOpenFree(id){
+  const def = FREE_CASES.find(x=>x.id===id);
+  if(!def) return `<p class="empty">Caisse introuvable.</p>`;
+  const byName = Object.fromEntries(CAT.skins.map(s=>[s.n,s]));
+  const jp = byName[def.jackpot];
+  const d = simDaily();
+  const stats = simStats();
+  const profit = stats.value - stats.spent;
+  const drops = resolveFreeCase(def);
+  const named = drops.filter(x=>def.drops.some(([n])=>n===x.skin.n));
+  const fillerPct = 100 - named.reduce((a,x)=>a+x.pct,0);
+  const oddsHtml = named.map(x=>
+    `<b>${x.pct.toFixed(2).replace('.',',')} %</b> ${esc(x.skin.n)}`).join(' · ')
+    + ` · <b>${fillerPct.toFixed(1).replace('.',',')} %</b> skins communs`;
+
+  setTimeout(()=>{
+    const btn = document.getElementById('openBtn');
+    const adBtn = document.getElementById('adBtn');
+    if(btn) btn.addEventListener('click', ()=>runOpen(def.title, 0, def));
+    if(adBtn) adBtn.addEventListener('click', ()=>adGate());
+  },0);
+
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / <a href="#/gratuit">Caisses gratuites</a> / ${esc(def.title)}</p>
+    <div class="sim-head">
+      ${jp?`<img src="${esc(jp.img)}" alt="">`:''}
+      <div>
+        <h1 style="margin:0 0 4px">${esc(def.title)}</h1>
+        <div class="odds">Ouverture <b style="color:var(--green)">GRATUITE</b> · Jackpot : <b>${esc(def.jackpot)}</b> à ${def.drops[0][1].toString().replace('.',',')} %</div>
+      </div>
+    </div>
+    <div class="sim-stats">
+      <div class="blk"><div class="lbl">Ouvertures restantes</div><div class="v" id="leftCnt">${d.left}</div></div>
+      <div class="blk"><div class="lbl">Total ouvert (toi)</div><div class="v" id="statOpens">${stats.opens}</div></div>
+      <div class="blk"><div class="lbl">Dépensé (simulé)</div><div class="v" id="statSpent">${fmtEUR(stats.spent)}</div></div>
+      <div class="blk"><div class="lbl">Valeur obtenue</div><div class="v" id="statValue">${fmtEUR(stats.value)}</div></div>
+      <div class="blk"><div class="lbl">Bilan</div><div class="v ${profit>=0?'pos':'neg'}" id="statProfit">${profit>=0?'+':''}${fmtEUR(profit)}</div></div>
+    </div>
+    <div class="roul-wrap" id="roulWrap" style="display:none">
+      <div class="roul-marker"></div>
+      <div class="roul" id="roul"></div>
+    </div>
+    <div id="revealZone"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin:0 0 14px" id="btnZone">
+      <button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>Ouvrir — Gratuit</button>
+      ${d.left<=0?`<button class="bigbtn ghost" id="adBtn">▶ Regarder une pub (${AD_SECONDS}s) = +${AD_BONUS} ouvertures</button>`:''}
+    </div>
+    <div class="odds" style="margin-bottom:14px">Drops : ${oddsHtml} · StatTrak™ 10 % · Simulateur — aucun objet réel n'est gagné.</div>
+    ${adSlot('ad-slot-bottom')}
+  `;
+}
+
+/* ---------- caisses gratuites (pools personnalisés, jackpot à 0,01 %) ---------- */
+const FREE_CASES = [
+  {id:'dragon', title:'Caisse du Dragon', tagline:'Le Graal des snipers',
+   jackpot:'AWP | Dragon Lore',
+   drops:[['AWP | Dragon Lore',0.01],['AWP | Gungnir',0.05],['AWP | Lightning Strike',0.5],
+          ['AWP | Asiimov',1.5],['AWP | Wildfire',2.5],['AWP | Hyper Beast',3.5],
+          ['AWP | Neo-Noir',4],['AWP | Fever Dream',8],['AWP | Elite Build',20]],
+   fillerCat:'Fusils'},
+  {id:'papillon', title:'Caisse Papillon', tagline:'Le couteau le plus stylé du jeu',
+   jackpot:'★ Butterfly Knife | Fade',
+   drops:[['★ Butterfly Knife | Fade',0.01],['★ Butterfly Knife | Slaughter',0.05],
+          ['★ Butterfly Knife',0.2],['★ Bayonet',0.8],['★ Gut Knife',2]],
+   fillerCat:'Pistolets'},
+  {id:'gants', title:'Caisse des Gants', tagline:'Pandora, Vice & co.',
+   jackpot:"★ Sport Gloves | Pandora's Box",
+   drops:[["★ Sport Gloves | Pandora's Box",0.01],['★ Sport Gloves | Vice',0.04],
+          ['★ Specialist Gloves | Crimson Kimono',0.1],['★ Moto Gloves | Spearmint',0.15],
+          ['★ Hand Wraps | Cobalt Skulls',0.5]],
+   fillerCat:'Mitraillettes'},
+  {id:'covert', title:'Caisse Covert', tagline:'Les rouges légendaires',
+   jackpot:'M4A4 | Howl',
+   drops:[['M4A4 | Howl',0.01],['AK-47 | Fire Serpent',0.1],['AK-47 | Vulcan',0.5],
+          ['M4A1-S | Printstream',1],['Desert Eagle | Printstream',2],['AK-47 | Asiimov',3]],
+   fillerCat:'Fusils'},
+  {id:'depart', title:'Caisse de Départ', tagline:'Pour se chauffer — gros taux de drop',
+   jackpot:'AK-47 | Redline',
+   drops:[['AK-47 | Redline',5],['AWP | Redline',3],['Desert Eagle | Blaze',1],
+          ['USP-S | Cortex',10],['Glock-18 | Water Elemental',12]],
+   fillerCat:'Pistolets'},
+];
+function resolveFreeCase(def){
+  const byName = window._byName || (window._byName = Object.fromEntries(CAT.skins.map(s=>[s.n,s])));
+  const drops = def.drops.map(([n,pct])=>({skin: byName[n], pct})).filter(d=>d.skin);
+  const usedPct = drops.reduce((a,d)=>a+d.pct,0);
+  /* remplissage : skins pas chers de la catégorie, part restante répartie */
+  const fillers = CAT.skins
+    .filter(s=>s.c===def.fillerCat && (s.r==='Consumer Grade'||s.r==='Industrial Grade'||s.r==='Mil-Spec Grade'))
+    .slice(0,12);
+  const per = (100-usedPct)/Math.max(fillers.length,1);
+  fillers.forEach(s=>drops.push({skin:s, pct:per}));
+  return drops;
+}
+function drawFromFree(def){
+  const drops = resolveFreeCase(def);
+  let r = Math.random()*100;
+  let pick = drops[drops.length-1].skin;
+  for(const d of drops){ if(r < d.pct){ pick = d.skin; break; } r -= d.pct; }
+  let r2 = Math.random(), wear = 'Field-Tested';
+  for(const [w,p] of WEAR_ODDS){ if(r2 < p){ wear = w; break; } r2 -= p; }
+  const st = pick.st && Math.random() < 0.10;
+  const price = sp(`${st?'StatTrak™ ':''}${pick.n} (${wear})`) ?? sp(`${pick.n} (${wear})`) ?? sp(`${pick.n} (Field-Tested)`) ?? sp(pick.n) ?? null;
+  return {item:pick, wear, st, price, special:(pick.c==='Couteaux'||pick.c==='Gants')};
+}
+
+function runOpen(caseName, casePrice, freeDef){
   const d = simDaily();
   if(d.left <= 0){ render(); return; }
   const btn = document.getElementById('openBtn');
   if(btn) btn.disabled = true;
 
-  const result = drawFromCase(caseName);
-  const pools = casePools(caseName);
-  const allItems = Object.values(pools).flat();
+  const result = freeDef ? drawFromFree(freeDef) : drawFromCase(caseName);
+  const allItems = freeDef
+    ? resolveFreeCase(freeDef).map(x=>x.skin)
+    : Object.values(casePools(caseName)).flat();
 
   /* construit la bande de roulette : 60 tuiles, la gagnante en position 52 */
   const N = 60, WIN = 52, TILE = 130;
@@ -992,7 +1236,8 @@ function runOpen(caseName, casePrice){
     /* comptabilise */
     const dd = simDaily(); dd.left -= 1; simDailySave(dd);
     const st = simStats();
-    st.opens += 1; st.spent += casePrice + KEY_PRICE; st.value += (result.price||0);
+    const cost = freeDef ? 0 : casePrice + KEY_PRICE;
+    st.opens += 1; st.spent += cost; st.value += (result.price||0);
     simStatsSave(st);
     const pulls = simPulls();
     pulls.push({n: result.item.n, img: result.item.img, rc: result.item.rc});
@@ -1005,16 +1250,16 @@ function runOpen(caseName, casePrice){
         <div class="rv-name" style="color:${esc(result.item.rc)}">${result.special?'✦ ':''}${esc(result.item.n)}</div>
         <div class="rv-sub">${result.st?'StatTrak™ · ':''}${esc(result.wear)} · ${esc(result.item.r)}</div>
         <div class="rv-price">${result.price!==null?fmtEUR(result.price):'prix inconnu'}</div>
-        <div class="rv-sub">coût de l'ouverture : ${fmtEUR(casePrice+KEY_PRICE)} → ${result.price!==null?(result.price>=casePrice+KEY_PRICE?'<span style="color:var(--green)">rentable ✔</span>':'<span style="color:var(--red)">à perte ✘</span>'):''}</div>
+        <div class="rv-sub">${freeDef ? 'ouverture gratuite 🎁' : `coût de l'ouverture : ${fmtEUR(casePrice+KEY_PRICE)} → ${result.price!==null?(result.price>=casePrice+KEY_PRICE?'<span style="color:var(--green)">rentable ✔</span>':'<span style="color:var(--red)">à perte ✘</span>'):''}`}</div>
         <div style="margin-top:8px"><a class="chip" href="#/item/${encodeURIComponent(result.item.i)}">Voir la fiche →</a></div>
       </div>
     </div>`;
-    updateSimHud(caseName, casePrice);
+    updateSimHud(caseName, casePrice, freeDef);
   }, 5400);
 }
 
 /* met à jour les compteurs sans re-rendre la page (préserve la roulette + reveal) */
-function updateSimHud(caseName, casePrice){
+function updateSimHud(caseName, casePrice, freeDef){
   const d = simDaily();
   const st = simStats();
   const profit = st.value - st.spent;
@@ -1031,7 +1276,7 @@ function updateSimHud(caseName, casePrice){
       ${d.left<=0?`<button class="bigbtn ghost" id="adBtn">▶ Regarder une pub (${AD_SECONDS}s) = +${AD_BONUS} ouvertures</button>`:''}`;
     const btn = document.getElementById('openBtn');
     const adBtn = document.getElementById('adBtn');
-    if(btn) btn.addEventListener('click', ()=>runOpen(caseName, casePrice));
+    if(btn) btn.addEventListener('click', ()=>runOpen(caseName, casePrice, freeDef));
     if(adBtn) adBtn.addEventListener('click', ()=>adGate());
   }
 }
@@ -1075,6 +1320,16 @@ function viewVendre(){
         <span class="dot"></span>Connexion Steam — bientôt
       </a>
     </div>
+    <h2>Moyens de paiement prévus</h2>
+    <div class="payrow">
+      <div class="pay"><span class="visa">VISA</span></div>
+      <div class="pay"><span class="mc"><i></i><i></i></span><span class="lbl2">Mastercard</span></div>
+      <div class="pay dark"><span class="ap">&#63743; Pay</span></div>
+      <div class="pay"><span class="btc">&#8383;</span><span class="lbl2">Bitcoin</span></div>
+      <div class="pay"><span class="lbl2" style="color:#3C3C3D">&#9670; Ethereum</span></div>
+      <div class="pay"><span class="lbl2" style="color:#10069F">SEPA · Virement</span></div>
+    </div>
+    <p class="intro" style="font-size:11.5px;margin-bottom:18px">Visuels indicatifs — les moyens de paiement seront activés au lancement du dépôt-vente, dans le respect des conditions de chaque prestataire.</p>
     <h2>Comment ça marchera</h2>
     <div class="sell-steps">
       <div class="sstep"><div class="num">1</div><div class="stitle">Connexion Steam</div>
@@ -1144,6 +1399,8 @@ function render(route, extra){
   else if(head==='collection'){ html = viewCollection(arg); }
   else if(head==='item'){ html = viewItem(arg); }
   else if(head==='ouverture'){ html = viewOpening(); navKey = 'ouverture'; }
+  else if(head==='gratuit' && !arg){ html = viewFreebies(); navKey = 'gratuit'; }
+  else if(head==='gratuit'){ html = viewOpenFree(arg); navKey = 'gratuit'; }
   else if(head==='ouvrir'){ html = viewOpenCase(arg); navKey = 'ouverture'; }
   else if(head==='vendre'){ html = viewVendre(); navKey = 'vendre'; }
   else if(head==='confidentialite'){ html = viewPrivacy(); }
@@ -1158,8 +1415,62 @@ function render(route, extra){
 
 window.addEventListener('hashchange', ()=>render());
 
-document.getElementById('q').addEventListener('keydown', e=>{
+/* ---------- thème clair/sombre ---------- */
+(function(){
+  const saved = localStorage.getItem('cs2t_theme') || 'dark';
+  document.documentElement.dataset.theme = saved;
+  const btn = document.getElementById('themeBtn');
+  const icon = ()=>{ btn.textContent = document.documentElement.dataset.theme === 'dark' ? '🌙' : '☀️'; };
+  icon();
+  btn.addEventListener('click', ()=>{
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('cs2t_theme', next);
+    icon();
+  });
+})();
+
+/* ---------- autocomplete de recherche (dès la 1re lettre) ---------- */
+const suggBox = document.getElementById('sugg');
+function renderSugg(q){
+  if(!CAT || !q){ suggBox.classList.remove('open'); suggBox.innerHTML=''; return; }
+  const needle = q.toLowerCase();
+  const starts = [], contains = [];
+  for(const s of CAT.skins){
+    const ln = s.n.toLowerCase();
+    if(ln.startsWith(needle) || ln.replace('★ ','').startsWith(needle)) starts.push(s);
+    else if(ln.includes(needle)) contains.push(s);
+    if(starts.length >= 12) break;
+  }
+  const items = starts.concat(contains).slice(0,12);
+  const cases = CAT.cases.filter(c=>c.n.toLowerCase().includes(needle)).slice(0,3);
+  if(!items.length && !cases.length){ suggBox.classList.remove('open'); suggBox.innerHTML=''; return; }
+  suggBox.innerHTML =
+    cases.map(c=>`<a class="sg" href="#/caisses">
+      <img loading="lazy" src="${esc(c.img)}"><div class="sgt"><div class="sgn">${esc(c.n)}</div>
+      <div class="sgs">Caisse</div></div>
+      <div class="sgp">${(()=>{const p=sp(c.n)??bestPrice(PRICES[c.n]);return p!=null?fmtEUR(p):'';})()}</div></a>`).join('')
+    + items.map(s=>{
+      const cp = cardPrice(s);
+      return `<a class="sg" href="#/item/${encodeURIComponent(s.i)}">
+        <img loading="lazy" src="${esc(s.img)}"><div class="sgt"><div class="sgn">${esc(s.n)}</div>
+        <div class="sgs" style="color:${esc(s.rc)}">${esc(s.r)} · ${esc(s.w)}</div></div>
+        <div class="sgp">${cp?fmtEUR(cp.p):''}</div></a>`;
+    }).join('')
+    + `<a class="more" href="#/recherche/${encodeURIComponent(q)}">Tous les résultats pour « ${esc(q)} » →</a>`;
+  suggBox.classList.add('open');
+}
+const qInput = document.getElementById('q');
+qInput.addEventListener('input', e=>renderSugg(e.target.value.trim()));
+qInput.addEventListener('focus', e=>renderSugg(e.target.value.trim()));
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.header-search')) { suggBox.classList.remove('open'); }
+});
+suggBox.addEventListener('click', ()=>{ suggBox.classList.remove('open'); qInput.value=''; });
+qInput.addEventListener('keydown', e=>{
+  if(e.key==='Escape'){ suggBox.classList.remove('open'); }
   if(e.key==='Enter' && e.target.value.trim()){
+    suggBox.classList.remove('open');
     location.hash = '#/recherche/' + encodeURIComponent(e.target.value.trim());
   }
 });

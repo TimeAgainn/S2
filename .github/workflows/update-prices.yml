@@ -16,6 +16,10 @@ on:
 permissions:
   contents: write   # nécessaire pour que le workflow puisse commit prices.json
 
+concurrency:
+  group: price-commits
+  cancel-in-progress: false
+
 jobs:
   update-prices:
     runs-on: ubuntu-latest

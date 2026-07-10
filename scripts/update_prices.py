@@ -390,11 +390,26 @@ def update_skinport_history(skinport_data: dict):
         serie.append(price)
         hist["series"][name] = serie
 
-    # tronque au maximum de points
-    if len(hist["dates"]) > SP_HISTORY_MAX_POINTS:
-        cut = len(hist["dates"]) - SP_HISTORY_MAX_POINTS
-        hist["dates"] = hist["dates"][cut:]
-        hist["series"] = {k: v[cut:] for k, v in hist["series"].items()}
+    # compression : points fins sur les 7 derniers jours, 1 point/jour au-delà
+    # (permet des runs très fréquents sans faire exploser la taille du fichier)
+    cutoff = (datetime.now(timezone.utc).timestamp()) - 7 * 86400
+    keep_idx = []
+    last_day_idx = {}
+    for i, d in enumerate(hist["dates"]):
+        try:
+            ts = datetime.fromisoformat(d).timestamp()
+        except ValueError:
+            keep_idx.append(i)
+            continue
+        if ts >= cutoff:
+            keep_idx.append(i)
+        else:
+            last_day_idx[d[:10]] = i  # dernier point de chaque jour ancien
+    keep = sorted(set(keep_idx) | set(last_day_idx.values()))
+    if len(keep) < len(hist["dates"]):
+        hist["dates"] = [hist["dates"][i] for i in keep]
+        hist["series"] = {k: [v[i] if i < len(v) else None for i in keep]
+                          for k, v in hist["series"].items()}
 
     with open(SP_HISTORY_FILE, "w", encoding="utf-8") as f:
         json.dump(hist, f, separators=(",", ":"), ensure_ascii=False)

@@ -1,0 +1,45 @@
+name: Update Skinport prices (fast)
+
+# Rafraîchit les prix Skinport (tous les items, 1 appel API) toutes les
+# 15 minutes. L'API Skinport est elle-même cachée 5 min côté serveur, et
+# les crons GitHub Actions peuvent glisser de quelques minutes : dans les
+# faits ça donne des prix frais toutes les ~15-25 min.
+# Les prix Steam détaillés restent gérés par update-prices.yml (cron 6h).
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: price-commits
+  cancel-in-progress: false
+
+jobs:
+  update-skinport:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Récupérer les prix Skinport
+        run: python3 scripts/update_skinport_fast.py
+
+      - name: Commit et push si les fichiers ont changé
+        run: |
+          git config user.name "cs2-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add skinport_all.json skinport_history.json
+          git diff --cached --quiet || git commit -m "Prix Skinport ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git pull --rebase origin main
+          git push
