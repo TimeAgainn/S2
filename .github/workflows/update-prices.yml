@@ -1,0 +1,44 @@
+name: Update CS2 prices
+
+# Se déclenche automatiquement toutes les 4h, + à la main depuis l'onglet Actions,
+# + à chaque push sur main (pratique pour tester juste après avoir modifié le script).
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_prices.py"
+
+permissions:
+  contents: write   # nécessaire pour que le workflow puisse commit prices.json
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Récupérer les prix et écrire prices.json
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/update_prices.py
+
+      - name: Commit et push si le fichier a changé
+        run: |
+          git config user.name "cs2-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add prices.json
+          git diff --cached --quiet || git commit -m "Mise à jour des prix ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git push
