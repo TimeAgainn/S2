@@ -47,6 +47,13 @@ nav.main a.active{color:var(--gold);}
   font-family:'Inter',sans-serif;font-size:12.5px;padding:8px 12px;width:210px;
 }
 .header-search input:focus{outline:none;border-color:var(--gold-dim);}
+.steam-btn{
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;
+  text-decoration:none;white-space:nowrap;border:1px solid #2a475e;background:#1b2838;color:#c7d5e0;
+  padding:8px 13px;display:flex;align-items:center;gap:7px;
+}
+.steam-btn:hover{border-color:#66c0f4;color:#fff;}
+.steam-btn .dot{width:7px;height:7px;border-radius:50%;background:#66c0f4;display:inline-block;}
 
 .wrap{max-width:1180px;margin:0 auto;padding:26px 16px 60px;}
 
@@ -177,6 +184,39 @@ h2{
 .chip:hover{color:var(--gold);border-color:var(--gold-dim);}
 .spark{width:100%;height:44px;display:block;margin:6px 0 2px;}
 
+/* ---------- tableau comparateur ---------- */
+.cmp{width:100%;border-collapse:collapse;font-size:12.5px;}
+.cmp th{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.06em;text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);
+}
+.cmp td{padding:8px 10px;border-bottom:1px solid var(--border);font-family:'IBM Plex Mono',monospace;}
+.cmp td a{color:var(--gold);text-decoration:none;}
+.cmp td a:hover{text-decoration:underline;}
+.cmp .best{color:var(--green);font-weight:600;}
+.cmp td.best a{color:var(--green);}
+.cmp .wear{color:var(--muted);font-family:'Inter',sans-serif;}
+.cmp .stlbl{color:#CF6A32;}
+.cmp-wrap{overflow-x:auto;}
+
+/* ---------- page Vendre ---------- */
+.sell-hero{
+  background:var(--surface);border:1px solid var(--border);padding:26px;margin:0 0 18px;
+}
+.sell-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:18px 0;}
+.sstep{background:var(--surface);border:1px solid var(--border);padding:16px;}
+.sstep .num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;color:var(--gold);
+}
+.sstep .stitle{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;text-transform:uppercase;margin:2px 0 6px;}
+.sstep p{color:var(--muted);font-size:12.5px;line-height:1.55;margin:0;}
+.soon{
+  display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);padding:3px 8px;margin-left:8px;vertical-align:middle;
+}
+.legal p{color:var(--muted);font-size:13px;line-height:1.7;max-width:760px;}
+.legal h2{margin-top:26px;}
+
 footer.site{
   border-top:1px solid var(--border);margin-top:30px;
 }
@@ -200,10 +240,12 @@ footer.site .inner{
       <a href="#/cat/Couteaux" data-r="cat:Couteaux">Couteaux</a>
       <a href="#/cat/Gants" data-r="cat:Gants">Gants</a>
       <a href="#/collections" data-r="collections">Collections</a>
+      <a href="#/vendre" data-r="vendre">Vendre</a>
     </nav>
     <div class="header-search">
       <input id="q" type="text" placeholder="Rechercher… (↵)">
     </div>
+    <a class="steam-btn" href="#/vendre" title="Connexion Steam — bientôt disponible"><span class="dot"></span>Connexion Steam</a>
   </div>
 </header>
 
@@ -216,6 +258,7 @@ footer.site .inner{
     Prix indicatifs, à titre informatif — pas un conseil d'investissement. Sources : API publique Steam
     Community Market et API officielle Skinport (prix), base communautaire CSGO-API (catalogue &amp; images —
     images © Valve, servies par le CDN Steam). Ce site n'est pas affilié à Valve Corporation.
+    · <a href="#/confidentialite" style="color:var(--muted)">Politique de confidentialité</a>
   </div>
 </footer>
 
@@ -235,7 +278,9 @@ footer.site .inner{
 
 const PAGE_SIZE = 60;
 let CAT = null;          // catalog.json
-let PRICES = {};         // name -> record de prices.json
+let PRICES = {};         // name -> record de prices.json (suivi Steam détaillé)
+let SP = {};             // market_hash_name -> prix Skinport (toutes variantes)
+let SP_AT = null;
 let GENERATED_AT = null;
 
 const app = document.getElementById('app');
@@ -262,6 +307,30 @@ function priceOf(skinOrName){
 function bestPrice(rec){
   if(!rec) return null;
   return rec.steam_price ?? rec.skinport_price ?? null;
+}
+/* prix Skinport d'une variante exacte ("AK-47 | Redline (Field-Tested)") */
+function sp(name){ const v = SP[name]; return (v===undefined||v===null) ? null : v; }
+/* meilleur prix affichable pour une carte : suivi Steam (FT) > Skinport FT > Skinport vanilla */
+function cardPrice(s){
+  const rec = priceOf(s);
+  const tracked = bestPrice(rec);
+  if(tracked !== null && tracked !== undefined) return {p:tracked, src:'suivi'};
+  const ft = sp(`${s.n} (Field-Tested)`);
+  if(ft !== null) return {p:ft, src:'Skinport'};
+  const vanilla = sp(s.n);
+  if(vanilla !== null) return {p:vanilla, src:'Skinport'};
+  const fn = sp(`${s.n} (Factory New)`);
+  if(fn !== null) return {p:fn, src:'Skinport'};
+  return null;
+}
+function skinportUrl(name){
+  return "https://skinport.com/market?search=" + encodeURIComponent(name.replace(/[|()★™]/g,' ').replace(/\s+/g,' ').trim());
+}
+function csfloatUrl(name){
+  return "https://csfloat.com/search?market_hash_name=" + encodeURIComponent(name);
+}
+function dmarketUrl(name){
+  return "https://dmarket.com/ingame-items/item-list/csgo-skins?title=" + encodeURIComponent(name);
 }
 function sparkline(history){
   if(!history || history.length < 2) return '';
@@ -290,11 +359,10 @@ function adSlot(id){
 
 /* ---------- cartes ---------- */
 function skinCard(s){
-  const rec = priceOf(s);
-  const p = bestPrice(rec);
-  const priceHtml = rec
-    ? `<div class="iprice">${fmtEUR(p)}<span style="color:var(--muted);font-size:10px;"> · FT</span></div>`
-    : `<div class="iprice na">prix non suivi</div>`;
+  const cp = cardPrice(s);
+  const priceHtml = cp
+    ? `<div class="iprice">${fmtEUR(cp.p)}<span style="color:var(--muted);font-size:10px;"> · ${cp.src==='suivi'?'FT':'dès'}</span></div>`
+    : `<div class="iprice na">prix : voir fiche</div>`;
   return `<a class="icard" href="#/item/${encodeURIComponent(s.i)}">
     <div class="rar" style="background:${esc(s.rc)}"></div>
     <div class="thumb"><img loading="lazy" src="${esc(s.img)}" alt="${esc(s.n)}"></div>
@@ -307,8 +375,8 @@ function skinCard(s){
 }
 function caseCard(c){
   const rec = PRICES[c.n];
-  const p = bestPrice(rec);
-  const priceHtml = rec
+  const p = bestPrice(rec) ?? sp(c.n);
+  const priceHtml = (p !== null && p !== undefined)
     ? `<div class="iprice">${fmtEUR(p)}</div>`
     : `<div class="iprice na">prix non suivi</div>`;
   return `<a class="icard" href="${steamUrl(c.n)}" target="_blank" rel="noopener">
@@ -480,16 +548,55 @@ function viewCollection(name){
 }
 
 const WEARS = ["Factory New","Minimal Wear","Field-Tested","Well-Worn","Battle-Scarred"];
+
+/* tableau de comparaison par usure : Skinport (prix bulk) vs Steam (suivi ou lien) */
+function cmpTable(s, rec){
+  const rows = [];
+  const variants = [{label:'', prefix:''}];
+  if(s.st) variants.push({label:'StatTrak™', prefix:'StatTrak™ '});
+  let hasAny = false;
+  for(const v of variants){
+    for(const w of WEARS){
+      const full = `${v.prefix}${s.n} (${w})`;
+      const spP = sp(full);
+      const steamTracked = (!v.prefix && w==='Field-Tested' && rec) ? rec.steam_price : null;
+      if(spP !== null || steamTracked !== null) hasAny = true;
+      rows.push({v, w, full, spP, steamTracked});
+    }
+  }
+  /* vanilla (couteaux sans skin) : nom sans suffixe d'usure */
+  const vanillaP = sp(s.n);
+  if(vanillaP !== null){
+    hasAny = true;
+    rows.unshift({v:{label:'',prefix:''}, w:'Vanilla', full:s.n, spP:vanillaP, steamTracked:null});
+  }
+  if(!hasAny){
+    return `<p class="intro" style="font-size:12.5px">Les prix par usure apparaîtront après le prochain
+    passage du robot de prix (toutes les 6h). En attendant, utilise les liens marchés ci-dessous.</p>`;
+  }
+  const tr = rows.filter(r=>r.spP!==null || r.steamTracked!==null).map(r=>{
+    const best = Math.min(...[r.spP, r.steamTracked].filter(x=>x!==null&&x!==undefined));
+    const cell = (p, url) => p===null||p===undefined
+      ? `<td><a href="${url}" target="_blank" rel="noopener">voir ↗</a></td>`
+      : `<td class="${p===best?'best':''}"><a href="${url}" target="_blank" rel="noopener">${fmtEUR(p)}</a></td>`;
+    return `<tr>
+      <td class="wear">${r.v.label?`<span class="stlbl">${r.v.label}</span> `:''}${r.w}</td>
+      ${cell(r.spP, skinportUrl(r.full))}
+      ${cell(r.steamTracked, steamUrl(r.full))}
+    </tr>`;
+  }).join('');
+  return `<div class="cmp-wrap"><table class="cmp">
+    <thead><tr><th>Usure</th><th>Skinport</th><th>Steam Market</th></tr></thead>
+    <tbody>${tr}</tbody>
+  </table></div>
+  <div class="lbl" style="margin-top:6px">${SP_AT ? 'Prix Skinport relevés le ' + fmtDate(SP_AT) + ' · ' : ''}le prix le plus bas est en vert · « voir ↗ » = prix en direct sur le site marchand</div>`;
+}
+
 function viewItem(id){
   const s = CAT.skins.find(x=>x.i===id);
   if(!s) return `<p class="empty">Item introuvable.</p>`;
   const rec = priceOf(s);
   const similar = CAT.skins.filter(x=>x.w===s.w && x.i!==s.i).sort((a,b)=>rarityRank(b)-rarityRank(a)).slice(0,8);
-
-  const wearLinks = WEARS.map(w=>{
-    const full = `${s.n} (${w})`;
-    return `<a class="chip" href="${steamUrl(full)}" target="_blank" rel="noopener">${w}</a>`;
-  }).join('');
 
   const floatHtml = (s.f0!==null && s.f1!==null && s.f0!==undefined && s.f1!==undefined) ? `
     <div class="dsec">
@@ -554,19 +661,75 @@ function viewItem(id){
         </div>
         ${priceHtml}
         ${floatHtml}
+        <div class="dsec">
+          <div class="lbl">Comparaison des prix par usure</div>
+          ${cmpTable(s, rec)}
+        </div>
         ${colChips ? `<div class="dsec"><div class="lbl">Collection</div><div class="chips">${colChips}</div></div>` : ''}
         ${crateChips ? `<div class="dsec"><div class="lbl">Caisses</div><div class="chips">${crateChips}</div></div>` : ''}
         <div class="dsec">
-          <div class="lbl">Steam Market par usure</div>
-          <div class="chips">${wearLinks}</div>
-        </div>
-        <div class="linkbtns">
-          <a class="lbtn" href="${steamUrl(s.n + ' (Field-Tested)')}" target="_blank" rel="noopener">Voir sur Steam Market →</a>
+          <div class="lbl">Voir sur les marchés</div>
+          <div class="linkbtns">
+            <a class="lbtn" href="${steamUrl(s.n + ' (Field-Tested)')}" target="_blank" rel="noopener">Steam Market →</a>
+            <a class="lbtn sec" href="${skinportUrl(s.n)}" target="_blank" rel="noopener">Skinport →</a>
+            <a class="lbtn sec" href="${csfloatUrl(s.n + ' (Field-Tested)')}" target="_blank" rel="noopener">CSFloat →</a>
+            <a class="lbtn sec" href="${dmarketUrl(s.n)}" target="_blank" rel="noopener">DMarket →</a>
+          </div>
         </div>
       </div>
     </div>
     ${adSlot('ad-slot-bottom')}
     ${similar.length ? `<h2>Autres skins ${esc(s.w)}</h2>${pagedGrid(similar, skinCard)}` : ''}
+  `;
+}
+
+function viewVendre(){
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / Vendre</p>
+    <h1>Vendre tes skins <span class="soon">Bientôt disponible</span></h1>
+    <div class="sell-hero">
+      <p class="intro" style="margin-bottom:12px">Le dépôt-vente arrive : tu connecteras ton compte Steam, tu choisiras
+      les skins de ton inventaire à mettre en vente, et tu seras payé en euros dès qu'un acheteur se présente.
+      Cette fonctionnalité nécessite une infrastructure sécurisée (connexion Steam, bots d'échange, paiements) —
+      elle est en préparation et ouvrira dans une version future du site.</p>
+      <a class="steam-btn" style="display:inline-flex;opacity:.55;cursor:not-allowed" onclick="return false" href="#">
+        <span class="dot"></span>Connexion Steam — bientôt
+      </a>
+    </div>
+    <h2>Comment ça marchera</h2>
+    <div class="sell-steps">
+      <div class="sstep"><div class="num">1</div><div class="stitle">Connexion Steam</div>
+        <p>Connexion sécurisée via Steam (OpenID officiel) — on ne voit jamais ton mot de passe, uniquement ton inventaire public.</p></div>
+      <div class="sstep"><div class="num">2</div><div class="stitle">Dépôt des skins</div>
+        <p>Tu choisis les skins à vendre et le prix (avec suggestion basée sur les prix du marché affichés sur ce site).</p></div>
+      <div class="sstep"><div class="num">3</div><div class="stitle">Vente & échange</div>
+        <p>Quand un acheteur paie, un bot d'échange sécurisé te fait une offre Steam pour transférer le skin.</p></div>
+      <div class="sstep"><div class="num">4</div><div class="stitle">Paiement en euros</div>
+        <p>Tu reçois tes euros (virement SEPA — d'autres moyens de paiement sont à l'étude pour la suite).</p></div>
+    </div>
+    <p class="intro" style="font-size:12.5px">En attendant, tu peux déjà comparer les prix de tes skins sur les fiches du site
+    (Skinport vs Steam) et vendre directement sur les plateformes existantes via les liens de chaque fiche.</p>
+    ${adSlot('ad-slot-bottom')}
+  `;
+}
+
+function viewPrivacy(){
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / Confidentialité</p>
+    <h1>Politique de confidentialité</h1>
+    <div class="legal">
+      <p><b>Ce que ce site collecte :</b> rien directement. CS2 Tracker est un site statique, sans compte,
+      sans formulaire et sans base de données côté serveur. Aucune donnée personnelle n'est demandée ni stockée par nos soins.</p>
+      <p><b>Services tiers :</b> les images des items sont servies par le CDN de Steam (Valve). Les polices de caractères
+      sont servies par Google Fonts. Si des publicités sont affichées (Google AdSense), Google peut déposer des cookies et
+      collecter des données de navigation à des fins de personnalisation des annonces, conformément à sa propre politique
+      de confidentialité ; tu peux configurer tes préférences publicitaires sur
+      <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color:var(--gold)">adssettings.google.com</a>.</p>
+      <p><b>Liens sortants :</b> les liens vers Steam, Skinport, CSFloat ou DMarket t'amènent sur des sites tiers qui
+      appliquent leurs propres conditions et politiques de confidentialité.</p>
+      <p><b>Contact :</b> via le dépôt GitHub du projet.</p>
+      <p>Ce site n'est pas affilié à Valve Corporation. Les prix sont indicatifs et ne constituent pas un conseil d'investissement.</p>
+    </div>
   `;
 }
 
@@ -601,6 +764,8 @@ function render(route, extra){
   else if(head==='collections'){ html = viewCollections(); navKey = 'collections'; }
   else if(head==='collection'){ html = viewCollection(arg); }
   else if(head==='item'){ html = viewItem(arg); }
+  else if(head==='vendre'){ html = viewVendre(); navKey = 'vendre'; }
+  else if(head==='confidentialite'){ html = viewPrivacy(); }
   else if(head==='recherche'){ html = viewSearch(arg); }
   else { html = `<p class="empty">Page introuvable. <a href="#/" style="color:var(--gold)">Retour à l'accueil</a></p>`; }
   app.innerHTML = html;
@@ -621,13 +786,18 @@ document.getElementById('q').addEventListener('keydown', e=>{
 /* ---------- chargement ---------- */
 async function boot(){
   try{
-    const [catRes, priceRes] = await Promise.all([
+    const [catRes, priceRes, spRes] = await Promise.all([
       fetch('./catalog.json'),
       fetch('./prices.json', {cache:'no-store'}),
+      fetch('./skinport_all.json', {cache:'no-store'}).catch(()=>null),
     ]);
     CAT = await catRes.json();
     const pdata = await priceRes.json().catch(()=>({items:[]}));
     GENERATED_AT = pdata.generated_at;
+    if(spRes && spRes.ok){
+      const spdata = await spRes.json().catch(()=>null);
+      if(spdata && spdata.prices){ SP = spdata.prices; SP_AT = spdata.generated_at; }
+    }
     (pdata.items||[]).forEach(it=>{
       PRICES[it.display] = it;   // "AK-47 | Redline", "Karambit"…
       PRICES[it.name] = it;      // market_hash_name complet ("★ Karambit", "Recoil Case"…)

@@ -20,7 +20,16 @@ scripts/build_catalog.py            → régénération du catalogue (source : B
 **Pages du site** (routing par hash, compatible GitHub Pages) :
 `#/` accueil · `#/caisses` · `#/cat/<catégorie>` · `#/arme/<arme>` ·
 `#/collections` · `#/collection/<nom>` · `#/item/<id>` (fiche avec inspection
-3D, float range, liens Steam par usure) · `#/recherche/<texte>`.
+3D, float range, comparateur de prix par usure Skinport/Steam, liens
+CSFloat/DMarket) · `#/vendre` (dépôt-vente, teaser) · `#/confidentialite` ·
+`#/recherche/<texte>`.
+
+**Comparaison de prix** : `skinport_all.json` est regénéré à chaque run du
+workflow de prix — un seul appel à l'API Skinport renvoie toutes les
+variantes (chaque usure + StatTrak) de tous les items du catalogue, ce qui
+permet d'afficher un prix sur chaque skin du site et le tableau comparatif
+des fiches. Les prix Steam détaillés (avec historique) restent limités aux
+~190 items suivis (l'API Steam ne permet pas le bulk).
 
 **Images & données catalogue** : API communautaire
 [ByMykel/CSGO-API](https://github.com/ByMykel/CSGO-API), images © Valve

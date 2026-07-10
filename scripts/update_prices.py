@@ -25,8 +25,15 @@ from datetime import datetime, timezone
 STEAM_APPID = 730
 STEAM_CURRENCY = 3  # EUR
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "..", "prices.json")
+CATALOG_FILE = os.path.join(os.path.dirname(__file__), "..", "catalog.json")
+SKINPORT_DUMP_FILE = os.path.join(os.path.dirname(__file__), "..", "skinport_all.json")
 MAX_HISTORY_POINTS = 90  # ~1 point par run ; ajuste selon la fréquence du workflow
 REQUEST_DELAY = 3  # secondes entre deux appels Steam, pour éviter le rate-limit (429)
+
+WEAR_SUFFIXES = (
+    " (Factory New)", " (Minimal Wear)", " (Field-Tested)",
+    " (Well-Worn)", " (Battle-Scarred)",
+)
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -296,6 +303,56 @@ def get_skinport_prices():
         return {}
 
 
+def base_name(market_hash_name: str) -> str:
+    """'StatTrak™ AK-47 | Redline (Field-Tested)' -> 'AK-47 | Redline'"""
+    n = market_hash_name
+    for prefix in ("StatTrak™ ", "Souvenir ", "★ StatTrak™ "):
+        if n.startswith(prefix):
+            n = n[len(prefix):]
+            if prefix == "★ StatTrak™ ":
+                n = "★ " + n
+    for suf in WEAR_SUFFIXES:
+        if n.endswith(suf):
+            return n[:-len(suf)]
+    return n
+
+
+def write_skinport_dump(skinport_data: dict):
+    """Écrit skinport_all.json : le prix Skinport de TOUTES les variantes
+    (chaque usure + StatTrak/Souvenir) des items présents dans catalog.json.
+    C'est ce fichier qui permet d'afficher un prix sur chaque skin du site
+    et le tableau de comparaison par usure sur les fiches."""
+    if not skinport_data:
+        print("[Skinport] Pas de données — skinport_all.json inchangé.")
+        return
+    try:
+        with open(CATALOG_FILE, "r", encoding="utf-8") as f:
+            catalog = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("[Skinport] catalog.json introuvable — dump non filtré ignoré.")
+        return
+
+    wanted = {s["n"] for s in catalog.get("skins", [])}
+    wanted |= {c["n"] for c in catalog.get("cases", [])}
+
+    prices = {}
+    for name, item in skinport_data.items():
+        if base_name(name) not in wanted:
+            continue
+        p = item.get("min_price")
+        if p is not None:
+            prices[name] = p
+
+    output = {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "currency": "EUR",
+        "prices": prices,
+    }
+    with open(SKINPORT_DUMP_FILE, "w", encoding="utf-8") as f:
+        json.dump(output, f, separators=(",", ":"), ensure_ascii=False)
+    print(f"skinport_all.json écrit ({len(prices)} variantes d'items).")
+
+
 # ============================================================
 # TELEGRAM (optionnel)
 # ============================================================
@@ -329,6 +386,7 @@ def main():
     existing_items = {it["id"]: it for it in existing.get("items", [])}
 
     skinport_data = get_skinport_prices()
+    write_skinport_dump(skinport_data)
     now_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     output_items = []
