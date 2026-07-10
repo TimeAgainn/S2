@@ -19,14 +19,14 @@
   --shadow-strength:.5; --shadow-strength-big:.65;
 }
 :root[data-theme="light"]{
-  --bg:#F5F3EE; --surface:#FFFFFF; --surface2:#EFECE4; --border:#DFD9CB;
-  --text:#1A1B1E; --muted:#8A8578; --gold:#C2410C; --gold-dim:#9A3412;
-  --red:#DC2626; --green:#047857;
-  --glow:radial-gradient(1200px 500px at 15% -10%, #EDE4D3 0%, transparent 60%);
-  --header-bg:rgba(245,243,238,.94);
-  --thumb1:#F0EDE5; --thumb2:#EAE6DB;
-  --btn-text:#FFFFFF;
-  --shadow-strength:.15; --shadow-strength-big:.22;
+  --bg:#E7DFCE; --surface:#F2EBDC; --surface2:#EAE1CE; --border:#CFC3A8;
+  --text:#2B2620; --muted:#8C816B; --gold:#B45309; --gold-dim:#92400E;
+  --red:#C2410C; --green:#166534;
+  --glow:radial-gradient(1200px 500px at 15% -10%, #DFD3B8 0%, transparent 60%);
+  --header-bg:rgba(231,223,206,.94);
+  --thumb1:#EDE5D2; --thumb2:#E6DCC6;
+  --btn-text:#FFF8EC;
+  --shadow-strength:.14; --shadow-strength-big:.2;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
@@ -51,13 +51,18 @@ header.site{
 nav.main{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;}
 nav.main::-webkit-scrollbar{display:none;}
 nav.main a{
-  font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.05em;
-  color:var(--muted);text-decoration:none;padding:8px 10px;white-space:nowrap;
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.03em;
+  color:var(--muted);text-decoration:none;padding:8px 7px;white-space:nowrap;
 }
 nav.main a:hover{color:var(--text);}
 nav.main a.active{color:var(--gold);}
-nav.main a.freetab{color:var(--green);font-weight:600;animation:pulseTab 1.6s infinite;}
-@keyframes pulseTab{0%,100%{opacity:1}50%{opacity:.55}}
+@keyframes pulseTab{0%,100%{box-shadow:0 0 0 0 rgba(61,240,168,.5)}50%{box-shadow:0 0 0 5px rgba(61,240,168,0)}}
+.freebtn{
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.03em;
+  color:var(--btn-text);background:var(--green);text-decoration:none;white-space:nowrap;
+  padding:9px 12px;font-weight:600;animation:pulseTab 1.8s infinite;
+}
+.freebtn:hover{filter:brightness(1.1);}
 .header-search{position:relative;}
 .header-search input{
   background:var(--surface);border:1px solid var(--border);color:var(--text);
@@ -366,10 +371,9 @@ footer.site .inner{
       <a href="#/cat/Couteaux" data-r="cat:Couteaux">Couteaux</a>
       <a href="#/cat/Gants" data-r="cat:Gants">Gants</a>
       <a href="#/collections" data-r="collections">Collections</a>
-      <a href="#/ouverture" data-r="ouverture">Ouvrir</a>
-      <a href="#/gratuit" data-r="gratuit" class="freetab">🎁 Gratuit</a>
       <a href="#/vendre" data-r="vendre">Vendre</a>
     </nav>
+    <a href="#/gratuit" class="freebtn" data-r="gratuit">🎁 Caisses gratuites</a>
     <div class="header-search">
       <input id="q" type="text" placeholder="Rechercher… (↵)" autocomplete="off">
       <div class="sugg" id="sugg"></div>
@@ -635,6 +639,10 @@ function viewHome(){
     <p class="intro">${CAT.skins.length.toLocaleString('fr-FR')} skins, ${CAT.cases.length} caisses et ${CAT.collections.length} collections avec images officielles.
     Prix Steam Market &amp; Skinport suivis automatiquement pour une sélection d'items, rafraîchis plusieurs fois par jour.</p>
     <p class="updated">Derniers prix : <b>${fmtDate(GENERATED_AT)}</b></p>
+    <h2 style="margin-top:10px">🎁 Ouvre des caisses gratuites</h2>
+    <p class="intro" style="margin-bottom:12px">${DAILY_FREE} ouvertures offertes chaque jour, jackpots jusqu'à
+    l'AWP Dragon Lore — et regarde une pub pour en regagner. <a href="#/gratuit" style="color:var(--gold)">Voir toutes les caisses →</a></p>
+    <div class="grid big">${freeCaseCards()}</div>
     ${adSlot('ad-slot-top')}
     <h2>Parcourir par type</h2>
     <div class="grid big">${tiles}
@@ -1057,10 +1065,9 @@ function viewOpenCase(caseName){
   `;
 }
 
-function viewFreebies(){
-  const d = simDaily();
+function freeCaseCards(){
   const byName = Object.fromEntries(CAT.skins.map(s=>[s.n,s]));
-  const cards = FREE_CASES.map(def=>{
+  return FREE_CASES.map(def=>{
     const jp = byName[def.jackpot];
     const jpPrice = jp ? (sp(`${def.jackpot} (Factory New)`) ?? sp(`${def.jackpot} (Field-Tested)`) ?? sp(def.jackpot)) : null;
     return `<a class="icard freecard" href="#/gratuit/${def.id}">
@@ -1075,6 +1082,11 @@ function viewFreebies(){
       </div>
     </a>`;
   }).join('');
+}
+
+function viewFreebies(){
+  const d = simDaily();
+  const cards = freeCaseCards();
   return `
     <p class="crumb"><a href="#/">Accueil</a> / Caisses gratuites</p>
     <h1>🎁 Caisses gratuites</h1>
@@ -1322,12 +1334,12 @@ function viewVendre(){
     </div>
     <h2>Moyens de paiement prévus</h2>
     <div class="payrow">
-      <div class="pay"><span class="visa">VISA</span></div>
-      <div class="pay"><span class="mc"><i></i><i></i></span><span class="lbl2">Mastercard</span></div>
-      <div class="pay dark"><span class="ap">&#63743; Pay</span></div>
-      <div class="pay"><span class="btc">&#8383;</span><span class="lbl2">Bitcoin</span></div>
-      <div class="pay"><span class="lbl2" style="color:#3C3C3D">&#9670; Ethereum</span></div>
-      <div class="pay"><span class="lbl2" style="color:#10069F">SEPA · Virement</span></div>
+      <div class="pay" title="Visa"><svg viewBox="0 0 1000 324" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#1434CB" d="M651.2 0c-70.8 0-134 36.7-134 104.5 0 77.8 112.3 83.2 112.3 122.3 0 16.5-18.9 31.2-51.1 31.2-45.7 0-79.9-20.6-79.9-20.6l-14.6 68.5s39.4 17.4 91.6 17.4c77.4 0 138.3-38.5 138.3-107.5 0-82.2-112.7-87.4-112.7-123.7 0-12.9 15.5-27 47.6-27 36.2 0 65.8 15 65.8 15l14.3-66.2S696.5 0 651.2 0zM2.2 5l-1.7 10s29.8 5.5 56.7 16.4c34.6 12.5 37 19.8 42.9 42.4l63.5 244.9h85.1L379.8 5h-84.9l-84.3 213.3-34.4-180.7C173.1 16.9 157.1 5 137.3 5H2.2zm411.8 0-66.6 313.7h81L494.7 5h-80.7zm451.9 0c-19.5 0-29.9 10.5-37.5 28.7L709.1 318.7h84.9l16.4-47.4h103.4l10 47.4H999L933.6 5h-67.7zm11 84.8 25.2 117.6h-67.4l42.2-117.6z"/></svg></div>
+      <div class="pay" title="Mastercard"><svg viewBox="0 0 152 94" height="26" xmlns="http://www.w3.org/2000/svg"><circle cx="47" cy="47" r="47" fill="#EB001B"/><circle cx="105" cy="47" r="47" fill="#F79E1B"/><path d="M76 10.6a46.9 46.9 0 0 1 0 72.8 46.9 46.9 0 0 1 0-72.8z" fill="#FF5F00"/></svg></div>
+      <div class="pay dark" title="Apple Pay"><svg viewBox="0 0 512 210.2" height="20" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M93.6 27.1C87.6 34.2 78 39.8 68.4 39c-1.2-9.6 3.5-19.8 9-26.1C83.4 5.6 93.9.4 102.4 0c1 10-2.9 19.8-8.8 27.1zm8.7 13.8c-13.9-.8-25.8 7.9-32.4 7.9-6.7 0-16.8-7.5-27.8-7.3-14.3.2-27.6 8.3-34.9 21.2-15 25.8-3.9 64 10.6 85 7.1 10.4 15.6 21.8 26.8 21.4 10.6-.4 14.8-6.9 27.6-6.9s16.6 6.9 27.8 6.7c11.6-.2 18.9-10.4 26-20.8 8.1-11.8 11.4-23.3 11.6-23.9-.2-.2-22.4-8.7-22.6-34.3-.2-21.4 17.5-31.6 18.3-32.2-10-14.8-25.6-16.4-31-16.8zm80.3-29.1v155.4h24.1v-53.1h33.4c30.5 0 51.9-20.9 51.9-51.2s-21-51.1-51.1-51.1h-58.3zm24.1 20.3h27.8c20.9 0 32.9 11.2 32.9 30.9s-12 31-33 31h-27.7V32.1zm129.3 136.3c15.1 0 29.2-7.7 35.6-19.9h.5v18.7h22.3V89.6c0-22.5-18-37-45.7-37-25.7 0-44.7 14.7-45.4 34.9h21.7c1.8-9.6 10.7-15.9 22.9-15.9 14.8 0 23.1 6.9 23.1 19.6v8.6l-30.2 1.8c-28.1 1.7-43.3 13.2-43.3 33.2 0 20.2 15.7 33.6 38.5 33.6zm6.5-18.4c-12.9 0-21.1-6.2-21.1-15.7 0-9.8 7.9-15.5 23-16.4l26.9-1.7v8.8c0 14.6-12.4 25-28.8 25zm81.7 59.5c23.5 0 34.6-9 44.3-36.2L512 55.1h-24.5l-28.4 91.8h-.5l-28.4-91.8h-25.2l40.9 113.2-2.2 6.9c-3.7 11.7-9.7 16.2-20.4 16.2-1.9 0-5.6-.2-7.1-.4v18.6c1.4.4 7.4.6 9.2.6z"/></svg></div>
+      <div class="pay" title="Bitcoin"><svg viewBox="0 0 64 64" height="26" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="32" fill="#F7931A"/><path fill="#fff" d="M46.1 27.4c.6-4.2-2.6-6.5-7-8l1.4-5.7-3.5-.9-1.4 5.6c-.9-.2-1.9-.4-2.8-.7l1.4-5.6-3.5-.9-1.4 5.7c-.8-.2-1.5-.3-2.3-.5l-4.8-1.2-.9 3.7s2.6.6 2.5.6c1.4.4 1.7 1.3 1.6 2l-1.6 6.5c.1 0 .2.1.4.1l-.4-.1-2.3 9.1c-.2.4-.6 1.1-1.6.8 0 .1-2.5-.6-2.5-.6l-1.7 4 4.6 1.1c.8.2 1.7.4 2.5.6l-1.4 5.8 3.5.9 1.4-5.7c.9.3 1.9.5 2.8.7l-1.4 5.7 3.5.9 1.4-5.8c6 1.1 10.5.7 12.4-4.7 1.5-4.3-.1-6.9-3.2-8.5 2.3-.6 4-2.1 4.3-5.2zm-7.9 11.2c-1.1 4.3-8.4 2-10.7 1.4l1.9-7.6c2.4.6 9.9 1.7 8.8 6.2zm1.1-11.3c-1 4-7 1.9-9 1.4l1.7-6.9c2 .5 8.3 1.4 7.3 5.5z"/></svg></div>
+      <div class="pay" title="Ethereum"><svg viewBox="0 0 256 417" height="26" xmlns="http://www.w3.org/2000/svg"><path fill="#343434" d="m127.9 0-2.8 9.5v275.7l2.8 2.8 127.9-75.6z"/><path fill="#8C8C8C" d="M127.9 0 0 212.4l127.9 75.6V0z"/><path fill="#3C3C3B" d="m127.9 312.2-1.6 1.9v98.2l1.6 4.7L256 236.6z"/><path fill="#8C8C8C" d="M127.9 417v-104.8L0 236.6z"/><path fill="#141414" d="m127.9 288 127.9-75.6-127.9-58.1z"/><path fill="#393939" d="m0 212.4 127.9 75.6v-133.7z"/></svg><span class="lbl2">Ethereum</span></div>
+      <div class="pay" title="Virement SEPA"><span class="lbl2" style="color:#10069F;font-weight:800">SEPA</span><span class="lbl2">Virement</span></div>
     </div>
     <p class="intro" style="font-size:11.5px;margin-bottom:18px">Visuels indicatifs — les moyens de paiement seront activés au lancement du dépôt-vente, dans le respect des conditions de chaque prestataire.</p>
     <h2>Comment ça marchera</h2>
@@ -1407,7 +1419,7 @@ function render(route, extra){
   else if(head==='recherche'){ html = viewSearch(arg); }
   else { html = `<p class="empty">Page introuvable. <a href="#/" style="color:var(--gold)">Retour à l'accueil</a></p>`; }
   app.innerHTML = html;
-  document.querySelectorAll('#mainNav a').forEach(a=>{
+  document.querySelectorAll('#mainNav a, .freebtn').forEach(a=>{
     a.classList.toggle('active', a.dataset.r === navKey);
   });
   window.scrollTo(0,0);
