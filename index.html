@@ -314,6 +314,17 @@ h2{
 .sim-stats .blk .v.pos{color:var(--green);} .sim-stats .blk .v.neg{color:var(--red);}
 .roul-wrap{position:relative;background:var(--surface);border:1px solid var(--border);overflow:hidden;margin:0 0 16px;}
 .roul{display:flex;will-change:transform;}
+.roul.spinning img{filter:blur(2.5px);}
+.rtile.win{animation:winPop .7s ease-out forwards;position:relative;z-index:1;}
+@keyframes winPop{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1.06);box-shadow:0 0 22px var(--winc,#38E1FF)}}
+.flash-ov{
+  position:fixed;inset:0;z-index:200;pointer-events:none;
+  background:radial-gradient(60% 60% at 50% 50%, var(--fc,#fff) 0%, transparent 70%);
+  animation:flashFade .9s ease-out forwards;
+}
+@keyframes flashFade{0%{opacity:.85}100%{opacity:0}}
+.reveal{animation:fadeUp .5s ease-out;}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:none}}
 .rtile{
   flex:0 0 130px;height:120px;border-right:1px solid var(--border);display:flex;flex-direction:column;
   align-items:center;justify-content:center;padding:8px;gap:4px;background:var(--surface);
@@ -642,8 +653,7 @@ function viewHome(){
     Prix Steam Market &amp; Skinport suivis automatiquement pour une sélection d'items, rafraîchis plusieurs fois par jour.</p>
     <p class="updated">Derniers prix : <b>${fmtDate(GENERATED_AT)}</b></p>
     <h2 style="margin-top:10px">🎁 Ouvre des caisses gratuites</h2>
-    <p class="intro" style="margin-bottom:12px">${DAILY_FREE} ouvertures offertes chaque jour, jackpots jusqu'à
-    l'AWP Dragon Lore — et regarde une pub pour en regagner. <a href="#/gratuit" style="color:var(--gold)">Voir toutes les caisses →</a></p>
+    <p class="intro" style="margin-bottom:12px">${DAILY_FREE} ouvertures offertes chaque jour parmi 5 caisses, jackpots jusqu'à l'AWP Dragon Lore. <a href="#/gratuit" style="color:var(--gold)">Voir toutes les caisses →</a></p>
     <div class="grid big">${freeCaseCards()}</div>
     ${adSlot('ad-slot-top')}
     <h2>Parcourir par type</h2>
@@ -934,9 +944,8 @@ const SIM_ODDS = [
 ];
 const WEAR_ODDS = [["Factory New",.03],["Minimal Wear",.24],["Field-Tested",.33],["Well-Worn",.24],["Battle-Scarred",.16]];
 const KEY_PRICE = 2.35;
-const DAILY_FREE = 10;
-const AD_BONUS = 5;
-const AD_SECONDS = 15;
+const DAILY_FREE = 3;   // 3 ouvertures/jour, à choisir parmi les caisses proposées
+const AD_SECONDS = 15;  // pub avant chaque ouverture
 
 function casePools(caseName){
   const items = CAT.skins.filter(s=>s.cr.includes(caseName));
@@ -1030,9 +1039,7 @@ function viewOpenCase(caseName){
 
   setTimeout(()=>{
     const btn = document.getElementById('openBtn');
-    const adBtn = document.getElementById('adBtn');
     if(btn) btn.addEventListener('click', ()=>runOpen(caseName, casePrice));
-    if(adBtn) adBtn.addEventListener('click', ()=>adGate());
   },0);
 
   return `
@@ -1057,8 +1064,7 @@ function viewOpenCase(caseName){
     </div>
     <div id="revealZone"></div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin:0 0 14px" id="btnZone">
-      <button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>Ouvrir la caisse</button>
-      ${d.left<=0?`<button class="bigbtn ghost" id="adBtn">▶ Regarder une pub (${AD_SECONDS}s) = +${AD_BONUS} ouvertures</button>`:''}
+      <button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>${d.left<=0?'Reviens demain !':'▶ Pub ('+AD_SECONDS+'s) puis ouverture'}</button>
     </div>
     <div class="odds" style="margin-bottom:14px">Probabilités officielles : ${oddsHtml} · StatTrak™ 10 % · Simulateur — aucun objet réel n'est gagné.</div>
     ${pulls.length?`<div class="lbl" style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase">Tes 10 derniers tirages</div>
@@ -1094,8 +1100,7 @@ function viewFreebies(){
     <h1>🎁 Caisses gratuites</h1>
     <div class="free-hero">
       <p class="intro" style="margin:0">5 caisses exclusives, <b>100 % gratuites</b>, avec un jackpot de folie dans chacune —
-      jusqu'à l'<b>AWP Dragon Lore</b> et le <b>M4A4 Howl</b>. ${DAILY_FREE} ouvertures offertes par jour,
-      et tu peux en regagner en regardant une pub. Simulateur : aucun objet réel n'est gagné, mais les prix affichés sont les vrais.</p>
+      jusqu'à l'<b>AWP Dragon Lore</b> et le <b>M4A4 Howl</b>. ${DAILY_FREE} ouvertures par jour, à choisir parmi les 5 caisses — chaque ouverture est précédée d'une courte pub. Simulateur : aucun objet réel n'est gagné, mais les prix affichés sont les vrais.</p>
     </div>
     <p class="updated">Ouvertures restantes aujourd'hui : <b>${d.left}</b></p>
     <div class="grid big">${cards}</div>
@@ -1120,9 +1125,7 @@ function viewOpenFree(id){
 
   setTimeout(()=>{
     const btn = document.getElementById('openBtn');
-    const adBtn = document.getElementById('adBtn');
     if(btn) btn.addEventListener('click', ()=>runOpen(def.title, 0, def));
-    if(adBtn) adBtn.addEventListener('click', ()=>adGate());
   },0);
 
   return `
@@ -1147,8 +1150,7 @@ function viewOpenFree(id){
     </div>
     <div id="revealZone"></div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin:0 0 14px" id="btnZone">
-      <button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>Ouvrir — Gratuit</button>
-      ${d.left<=0?`<button class="bigbtn ghost" id="adBtn">▶ Regarder une pub (${AD_SECONDS}s) = +${AD_BONUS} ouvertures</button>`:''}
+      <button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>${d.left<=0?'Reviens demain !':'▶ Pub ('+AD_SECONDS+'s) puis ouverture — Gratuit'}</button>
     </div>
     <div class="odds" style="margin-bottom:14px">Drops : ${oddsHtml} · StatTrak™ 10 % · Simulateur — aucun objet réel n'est gagné.</div>
     ${adSlot('ad-slot-bottom')}
@@ -1212,6 +1214,11 @@ function drawFromFree(def){
 function runOpen(caseName, casePrice, freeDef){
   const d = simDaily();
   if(d.left <= 0){ render(); return; }
+  /* la pub s'affiche d'abord, l'animation ne démarre qu'après */
+  adGate(()=>spinNow(caseName, casePrice, freeDef));
+}
+
+function spinNow(caseName, casePrice, freeDef){
   const btn = document.getElementById('openBtn');
   if(btn) btn.disabled = true;
 
@@ -1229,6 +1236,7 @@ function runOpen(caseName, casePrice, freeDef){
   const roulWrap = document.getElementById('roulWrap');
   const roul = document.getElementById('roul');
   roulWrap.style.display = 'block';
+  roul.classList.add('spinning');
   roul.style.transition = 'none';
   roul.style.transform = 'translateX(0)';
   roul.innerHTML = strip.map(s=>`<div class="rtile">
@@ -1241,10 +1249,29 @@ function runOpen(caseName, casePrice, freeDef){
   const target = WIN*TILE + TILE/2 - wrapW/2 + (Math.random()*60-30);
   requestAnimationFrame(()=>{
     requestAnimationFrame(()=>{
-      roul.style.transition = 'transform 5.2s cubic-bezier(0.06,0.8,0.12,1)';
+      roul.style.transition = 'transform 6.4s cubic-bezier(0.09,0.82,0.05,0.995)';
       roul.style.transform = `translateX(${-target}px)`;
     });
   });
+  /* flou de vitesse pendant la phase rapide, net pendant la décélération */
+  setTimeout(()=>roul.classList.remove('spinning'), 3200);
+
+  setTimeout(()=>{
+    /* met en valeur la tuile gagnante */
+    const winTile = roul.children[WIN];
+    if(winTile){
+      winTile.classList.add('win');
+      winTile.style.setProperty('--winc', result.item.rc);
+    }
+    /* flash plein écran pour les drops rares (couteau/gant/covert) */
+    if(result.special || rarityRank(result.item) >= 5){
+      const f = document.createElement('div');
+      f.className = 'flash-ov';
+      f.style.setProperty('--fc', result.item.rc);
+      document.body.appendChild(f);
+      setTimeout(()=>f.remove(), 900);
+    }
+  }, 6450);
 
   setTimeout(()=>{
     /* comptabilise */
@@ -1269,7 +1296,7 @@ function runOpen(caseName, casePrice, freeDef){
       </div>
     </div>`;
     updateSimHud(caseName, casePrice, freeDef);
-  }, 5400);
+  }, 6700);
 }
 
 /* met à jour les compteurs sans re-rendre la page (préserve la roulette + reveal) */
@@ -1286,25 +1313,24 @@ function updateSimHud(caseName, casePrice, freeDef){
   if(pf){ pf.textContent = (profit>=0?'+':'') + fmtEUR(profit); pf.className = 'v ' + (profit>=0?'pos':'neg'); }
   const zone = document.getElementById('btnZone');
   if(zone){
-    zone.innerHTML = `<button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>Ouvrir la caisse</button>
-      ${d.left<=0?`<button class="bigbtn ghost" id="adBtn">▶ Regarder une pub (${AD_SECONDS}s) = +${AD_BONUS} ouvertures</button>`:''}`;
+    zone.innerHTML = `<button class="bigbtn" id="openBtn" ${d.left<=0?'disabled':''}>${d.left<=0?'Reviens demain !':'▶ Pub ('+AD_SECONDS+'s) puis ouverture'}</button>`;
     const btn = document.getElementById('openBtn');
-    const adBtn = document.getElementById('adBtn');
     if(btn) btn.addEventListener('click', ()=>runOpen(caseName, casePrice, freeDef));
-    if(adBtn) adBtn.addEventListener('click', ()=>adGate());
   }
 }
 
-function adGate(){
-  /* Emplacement "pub récompensée" : le compte à rebours simule l'endroit où
-     une vraie rewarded ad (Google Ad Manager / AdSense H5) sera branchée. */
+function adGate(onDone){
+  /* Portail publicitaire : s'affiche AVANT chaque ouverture. Le compte à
+     rebours simule l'emplacement où une vraie rewarded ad (Google Ad
+     Manager / AdSense H5) sera branchée. */
   const ov = document.createElement('div');
   ov.className = 'modal-ov';
   ov.innerHTML = `<div class="modal">
     <div class="lbl" style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em">Publicité — emplacement réservé</div>
     <div class="cnt" id="adCnt">${AD_SECONDS}</div>
     <p class="intro" style="font-size:12px">Quand la régie publicitaire sera activée, une vidéo se jouera ici.
-    Reste sur la page jusqu'à la fin du compte à rebours pour recevoir +${AD_BONUS} ouvertures.</p>
+    L'ouverture de ta caisse démarre à la fin du compte à rebours.</p>
+    <button class="bigbtn ghost" id="adCancel" style="font-size:14px;padding:8px 18px">Annuler</button>
   </div>`;
   document.body.appendChild(ov);
   let left = AD_SECONDS;
@@ -1315,10 +1341,13 @@ function adGate(){
     if(left <= 0){
       clearInterval(iv);
       ov.remove();
-      const d = simDaily(); d.left += AD_BONUS; simDailySave(d);
-      render();
+      onDone();
     }
   }, 1000);
+  ov.querySelector('#adCancel').addEventListener('click', ()=>{
+    clearInterval(iv);
+    ov.remove();  // annulé : aucune ouverture consommée
+  });
 }
 
 function viewVendre(){
