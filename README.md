@@ -1,17 +1,30 @@
 # CS2 Price Tracker — Site public
 
-Site statique façon csgoskins.gg qui affiche le prix d'une large sélection
-d'items CS2 (caisses actives et discontinuées, couteaux, gants, skins
-d'armes populaires — environ 190 items), mis à jour automatiquement toutes
-les 6h par un workflow GitHub Actions.
+Base de données + tracker de prix CS2 : ~2100 skins, 42 caisses et 94
+collections avec images officielles (CDN Steam), pages par catégorie / arme /
+collection, fiches détaillées avec effet d'inspection 3D, et suivi de prix
+Steam Market & Skinport (~190 items suivis, mis à jour toutes les 6h par
+GitHub Actions).
 
 **Structure :**
 ```
-index.html                        → la page (lit prices.json)
-prices.json                       → les données affichées (regénéré automatiquement)
-scripts/update_prices.py          → le script qui va chercher les prix
-.github/workflows/update-prices.yml → l'automatisation
+index.html                          → SPA à routing par hash (toutes les pages)
+catalog.json                        → catalogue complet skins/caisses/collections + images
+prices.json                         → prix suivis (regénéré automatiquement toutes les 6h)
+scripts/update_prices.py            → script de récupération des prix
+scripts/build_catalog.py            → régénération du catalogue (source : ByMykel/CSGO-API)
+.github/workflows/update-prices.yml → cron prix (6h)
+.github/workflows/update-catalog.yml→ cron catalogue (hebdo)
 ```
+
+**Pages du site** (routing par hash, compatible GitHub Pages) :
+`#/` accueil · `#/caisses` · `#/cat/<catégorie>` · `#/arme/<arme>` ·
+`#/collections` · `#/collection/<nom>` · `#/item/<id>` (fiche avec inspection
+3D, float range, liens Steam par usure) · `#/recherche/<texte>`.
+
+**Images & données catalogue** : API communautaire
+[ByMykel/CSGO-API](https://github.com/ByMykel/CSGO-API), images © Valve
+servies par le CDN Steam. Le site n'est pas affilié à Valve.
 
 ---
 

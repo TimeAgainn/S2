@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suivi des prix CS2 — caisses, couteaux, gants & skins (Steam &amp; Skinport)</title>
-<meta name="description" content="Suivi des prix de caisses, couteaux, gants et skins d'armes CS2 sur Steam Market et Skinport, mis à jour automatiquement plusieurs fois par jour.">
+<title>CS2 Tracker — prix, skins, caisses & collections CS2</title>
+<meta name="description" content="Base de données CS2 : plus de 2000 skins, couteaux, gants et caisses avec images, raretés, collections et suivi de prix Steam Market & Skinport mis à jour automatiquement.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
@@ -17,9 +17,40 @@
 html,body{margin:0;padding:0;}
 body{
   background:radial-gradient(1200px 500px at 15% -10%, #1a1710 0%, transparent 60%), var(--bg);
-  color:var(--text); font-family:'Inter',sans-serif; min-height:100vh; padding:28px 16px 60px;
+  color:var(--text); font-family:'Inter',sans-serif; min-height:100vh;
 }
-.wrap{max-width:1180px;margin:0 auto;}
+a{color:inherit;}
+img{max-width:100%;}
+
+/* ---------- header / nav ---------- */
+header.site{
+  position:sticky;top:0;z-index:50;background:rgba(13,15,18,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.nav-wrap{max-width:1180px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:18px;height:58px;}
+.logo{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;
+  letter-spacing:.02em;text-decoration:none;white-space:nowrap;
+}
+.logo b{color:var(--gold);}
+nav.main{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;}
+nav.main::-webkit-scrollbar{display:none;}
+nav.main a{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted);text-decoration:none;padding:8px 10px;white-space:nowrap;
+}
+nav.main a:hover{color:var(--text);}
+nav.main a.active{color:var(--gold);}
+.header-search{position:relative;}
+.header-search input{
+  background:var(--surface);border:1px solid var(--border);color:var(--text);
+  font-family:'Inter',sans-serif;font-size:12.5px;padding:8px 12px;width:210px;
+}
+.header-search input:focus{outline:none;border-color:var(--gold-dim);}
+
+.wrap{max-width:1180px;margin:0 auto;padding:26px 16px 60px;}
+
+/* ---------- typographie commune ---------- */
 .eyebrow{
   font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--gold);
   text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:6px;
@@ -27,128 +58,214 @@ body{
 .eyebrow::before{content:"";width:6px;height:6px;background:var(--gold);display:inline-block;}
 h1{
   font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
-  font-size:clamp(28px,6vw,40px);margin:0 0 8px;line-height:1.05;
+  font-size:clamp(26px,5.5vw,38px);margin:0 0 8px;line-height:1.05;
+}
+h2{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:22px;margin:34px 0 14px;line-height:1.1;
 }
 .intro{color:var(--muted);font-size:14px;max-width:720px;line-height:1.6;margin:0 0 6px;}
 .updated{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);margin:0 0 20px;}
 .updated b{color:var(--gold);}
+.crumb{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin:0 0 14px;}
+.crumb a{color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--border);}
+.crumb a:hover{color:var(--gold);}
+.count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin:0 0 14px;}
+.empty{color:var(--muted);font-size:13px;padding:30px 0;}
 
-/* --- emplacement pub (haut de page) ---
-   Une fois ton compte AdSense approuvé : colle ton script <script async src="...adsbygoogle.js?client=ca-pub-XXXX">
-   dans <head>, puis remplace le contenu de #ad-slot-top par ton <ins class="adsbygoogle">.
-   Voir README.md > "Activer les publicités". */
+/* ---------- pub ---------- */
 .ad-slot{
-  border:1px dashed var(--border); color:var(--muted); font-family:'IBM Plex Mono',monospace;
-  font-size:10.5px; text-align:center; padding:10px; margin:0 0 22px; letter-spacing:.04em;
+  border:1px dashed var(--border);color:var(--muted);font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;text-align:center;padding:10px;margin:0 0 22px;letter-spacing:.04em;
 }
 
-.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px;}
-.search{
-  background:var(--surface); border:1px solid var(--border); color:var(--text);
-  font-family:'Inter',sans-serif; font-size:13px; padding:9px 12px; flex:1 1 220px; min-width:180px;
+/* ---------- grilles de cartes ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.grid.big{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+.icard{
+  background:var(--surface);border:1px solid var(--border);text-decoration:none;display:flex;
+  flex-direction:column;transition:border-color .15s, transform .15s;position:relative;overflow:hidden;
 }
-.search:focus{outline:none;border-color:var(--gold-dim);}
-.tabs{display:flex;flex-wrap:wrap;gap:6px;}
-.tab{
-  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;
-  background:var(--surface); border:1px solid var(--border); color:var(--muted);
-  padding:8px 12px; cursor:pointer;
+.icard:hover{border-color:var(--gold-dim);transform:translateY(-2px);}
+.icard .rar{height:3px;}
+.icard .thumb{
+  aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:10px;
+  background:radial-gradient(75% 75% at 50% 45%, #1e222a 0%, var(--surface) 100%);
 }
-.tab:hover{color:var(--text);}
-.tab.active{color:var(--bg);background:var(--gold);border-color:var(--gold);}
-.count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin:0 0 16px;}
+.icard .thumb img{max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(0,0,0,.5));}
+.icard .meta{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1;}
+.icard .iname{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;line-height:1.1;text-transform:uppercase;}
+.icard .isub{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;}
+.icard .iprice{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--gold);margin-top:auto;padding-top:4px;}
+.icard .iprice.na{color:var(--muted);}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;}
-.card{background:var(--surface);border:1px solid var(--border);padding:0 0 16px;}
-.card-top{height:3px;background:var(--gold);}
-.card-head{padding:16px 16px 6px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
-.card-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;line-height:1.05;}
-.tag{
-  font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);
-  border:1px solid var(--border); padding:2px 6px;white-space:nowrap;letter-spacing:.03em;
+/* tuiles catégorie / arme / collection */
+.tile{
+  background:var(--surface);border:1px solid var(--border);text-decoration:none;padding:16px;
+  display:flex;flex-direction:column;gap:8px;transition:border-color .15s, transform .15s;
 }
-.tag.frozen{color:var(--gold);border-color:var(--gold-dim);}
-.card-cat{
-  font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);text-transform:uppercase;
-  letter-spacing:.08em;padding:16px 16px 0;
-}
-.card-body{padding:0 16px;}
-.blurb{font-size:12.5px;color:var(--muted);line-height:1.55;margin:4px 0 14px;}
-.prices{display:flex;gap:18px;margin-bottom:10px;flex-wrap:wrap;}
-.price-block .src{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
-.price-block .val{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;}
-.spark{width:100%;height:36px;margin:6px 0 12px;display:block;}
-.divider{height:1px;background:var(--border);margin:10px 0;}
-.link-row a{
-  font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);
-  text-decoration:none;border-bottom:1px solid var(--gold-dim);
-}
-.link-row a:hover{color:#f4c766;}
-.empty{color:var(--muted);font-size:12px;}
+.tile:hover{border-color:var(--gold-dim);transform:translateY(-2px);}
+.tile .tname{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;}
+.tile .tcount{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);}
+.tile .timg{height:90px;display:flex;align-items:center;justify-content:center;}
+.tile .timg img{max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5));}
 
-footer{
-  max-width:1180px;margin:30px auto 0;color:var(--muted);font-size:11.5px;
-  line-height:1.6;border-top:1px solid var(--border);padding-top:16px;
+.morebar{text-align:center;margin:22px 0 0;}
+.morebtn{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.05em;
+  background:var(--surface);border:1px solid var(--border);color:var(--text);padding:11px 26px;cursor:pointer;
+}
+.morebtn:hover{border-color:var(--gold-dim);color:var(--gold);}
+
+/* filtres de page liste */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;align-items:center;}
+.fsel{
+  background:var(--surface);border:1px solid var(--border);color:var(--text);
+  font-family:'IBM Plex Mono',monospace;font-size:11px;padding:8px 10px;
+}
+.fsel:focus{outline:none;border-color:var(--gold-dim);}
+
+/* ---------- fiche item ---------- */
+.detail{display:grid;grid-template-columns:minmax(300px,1.15fr) 1fr;gap:26px;align-items:start;}
+@media(max-width:820px){.detail{grid-template-columns:1fr;}}
+.inspect{
+  background:radial-gradient(80% 80% at 50% 42%, #21262f 0%, var(--surface) 100%);
+  border:1px solid var(--border);position:relative;perspective:900px;overflow:hidden;
+}
+.inspect .stage{
+  aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:28px;
+  transform-style:preserve-3d;transition:transform .12s ease-out;will-change:transform;
+}
+.inspect img{max-height:100%;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,.65));pointer-events:none;transform:translateZ(40px);}
+.inspect .glare{
+  position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .2s;
+  background:radial-gradient(400px 260px at var(--gx,50%) var(--gy,50%), rgba(255,235,190,.14) 0%, transparent 70%);
+}
+.inspect:hover .glare{opacity:1;}
+.inspect .hint{
+  position:absolute;bottom:10px;left:0;right:0;text-align:center;
+  font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;
+}
+.dmeta .badges{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;}
+.badge{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.04em;
+  border:1px solid var(--border);padding:3px 8px;color:var(--muted);text-transform:uppercase;
+}
+.badge.rar{border-color:transparent;color:#0D0F12;font-weight:600;}
+.badge.st{color:#CF6A32;border-color:#CF6A32;}
+.dsec{margin:0 0 18px;}
+.dsec .lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;}
+.pricebig{display:flex;gap:26px;flex-wrap:wrap;}
+.pricebig .val{font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:600;}
+.pricebig .src{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;}
+.floatbar{position:relative;height:8px;background:linear-gradient(90deg,#5FB88F 0%,#9fc25f 25%,#E4AE39 50%,#e07b39 75%,#E6544F 100%);margin:8px 0 4px;}
+.floatbar .fseg{position:absolute;top:-3px;bottom:-3px;background:rgba(13,15,18,.55);}
+.floatlbl{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);}
+.linkbtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.lbtn{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;text-decoration:none;letter-spacing:.03em;
+  border:1px solid var(--gold-dim);color:var(--gold);padding:9px 14px;
+}
+.lbtn:hover{background:rgba(228,174,57,.08);}
+.lbtn.sec{border-color:var(--border);color:var(--muted);}
+.lbtn.sec:hover{color:var(--text);}
+.chips{display:flex;flex-wrap:wrap;gap:6px;}
+.chip{
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;text-decoration:none;
+  border:1px solid var(--border);color:var(--muted);padding:5px 10px;
+}
+.chip:hover{color:var(--gold);border-color:var(--gold-dim);}
+.spark{width:100%;height:44px;display:block;margin:6px 0 2px;}
+
+footer.site{
+  border-top:1px solid var(--border);margin-top:30px;
+}
+footer.site .inner{
+  max-width:1180px;margin:0 auto;padding:18px 16px 30px;color:var(--muted);font-size:11.5px;line-height:1.6;
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="eyebrow">Mis à jour automatiquement</div>
-  <h1>Prix des caisses, couteaux, gants &amp; skins CS2</h1>
-  <p class="intro">Suivi des prix d'une large sélection d'items CS2 — caisses actives et discontinuées, couteaux et gants (finition Vanilla), skins d'armes populaires — sur Steam Market et Skinport, rafraîchis plusieurs fois par jour.</p>
-  <p class="updated">Dernière vérification : <b id="updatedAt">—</b></p>
 
-  <!-- Emplacement pub #1 (bannière haute). Vide tant qu'AdSense n'est pas activé. -->
-  <div class="ad-slot" id="ad-slot-top">Emplacement publicitaire</div>
-
-  <div class="controls">
-    <input class="search" id="search" type="text" placeholder="Rechercher un item (ex. Karambit, AK-47, Dragon Lore...)">
-    <div class="tabs" id="tabs">
-      <button class="tab active" data-cat="all">Tout</button>
-      <button class="tab" data-cat="Caisses">Caisses</button>
-      <button class="tab" data-cat="Couteaux">Couteaux</button>
-      <button class="tab" data-cat="Gants">Gants</button>
-      <button class="tab" data-cat="Armes">Armes</button>
+<header class="site">
+  <div class="nav-wrap">
+    <a class="logo" href="#/">CS2<b>TRACKER</b></a>
+    <nav class="main" id="mainNav">
+      <a href="#/" data-r="home">Accueil</a>
+      <a href="#/caisses" data-r="caisses">Caisses</a>
+      <a href="#/cat/Fusils" data-r="cat:Fusils">Fusils</a>
+      <a href="#/cat/Pistolets" data-r="cat:Pistolets">Pistolets</a>
+      <a href="#/cat/Mitraillettes" data-r="cat:Mitraillettes">SMG</a>
+      <a href="#/cat/Armes lourdes" data-r="cat:Armes lourdes">Lourdes</a>
+      <a href="#/cat/Couteaux" data-r="cat:Couteaux">Couteaux</a>
+      <a href="#/cat/Gants" data-r="cat:Gants">Gants</a>
+      <a href="#/collections" data-r="collections">Collections</a>
+    </nav>
+    <div class="header-search">
+      <input id="q" type="text" placeholder="Rechercher… (↵)">
     </div>
   </div>
-  <p class="count" id="count"></p>
+</header>
 
-  <div class="grid" id="grid">
-    <p class="empty">Chargement des prix…</p>
-  </div>
-
-  <!-- Emplacement pub #2 (bannière basse). -->
-  <div class="ad-slot" id="ad-slot-bottom">Emplacement publicitaire</div>
-
-  <footer>
-    Prix indicatifs, à titre informatif — pas un conseil d'investissement. Sources : API publique Steam Community Market et API officielle Skinport. Généré automatiquement, voir le dépôt source pour la méthodologie.
-  </footer>
+<div class="wrap" id="app">
+  <p class="empty">Chargement de la base de données…</p>
 </div>
 
-<script>
-let ALL_ITEMS = [];
-let currentCat = 'all';
-let currentSearch = '';
+<footer class="site">
+  <div class="inner">
+    Prix indicatifs, à titre informatif — pas un conseil d'investissement. Sources : API publique Steam
+    Community Market et API officielle Skinport (prix), base communautaire CSGO-API (catalogue &amp; images —
+    images © Valve, servies par le CDN Steam). Ce site n'est pas affilié à Valve Corporation.
+  </div>
+</footer>
 
+<script>
+/* =================================================================
+   CS2 Tracker — SPA à routing par hash (compatible GitHub Pages)
+   Routes :
+     #/                      accueil
+     #/caisses               toutes les caisses
+     #/cat/<catégorie>       armes d'une catégorie
+     #/arme/<arme>           skins d'une arme
+     #/collections           toutes les collections
+     #/collection/<nom>      skins d'une collection
+     #/item/<id>             fiche détaillée d'un skin
+     #/recherche/<texte>     résultats de recherche
+   ================================================================= */
+
+const PAGE_SIZE = 60;
+let CAT = null;          // catalog.json
+let PRICES = {};         // name -> record de prices.json
+let GENERATED_AT = null;
+
+const app = document.getElementById('app');
+
+/* ---------- utilitaires ---------- */
 function fmtEUR(n){
   if(n === null || n === undefined || isNaN(n)) return "—";
   return n.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}) + " €";
 }
-
 function fmtDate(iso){
   if(!iso) return "—";
-  const d = new Date(iso);
-  return d.toLocaleString('fr-FR', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
+  return new Date(iso).toLocaleString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
 }
-
+function esc(s){
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 function steamUrl(name){
   return "https://steamcommunity.com/market/listings/730/" + encodeURIComponent(name);
 }
-
+function priceOf(skinOrName){
+  const n = typeof skinOrName === 'string' ? skinOrName : skinOrName.n;
+  return PRICES[n] || null;
+}
+function bestPrice(rec){
+  if(!rec) return null;
+  return rec.steam_price ?? rec.skinport_price ?? null;
+}
 function sparkline(history){
   if(!history || history.length < 2) return '';
-  const w = 240, h = 36, pad = 3;
+  const w = 240, h = 44, pad = 3;
   const prices = history.map(p => p.p);
   const min = Math.min(...prices), max = Math.max(...prices);
   const range = (max - min) || 1;
@@ -163,89 +280,365 @@ function sparkline(history){
     <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
   </svg>`;
 }
+const RARITY_ORDER = {"Consumer Grade":0,"Industrial Grade":1,"Mil-Spec Grade":2,"Restricted":3,"Classified":4,"Covert":5,"Contraband":6,"Extraordinary":5};
+function rarityRank(s){ return RARITY_ORDER[s.r] ?? 2; }
 
-function cardHTML(it){
+function adSlot(id){
+  /* Emplacement AdSense — voir README.md > "Activer les publicités" */
+  return `<div class="ad-slot" id="${id}">Emplacement publicitaire</div>`;
+}
+
+/* ---------- cartes ---------- */
+function skinCard(s){
+  const rec = priceOf(s);
+  const p = bestPrice(rec);
+  const priceHtml = rec
+    ? `<div class="iprice">${fmtEUR(p)}<span style="color:var(--muted);font-size:10px;"> · FT</span></div>`
+    : `<div class="iprice na">prix non suivi</div>`;
+  return `<a class="icard" href="#/item/${encodeURIComponent(s.i)}">
+    <div class="rar" style="background:${esc(s.rc)}"></div>
+    <div class="thumb"><img loading="lazy" src="${esc(s.img)}" alt="${esc(s.n)}"></div>
+    <div class="meta">
+      <div class="iname">${esc(s.n)}</div>
+      <div class="isub">${esc(s.r)}${s.st ? ' · ST' : ''}</div>
+      ${priceHtml}
+    </div>
+  </a>`;
+}
+function caseCard(c){
+  const rec = PRICES[c.n];
+  const p = bestPrice(rec);
+  const priceHtml = rec
+    ? `<div class="iprice">${fmtEUR(p)}</div>`
+    : `<div class="iprice na">prix non suivi</div>`;
+  return `<a class="icard" href="${steamUrl(c.n)}" target="_blank" rel="noopener">
+    <div class="rar" style="background:var(--gold)"></div>
+    <div class="thumb"><img loading="lazy" src="${esc(c.img)}" alt="${esc(c.n)}"></div>
+    <div class="meta">
+      <div class="iname">${esc(c.n)}</div>
+      <div class="isub">${c.d ? 'Sortie : ' + esc(c.d) : ''}</div>
+      ${priceHtml}
+    </div>
+  </a>`;
+}
+
+/* grille paginée : rend les PAGE_SIZE premiers, bouton "voir plus" */
+function pagedGrid(items, renderFn, big){
+  const total = items.length;
+  let shown = Math.min(PAGE_SIZE, total);
+  const gridId = 'g' + Math.random().toString(36).slice(2,8);
+  const html = `<div class="grid${big?' big':''}" id="${gridId}">${items.slice(0,shown).map(renderFn).join('')}</div>
+    ${total > shown ? `<div class="morebar"><button class="morebtn" id="${gridId}-more">Voir plus (${total - shown} restants)</button></div>` : ''}`;
+  setTimeout(()=>{
+    const btn = document.getElementById(gridId + '-more');
+    if(!btn) return;
+    btn.addEventListener('click', ()=>{
+      const grid = document.getElementById(gridId);
+      const next = items.slice(shown, shown + PAGE_SIZE*2);
+      grid.insertAdjacentHTML('beforeend', next.map(renderFn).join(''));
+      shown += next.length;
+      if(shown >= total) btn.parentElement.remove();
+      else btn.textContent = `Voir plus (${total - shown} restants)`;
+    });
+  }, 0);
+  return html;
+}
+
+/* ---------- vues ---------- */
+function viewHome(){
+  const cats = ["Fusils","Pistolets","Mitraillettes","Armes lourdes","Couteaux","Gants"];
+  const tiles = cats.map(cat=>{
+    const skins = CAT.skins.filter(s=>s.c===cat);
+    const sample = skins.find(s=>rarityRank(s)>=4) || skins[0];
+    return `<a class="tile" href="#/cat/${encodeURIComponent(cat)}">
+      <div class="timg"><img loading="lazy" src="${esc(sample?.img||'')}" alt=""></div>
+      <div class="tname">${esc(cat)}</div>
+      <div class="tcount">${skins.length} skins</div>
+    </a>`;
+  }).join('');
+
+  const tracked = CAT.skins.filter(s=>priceOf(s)).sort((a,b)=>(bestPrice(priceOf(b))||0)-(bestPrice(priceOf(a))||0));
+  const recentCases = CAT.cases.slice(-8).reverse();
+
   return `
-    <div class="card-top"></div>
-    <div class="card-cat">${it.category || ''}</div>
-    <div class="card-head">
-      <div class="card-name">${it.display}</div>
-      <div class="tag ${it.status && it.status.toLowerCase().includes('référence') ? '' : 'frozen'}">${it.status || ''}</div>
+    <div class="eyebrow">Base de données &amp; suivi de prix</div>
+    <h1>Skins, caisses &amp; collections CS2</h1>
+    <p class="intro">${CAT.skins.length.toLocaleString('fr-FR')} skins, ${CAT.cases.length} caisses et ${CAT.collections.length} collections avec images officielles.
+    Prix Steam Market &amp; Skinport suivis automatiquement pour une sélection d'items, rafraîchis plusieurs fois par jour.</p>
+    <p class="updated">Derniers prix : <b>${fmtDate(GENERATED_AT)}</b></p>
+    ${adSlot('ad-slot-top')}
+    <h2>Parcourir par type</h2>
+    <div class="grid big">${tiles}
+      <a class="tile" href="#/caisses">
+        <div class="timg"><img loading="lazy" src="${esc(CAT.cases[CAT.cases.length-1]?.img||'')}" alt=""></div>
+        <div class="tname">Caisses</div><div class="tcount">${CAT.cases.length} caisses</div>
+      </a>
+      <a class="tile" href="#/collections">
+        <div class="timg"><img loading="lazy" src="${esc(CAT.collections.find(c=>c.img)?.img||'')}" alt=""></div>
+        <div class="tname">Collections</div><div class="tcount">${CAT.collections.length} collections</div>
+      </a>
     </div>
-    <div class="card-body">
-      <p class="blurb">${it.blurb || ''}</p>
-      ${sparkline(it.history)}
-      <div class="prices">
-        <div class="price-block">
-          <div class="src">Steam</div>
-          <div class="val">${fmtEUR(it.steam_price)}</div>
-        </div>
-        <div class="price-block">
-          <div class="src">Skinport</div>
-          <div class="val">${fmtEUR(it.skinport_price)}</div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="link-row">
-        <a href="${steamUrl(it.name)}" target="_blank" rel="noopener">Voir sur Steam Market →</a>
-      </div>
-    </div>
+    <h2>Items suivis les plus chers</h2>
+    ${pagedGrid(tracked.slice(0,12), skinCard)}
+    <h2>Caisses récentes</h2>
+    ${pagedGrid(recentCases, caseCard)}
+    ${adSlot('ad-slot-bottom')}
   `;
 }
 
-function render(){
-  const grid = document.getElementById('grid');
-  const q = currentSearch.trim().toLowerCase();
-
-  const filtered = ALL_ITEMS.filter(it=>{
-    const matchesCat = currentCat === 'all' || it.category === currentCat;
-    const matchesSearch = !q || it.display.toLowerCase().includes(q);
-    return matchesCat && matchesSearch;
-  });
-
-  document.getElementById('count').textContent = `${filtered.length} item${filtered.length > 1 ? 's' : ''}`;
-
-  grid.innerHTML = '';
-  if(filtered.length === 0){
-    grid.innerHTML = '<p class="empty">Aucun item ne correspond à ta recherche.</p>';
-    return;
-  }
-  filtered.forEach(it=>{
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = cardHTML(it);
-    grid.appendChild(card);
-  });
+function viewCat(cat){
+  const skins = CAT.skins.filter(s=>s.c===cat);
+  if(!skins.length) return `<p class="empty">Catégorie inconnue.</p>`;
+  const weapons = {};
+  skins.forEach(s=>{ (weapons[s.w] = weapons[s.w] || []).push(s); });
+  const tiles = Object.keys(weapons).sort().map(w=>{
+    const list = weapons[w];
+    const sample = list.find(s=>rarityRank(s)>=4) || list[0];
+    return `<a class="tile" href="#/arme/${encodeURIComponent(w)}">
+      <div class="timg"><img loading="lazy" src="${esc(sample.img)}" alt=""></div>
+      <div class="tname">${esc(w)}</div>
+      <div class="tcount">${list.length} skins</div>
+    </a>`;
+  }).join('');
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / ${esc(cat)}</p>
+    <h1>${esc(cat)}</h1>
+    <p class="count">${Object.keys(weapons).length} modèles · ${skins.length} skins</p>
+    ${adSlot('ad-slot-top')}
+    <div class="grid big">${tiles}</div>
+  `;
 }
 
-async function load(){
+function viewWeapon(weapon, sortMode){
+  const skins = CAT.skins.filter(s=>s.w===weapon);
+  if(!skins.length) return `<p class="empty">Arme inconnue.</p>`;
+  const cat = skins[0].c;
+  sortMode = sortMode || 'rarity';
+  const sorted = [...skins];
+  if(sortMode==='rarity') sorted.sort((a,b)=>rarityRank(b)-rarityRank(a) || a.n.localeCompare(b.n));
+  if(sortMode==='name') sorted.sort((a,b)=>a.n.localeCompare(b.n));
+  if(sortMode==='price') sorted.sort((a,b)=>(bestPrice(priceOf(b))||-1)-(bestPrice(priceOf(a))||-1));
+  setTimeout(()=>{
+    const sel = document.getElementById('sortSel');
+    if(sel) sel.addEventListener('change', ()=>render(`arme/${encodeURIComponent(weapon)}`, sel.value));
+  },0);
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / <a href="#/cat/${encodeURIComponent(cat)}">${esc(cat)}</a> / ${esc(weapon)}</p>
+    <h1>${esc(weapon)}</h1>
+    <p class="count">${skins.length} skins</p>
+    ${adSlot('ad-slot-top')}
+    <div class="filters">
+      <select class="fsel" id="sortSel">
+        <option value="rarity" ${sortMode==='rarity'?'selected':''}>Tri : rareté</option>
+        <option value="name" ${sortMode==='name'?'selected':''}>Tri : nom</option>
+        <option value="price" ${sortMode==='price'?'selected':''}>Tri : prix suivi</option>
+      </select>
+    </div>
+    ${pagedGrid(sorted, skinCard)}
+  `;
+}
+
+function viewCases(){
+  const rows = [...CAT.cases].reverse();
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / Caisses</p>
+    <h1>Caisses CS2</h1>
+    <p class="count">${rows.length} caisses, de la plus récente à la plus ancienne</p>
+    ${adSlot('ad-slot-top')}
+    ${pagedGrid(rows, caseCard, true)}
+  `;
+}
+
+function viewCollections(){
+  const tiles = CAT.collections.map(c=>{
+    const n = CAT.skins.filter(s=>s.col.includes(c.n)).length;
+    return `<a class="tile" href="#/collection/${encodeURIComponent(c.n)}">
+      ${c.img ? `<div class="timg"><img loading="lazy" src="${esc(c.img)}" alt=""></div>` : ''}
+      <div class="tname">${esc(c.n)}</div>
+      <div class="tcount">${n} skins</div>
+    </a>`;
+  }).join('');
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / Collections</p>
+    <h1>Collections</h1>
+    <p class="count">${CAT.collections.length} collections</p>
+    ${adSlot('ad-slot-top')}
+    <div class="grid big">${tiles}</div>
+  `;
+}
+
+function viewCollection(name){
+  const skins = CAT.skins.filter(s=>s.col.includes(name)).sort((a,b)=>rarityRank(b)-rarityRank(a));
+  if(!skins.length) return `<p class="empty">Collection inconnue.</p>`;
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / <a href="#/collections">Collections</a> / ${esc(name)}</p>
+    <h1>${esc(name)}</h1>
+    <p class="count">${skins.length} skins</p>
+    ${adSlot('ad-slot-top')}
+    ${pagedGrid(skins, skinCard)}
+  `;
+}
+
+const WEARS = ["Factory New","Minimal Wear","Field-Tested","Well-Worn","Battle-Scarred"];
+function viewItem(id){
+  const s = CAT.skins.find(x=>x.i===id);
+  if(!s) return `<p class="empty">Item introuvable.</p>`;
+  const rec = priceOf(s);
+  const similar = CAT.skins.filter(x=>x.w===s.w && x.i!==s.i).sort((a,b)=>rarityRank(b)-rarityRank(a)).slice(0,8);
+
+  const wearLinks = WEARS.map(w=>{
+    const full = `${s.n} (${w})`;
+    return `<a class="chip" href="${steamUrl(full)}" target="_blank" rel="noopener">${w}</a>`;
+  }).join('');
+
+  const floatHtml = (s.f0!==null && s.f1!==null && s.f0!==undefined && s.f1!==undefined) ? `
+    <div class="dsec">
+      <div class="lbl">Float range</div>
+      <div class="floatbar">
+        <div class="fseg" style="left:0;width:${(s.f0*100).toFixed(1)}%"></div>
+        <div class="fseg" style="right:0;width:${((1-s.f1)*100).toFixed(1)}%"></div>
+      </div>
+      <div class="floatlbl"><span>${s.f0}</span><span>${s.f1}</span></div>
+    </div>` : '';
+
+  const priceHtml = rec ? `
+    <div class="dsec">
+      <div class="lbl">Prix suivi (${esc(rec.status||'')})</div>
+      <div class="pricebig">
+        <div><div class="src">Steam</div><div class="val">${fmtEUR(rec.steam_price)}</div></div>
+        <div><div class="src">Skinport</div><div class="val">${fmtEUR(rec.skinport_price)}</div></div>
+      </div>
+      ${sparkline(rec.history)}
+      <div class="lbl" style="margin-top:4px">Dernière vérification : ${fmtDate(rec.last_checked)}</div>
+    </div>` : `
+    <div class="dsec">
+      <div class="lbl">Prix</div>
+      <p class="intro" style="font-size:12.5px">Cet item ne fait pas (encore) partie de la liste suivie automatiquement —
+      consulte le prix en direct sur Steam Market ci-dessous.</p>
+    </div>`;
+
+  const colChips = s.col.map(c=>`<a class="chip" href="#/collection/${encodeURIComponent(c)}">${esc(c)}</a>`).join('');
+  const crateChips = s.cr.map(c=>`<span class="chip" style="cursor:default">${esc(c)}</span>`).join('');
+
+  setTimeout(()=>{
+    const box = document.getElementById('inspect');
+    const stage = document.getElementById('stage');
+    if(!box || !stage) return;
+    box.addEventListener('mousemove', e=>{
+      const r = box.getBoundingClientRect();
+      const px = (e.clientX - r.left)/r.width, py = (e.clientY - r.top)/r.height;
+      stage.style.transform = `rotateY(${(px-0.5)*26}deg) rotateX(${(0.5-py)*18}deg)`;
+      box.style.setProperty('--gx', (px*100)+'%');
+      box.style.setProperty('--gy', (py*100)+'%');
+    });
+    box.addEventListener('mouseleave', ()=>{ stage.style.transform = 'rotateY(0) rotateX(0)'; });
+  },0);
+
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / <a href="#/cat/${encodeURIComponent(s.c)}">${esc(s.c)}</a> /
+      <a href="#/arme/${encodeURIComponent(s.w)}">${esc(s.w)}</a> / ${esc(s.n)}</p>
+    <div class="detail">
+      <div>
+        <div class="inspect" id="inspect">
+          <div class="stage" id="stage"><img src="${esc(s.img)}" alt="${esc(s.n)}"></div>
+          <div class="glare"></div>
+          <div class="hint">Inspection — déplace la souris</div>
+        </div>
+      </div>
+      <div class="dmeta">
+        <h1>${esc(s.n)}</h1>
+        <div class="badges">
+          <span class="badge rar" style="background:${esc(s.rc)}">${esc(s.r)}</span>
+          ${s.st ? '<span class="badge st">StatTrak™ disponible</span>' : ''}
+          <span class="badge">${esc(s.c)}</span>
+        </div>
+        ${priceHtml}
+        ${floatHtml}
+        ${colChips ? `<div class="dsec"><div class="lbl">Collection</div><div class="chips">${colChips}</div></div>` : ''}
+        ${crateChips ? `<div class="dsec"><div class="lbl">Caisses</div><div class="chips">${crateChips}</div></div>` : ''}
+        <div class="dsec">
+          <div class="lbl">Steam Market par usure</div>
+          <div class="chips">${wearLinks}</div>
+        </div>
+        <div class="linkbtns">
+          <a class="lbtn" href="${steamUrl(s.n + ' (Field-Tested)')}" target="_blank" rel="noopener">Voir sur Steam Market →</a>
+        </div>
+      </div>
+    </div>
+    ${adSlot('ad-slot-bottom')}
+    ${similar.length ? `<h2>Autres skins ${esc(s.w)}</h2>${pagedGrid(similar, skinCard)}` : ''}
+  `;
+}
+
+function viewSearch(q){
+  const needle = q.trim().toLowerCase();
+  if(!needle) return `<p class="empty">Tape un nom d'item dans la recherche.</p>`;
+  const skins = CAT.skins.filter(s=>s.n.toLowerCase().includes(needle));
+  const cases = CAT.cases.filter(c=>c.n.toLowerCase().includes(needle));
+  return `
+    <p class="crumb"><a href="#/">Accueil</a> / Recherche</p>
+    <h1>« ${esc(q)} »</h1>
+    <p class="count">${skins.length} skins · ${cases.length} caisses</p>
+    ${cases.length ? `<h2>Caisses</h2>${pagedGrid(cases, caseCard, true)}` : ''}
+    ${skins.length ? `<h2>Skins</h2>${pagedGrid(skins, skinCard)}` : ''}
+    ${!skins.length && !cases.length ? '<p class="empty">Aucun résultat.</p>' : ''}
+  `;
+}
+
+/* ---------- router ---------- */
+function currentRoute(){
+  return decodeURIComponent(location.hash.replace(/^#\//,'')) || '';
+}
+function render(route, extra){
+  route = route !== undefined ? route : currentRoute();
+  let html, navKey = '';
+  const [head, ...rest] = route.split('/');
+  const arg = rest.join('/');
+  if(!head){ html = viewHome(); navKey = 'home'; }
+  else if(head==='caisses'){ html = viewCases(); navKey = 'caisses'; }
+  else if(head==='cat'){ html = viewCat(arg); navKey = 'cat:'+arg; }
+  else if(head==='arme'){ html = viewWeapon(arg, extra); }
+  else if(head==='collections'){ html = viewCollections(); navKey = 'collections'; }
+  else if(head==='collection'){ html = viewCollection(arg); }
+  else if(head==='item'){ html = viewItem(arg); }
+  else if(head==='recherche'){ html = viewSearch(arg); }
+  else { html = `<p class="empty">Page introuvable. <a href="#/" style="color:var(--gold)">Retour à l'accueil</a></p>`; }
+  app.innerHTML = html;
+  document.querySelectorAll('#mainNav a').forEach(a=>{
+    a.classList.toggle('active', a.dataset.r === navKey);
+  });
+  window.scrollTo(0,0);
+}
+
+window.addEventListener('hashchange', ()=>render());
+
+document.getElementById('q').addEventListener('keydown', e=>{
+  if(e.key==='Enter' && e.target.value.trim()){
+    location.hash = '#/recherche/' + encodeURIComponent(e.target.value.trim());
+  }
+});
+
+/* ---------- chargement ---------- */
+async function boot(){
   try{
-    const res = await fetch('./prices.json', {cache:'no-store'});
-    const data = await res.json();
-    document.getElementById('updatedAt').textContent = fmtDate(data.generated_at);
-    ALL_ITEMS = data.items || [];
+    const [catRes, priceRes] = await Promise.all([
+      fetch('./catalog.json'),
+      fetch('./prices.json', {cache:'no-store'}),
+    ]);
+    CAT = await catRes.json();
+    const pdata = await priceRes.json().catch(()=>({items:[]}));
+    GENERATED_AT = pdata.generated_at;
+    (pdata.items||[]).forEach(it=>{
+      PRICES[it.display] = it;   // "AK-47 | Redline", "Karambit"…
+      PRICES[it.name] = it;      // market_hash_name complet ("★ Karambit", "Recoil Case"…)
+    });
     render();
   }catch(e){
-    document.getElementById('grid').innerHTML = '<p class="empty">Impossible de charger prices.json — vérifie que le fichier existe à la racine du site.</p>';
+    app.innerHTML = '<p class="empty">Impossible de charger catalog.json / prices.json.</p>';
     console.error(e);
   }
 }
-
-document.getElementById('search').addEventListener('input', (e)=>{
-  currentSearch = e.target.value;
-  render();
-});
-
-document.getElementById('tabs').addEventListener('click', (e)=>{
-  const btn = e.target.closest('.tab');
-  if(!btn) return;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  currentCat = btn.dataset.cat;
-  render();
-});
-
-load();
+boot();
 </script>
 </body>
 </html>
