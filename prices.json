@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T09:32:26+00:00",
+  "generated_at": "2026-07-27T14:11:26+00:00",
   "items": [
     {
       "id": "breakout",
@@ -9,9 +9,9 @@
       "status": "Gel des drops : déc. 2025",
       "blurb": "Contient le Couteau Papillon. Caisse d'opération discontinuée depuis 2016 ; offre définitivement figée depuis le gel Valve de décembre 2025.",
       "steam_price": null,
-      "steam_volume": "1,850",
+      "steam_volume": null,
       "skinport_price": 5.72,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-08T00:00:00+00:00",
@@ -296,6 +296,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 5.72
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 5.72
         }
       ]
     },
@@ -307,9 +311,9 @@
       "status": "Gel des drops : déc. 2025",
       "blurb": "Contient les 5 couteaux originaux (Karambit, M9 Bayonet, Bayonet, Flip, Gut) en finitions Fade / Crimson Web / Case Hardened, plus AWP Asiimov et AK-47 Redline.",
       "steam_price": null,
-      "steam_volume": "1,323",
+      "steam_volume": null,
       "skinport_price": 2.9,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-08T00:00:00+00:00",
@@ -586,6 +590,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 2.9
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.9
         }
       ]
     },
@@ -596,10 +604,10 @@
       "category": "Caisses",
       "status": "Sortie du pool actif : mars 2026",
       "blurb": "Partage le pool de gants d'Operation Broken Fang pour une fraction du prix. Vient tout juste de sortir du pool actif — rareté toute récente.",
-      "steam_price": 0.46,
-      "steam_volume": "28,857",
+      "steam_price": null,
+      "steam_volume": null,
       "skinport_price": 0.15,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-08T00:00:00+00:00",
@@ -876,6 +884,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.46
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.15
         }
       ]
     },
@@ -887,9 +899,9 @@
       "status": "Référence",
       "blurb": "La toute première caisse de gants. Sert de point de comparaison : plus chère que les autres, pas une caisse d'opération.",
       "steam_price": null,
-      "steam_volume": "1,408",
+      "steam_volume": null,
       "skinport_price": 8.05,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-08T00:00:00+00:00",
@@ -1170,6 +1182,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 8.05
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 8.05
         }
       ]
     },
@@ -1180,10 +1196,10 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse d'opération historique, l'une des plus rares du jeu.",
-      "steam_price": 78.14,
-      "steam_volume": "39",
+      "steam_price": null,
+      "steam_volume": null,
       "skinport_price": 49.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -1448,6 +1464,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 78.14
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 49.99
         }
       ]
     },
@@ -1458,10 +1478,10 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse d'opération contenant le Bowie Knife et le Butterfly Knife.",
-      "steam_price": 7.56,
-      "steam_volume": "306",
+      "steam_price": null,
+      "steam_volume": null,
       "skinport_price": 4.4,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -1738,6 +1758,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 7.56
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 4.4
         }
       ]
     },
@@ -1749,9 +1773,9 @@
       "status": "Hors pool de drop",
       "blurb": "Première caisse de la série Chroma, gants non inclus (avant leur introduction).",
       "steam_price": null,
-      "steam_volume": "677",
+      "steam_volume": null,
       "skinport_price": 3.65,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -2024,6 +2048,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 3.65
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 3.65
         }
       ]
     },
@@ -2034,10 +2062,10 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Suite de la série Chroma, skins à finition colorée type Doppler/Gamma.",
-      "steam_price": 4.6,
-      "steam_volume": "2,863",
+      "steam_price": null,
+      "steam_volume": null,
       "skinport_price": 2.7,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -2314,6 +2342,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 4.6
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.7
         }
       ]
     },
@@ -2324,10 +2356,10 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Dernière caisse Chroma avant l'arrivée des gants sur le marché.",
-      "steam_price": 4.48,
-      "steam_volume": "2,124",
+      "steam_price": null,
+      "steam_volume": null,
       "skinport_price": 2,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -2600,6 +2632,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 4.48
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2
         }
       ]
     },
@@ -2611,9 +2647,9 @@
       "status": "Hors pool de drop",
       "blurb": "Introduit le Falchion Knife.",
       "steam_price": null,
-      "steam_volume": "1,920",
+      "steam_volume": null,
       "skinport_price": 1.2,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -2894,6 +2930,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.2
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.2
         }
       ]
     },
@@ -2905,9 +2945,9 @@
       "status": "Hors pool de drop",
       "blurb": "Introduit les Shadow Daggers.",
       "steam_price": null,
-      "steam_volume": "1,544",
+      "steam_volume": null,
       "skinport_price": 1.25,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -3184,6 +3224,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.25
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.25
         }
       ]
     },
@@ -3195,9 +3239,9 @@
       "status": "Hors pool de drop",
       "blurb": "Introduit le Bowie Knife et le R8 Revolver.",
       "steam_price": null,
-      "steam_volume": "1,409",
+      "steam_volume": null,
       "skinport_price": 2.03,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -3474,6 +3518,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 2.03
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.03
         }
       ]
     },
@@ -3484,10 +3532,10 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Gamma Doppler et les couteaux finition Ultraviolet.",
-      "steam_price": 4.3,
-      "steam_volume": "2,078",
+      "steam_price": null,
+      "steam_volume": null,
       "skinport_price": 2.25,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -3756,6 +3804,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 4.3
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.25
         }
       ]
     },
@@ -3766,10 +3818,10 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Suite de la série Gamma.",
-      "steam_price": 4.29,
-      "steam_volume": "2,743",
+      "steam_price": null,
+      "steam_volume": null,
       "skinport_price": 2.2,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -4038,6 +4090,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 4.29
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.2
         }
       ]
     },
@@ -4049,9 +4105,9 @@
       "status": "Hors pool de drop",
       "blurb": "Première caisse sans vote communautaire, sélection Valve.",
       "steam_price": null,
-      "steam_volume": "2,097",
+      "steam_volume": null,
       "skinport_price": 2.7,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -4324,6 +4380,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 2.7
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.7
         }
       ]
     },
@@ -4337,7 +4397,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 2.07,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T20:23:39+00:00",
@@ -4606,6 +4666,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 2.07
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.07
         }
       ]
     },
@@ -4619,7 +4683,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 26.86,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -4896,6 +4960,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 26.86
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 26.86
         }
       ]
     },
@@ -4909,7 +4977,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.38,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T20:23:39+00:00",
@@ -5178,6 +5246,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.38
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.38
         }
       ]
     },
@@ -5191,7 +5263,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.26,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -5468,6 +5540,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.26
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.26
         }
       ]
     },
@@ -5481,7 +5557,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.97,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -5758,6 +5834,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.97
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.97
         }
       ]
     },
@@ -5771,7 +5851,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.06,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -6044,6 +6124,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.06
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.06
         }
       ]
     },
@@ -6057,7 +6141,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -6334,6 +6418,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1
         }
       ]
     },
@@ -6347,7 +6435,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.8,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -6620,6 +6708,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.8
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.8
         }
       ]
     },
@@ -6633,7 +6725,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 4,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -6910,6 +7002,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 4
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 4
         }
       ]
     },
@@ -6923,7 +7019,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.25,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T19:16:17+00:00",
@@ -7196,6 +7292,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.25
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.25
         }
       ]
     },
@@ -7209,7 +7309,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 5.18,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -7486,6 +7586,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 5.18
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 5.18
         }
       ]
     },
@@ -7499,7 +7603,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.3,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -7776,6 +7880,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.3
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.3
         }
       ]
     },
@@ -7789,7 +7897,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 7.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -8062,6 +8170,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 7.99
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 7.99
         }
       ]
     },
@@ -8075,7 +8187,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.89,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -8352,6 +8464,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.89
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.89
         }
       ]
     },
@@ -8364,8 +8480,8 @@
       "blurb": "L'une des caisses les plus récentes encore en circulation active.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 0.24,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 0.32,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -8642,6 +8758,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.24
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.32
         }
       ]
     },
@@ -8655,7 +8775,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.15,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -8928,6 +9048,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.15
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.15
         }
       ]
     },
@@ -8941,7 +9065,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 45.92,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -9170,6 +9294,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 45.92
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 45.92
         }
       ]
     },
@@ -9183,7 +9311,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 16.82,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -9460,6 +9588,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 16.82
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 16.82
         }
       ]
     },
@@ -9473,7 +9605,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.49,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -9746,6 +9878,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 8.49
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 8.49
         }
       ]
     },
@@ -9759,7 +9895,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 6.13,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -10032,6 +10168,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 6.13
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 6.13
         }
       ]
     },
@@ -10045,7 +10185,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1000,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -10310,6 +10450,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1000
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1000
         }
       ]
     },
@@ -10323,7 +10467,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 707.49,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -10588,6 +10732,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 707.49
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 707.49
         }
       ]
     },
@@ -10601,7 +10749,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 224.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -10870,6 +11018,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 224.99
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 224.99
         }
       ]
     },
@@ -10883,7 +11035,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 194.37,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -11156,6 +11308,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 194.37
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 194.37
         }
       ]
     },
@@ -11169,7 +11325,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 58.38,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -11450,6 +11606,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 58.38
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 58.38
         }
       ]
     },
@@ -11463,7 +11623,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 116.7,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -11728,6 +11888,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 116.7
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 116.7
         }
       ]
     },
@@ -11741,7 +11905,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 99.01,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -12014,6 +12178,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 99.01
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 99.01
         }
       ]
     },
@@ -12027,7 +12195,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 96.97,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -12308,6 +12476,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 96.97
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 96.97
         }
       ]
     },
@@ -12321,7 +12493,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1089.87,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -12586,6 +12758,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1089.87
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1089.87
         }
       ]
     },
@@ -12599,7 +12775,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 60.78,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -12880,6 +13056,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 60.78
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 60.78
         }
       ]
     },
@@ -12893,7 +13073,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 38.54,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -13170,6 +13350,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 38.54
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 38.54
         }
       ]
     },
@@ -13183,7 +13367,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 177.5,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -13464,6 +13648,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 177.5
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 177.5
         }
       ]
     },
@@ -13477,7 +13665,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 307.36,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -13758,6 +13946,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 307.36
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 307.36
         }
       ]
     },
@@ -13771,7 +13963,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 83.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -14052,6 +14244,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 83.99
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 83.99
         }
       ]
     },
@@ -14065,7 +14261,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 176.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -14334,6 +14530,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 176.99
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 176.99
         }
       ]
     },
@@ -14347,7 +14547,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 44.68,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -14628,6 +14828,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 44.68
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 44.68
         }
       ]
     },
@@ -14641,7 +14845,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 47.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -14922,6 +15126,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 47.99
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 47.99
         }
       ]
     },
@@ -14935,7 +15143,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 109.18,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -15212,6 +15420,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 109.18
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 109.18
         }
       ]
     },
@@ -15225,7 +15437,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 205.85,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -15506,6 +15718,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 205.85
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 205.85
         }
       ]
     },
@@ -15519,7 +15735,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 88.63,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -15792,6 +16008,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 88.63
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 88.63
         }
       ]
     },
@@ -15805,7 +16025,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -15818,7 +16038,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -15831,7 +16051,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -15844,7 +16064,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -15857,7 +16077,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -15870,7 +16090,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -15883,7 +16103,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -15895,8 +16115,8 @@
       "blurb": "Skin Redline pour AK-47, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 25.87,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 26.48,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -16177,6 +16397,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 25.87
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 26.48
         }
       ]
     },
@@ -16190,7 +16414,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 35.1,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T19:16:17+00:00",
@@ -16459,6 +16683,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 35.1
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 35.1
         }
       ]
     },
@@ -16472,7 +16700,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 664.76,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -16737,6 +16965,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 664.76
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 664.76
         }
       ]
     },
@@ -16750,7 +16982,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 163.53,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -17023,6 +17255,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 163.53
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 163.53
         }
       ]
     },
@@ -17036,7 +17272,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 110.09,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -17313,6 +17549,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 110.09
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 110.09
         }
       ]
     },
@@ -17326,7 +17566,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 66.89,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -17607,6 +17847,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 66.89
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 66.89
         }
       ]
     },
@@ -17620,7 +17864,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 31.95,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -17901,6 +18145,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 31.95
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 31.95
         }
       ]
     },
@@ -17914,7 +18162,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 142,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -18179,6 +18427,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 142
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 142
         }
       ]
     },
@@ -18191,8 +18443,8 @@
       "blurb": "Skin Point Disarray pour AK-47, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 11.97,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 12.03,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T19:16:17+00:00",
@@ -18465,6 +18717,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 11.97
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 12.03
         }
       ]
     },
@@ -18478,7 +18734,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 203.77,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -18755,6 +19011,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 203.77
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 203.77
         }
       ]
     },
@@ -18768,7 +19028,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 13.04,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -19045,6 +19305,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 13.04
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 13.04
         }
       ]
     },
@@ -19058,7 +19322,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 83.44,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -19335,6 +19599,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 83.44
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 83.44
         }
       ]
     },
@@ -19348,7 +19616,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 51.01,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -19617,6 +19885,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 51.01
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 51.01
         }
       ]
     },
@@ -19630,7 +19902,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 29.57,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -19899,6 +20171,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 29.57
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 29.57
         }
       ]
     },
@@ -19912,7 +20188,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 330,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -20085,6 +20361,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 330
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 330
         }
       ]
     },
@@ -20098,7 +20378,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 3910.03,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -20243,6 +20523,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 3910.03
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 3910.03
         }
       ]
     },
@@ -20256,7 +20540,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 213.91,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -20521,6 +20805,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 213.91
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 213.91
         }
       ]
     },
@@ -20534,7 +20822,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 29.62,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -20811,6 +21099,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 29.62
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 29.62
         }
       ]
     },
@@ -20824,7 +21116,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -20837,7 +21129,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -20850,7 +21142,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 46.77,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -21131,6 +21423,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 46.77
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 46.77
         }
       ]
     },
@@ -21144,7 +21440,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 10.98,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -21425,6 +21721,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 10.98
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 10.98
         }
       ]
     },
@@ -21438,7 +21738,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 25.43,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -21719,6 +22019,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 25.43
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 25.43
         }
       ]
     },
@@ -21732,7 +22036,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 234.61,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -22013,6 +22317,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 234.61
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 234.61
         }
       ]
     },
@@ -22026,7 +22334,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 92.22,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -22303,6 +22611,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 92.22
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 92.22
         }
       ]
     },
@@ -22316,7 +22628,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 151.68,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -22597,6 +22909,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 151.68
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 151.68
         }
       ]
     },
@@ -22610,7 +22926,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 56.31,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -22887,6 +23203,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 56.31
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 56.31
         }
       ]
     },
@@ -22900,7 +23220,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -22913,7 +23233,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 44.38,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -23178,6 +23498,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 44.38
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 44.38
         }
       ]
     },
@@ -23191,7 +23515,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 152.64,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -23456,6 +23780,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 152.64
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 152.64
         }
       ]
     },
@@ -23469,7 +23797,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -23482,7 +23810,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 9.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -23763,6 +24091,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 9.99
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 9.99
         }
       ]
     },
@@ -23776,7 +24108,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -23789,7 +24121,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -23975,7 +24307,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 93.1,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -24240,6 +24572,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 93.1
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 93.1
         }
       ]
     },
@@ -24253,7 +24589,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -24266,7 +24602,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -24279,7 +24615,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 30.96,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -24560,6 +24896,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 30.96
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 30.96
         }
       ]
     },
@@ -24573,7 +24913,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 28,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -24854,6 +25194,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 28
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 28
         }
       ]
     },
@@ -24867,7 +25211,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 36.55,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -25144,6 +25488,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 36.55
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 36.55
         }
       ]
     },
@@ -25157,7 +25505,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 106.38,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -25422,6 +25770,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 106.38
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 106.38
         }
       ]
     },
@@ -25435,7 +25787,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 32.61,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -25712,6 +26064,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 32.61
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 32.61
         }
       ]
     },
@@ -25725,7 +26081,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 10.11,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -26002,6 +26358,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 10.11
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 10.11
         }
       ]
     },
@@ -26015,7 +26375,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 23.42,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -26292,6 +26652,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 23.42
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 23.42
         }
       ]
     },
@@ -26305,7 +26669,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 10.33,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -26586,6 +26950,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 10.33
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 10.33
         }
       ]
     },
@@ -26599,7 +26967,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -26612,7 +26980,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 31.72,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -26893,6 +27261,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 31.72
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 31.72
         }
       ]
     },
@@ -26905,8 +27277,8 @@
       "blurb": "Skin Code Red pour Desert Eagle, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 39.94,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 38.84,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -27187,6 +27559,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 39.94
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 38.84
         }
       ]
     },
@@ -27200,7 +27576,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 15.38,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -27481,6 +27857,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 15.38
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 15.38
         }
       ]
     },
@@ -27494,7 +27874,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 55,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -27771,6 +28151,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 55
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 55
         }
       ]
     },
@@ -27784,7 +28168,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -27797,7 +28181,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -27810,7 +28194,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 3.94,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -28091,6 +28475,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 3.94
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 3.94
         }
       ]
     },
@@ -28104,7 +28492,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -28117,7 +28505,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 16.2,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -28394,6 +28782,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 16.2
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 16.2
         }
       ]
     },
@@ -28407,7 +28799,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 30,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -28688,6 +29080,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 30
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 30
         }
       ]
     },
@@ -28701,7 +29097,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 44,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -28974,6 +29370,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 44
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 44
         }
       ]
     },
@@ -28987,7 +29387,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.65,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -29260,6 +29660,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.65
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.65
         }
       ]
     },
@@ -29272,8 +29676,8 @@
       "blurb": "Skin Wasteland Rebel pour Glock-18, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 94.02,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 103.49,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -29550,6 +29954,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 94.02
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 103.49
         }
       ]
     },
@@ -29563,7 +29971,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 56,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -29844,6 +30252,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 56
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 56
         }
       ]
     },
@@ -29857,7 +30269,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 90.5,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T19:16:17+00:00",
@@ -30126,6 +30538,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 90.5
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 90.5
         }
       ]
     },
@@ -30138,8 +30554,8 @@
       "blurb": "Skin Orion pour USP-S, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 49.81,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 49.57,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T20:23:39+00:00",
@@ -30408,6 +30824,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 49.81
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 49.57
         }
       ]
     },
@@ -30421,7 +30841,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 27,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -30698,6 +31118,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 27
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 27
         }
       ]
     },
@@ -30711,7 +31135,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 2.66,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -30988,6 +31412,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 2.66
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.66
         }
       ]
     },
@@ -31001,7 +31429,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.47,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -31278,6 +31706,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.47
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.47
         }
       ]
     },
@@ -31290,8 +31722,8 @@
       "blurb": "Skin Asiimov pour P250, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 9.72,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 10,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -31568,6 +32000,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 9.72
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 10
         }
       ]
     },
@@ -31581,7 +32017,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 23.28,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T20:23:39+00:00",
@@ -31850,6 +32286,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 23.28
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 23.28
         }
       ]
     },
@@ -31863,7 +32303,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 31.06,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -32092,6 +32532,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 31.06
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 31.06
         }
       ]
     },
@@ -32104,8 +32548,8 @@
       "blurb": "Skin Mehndi pour P250, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 12.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": null,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -32383,7 +32827,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.49,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -32664,6 +33108,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.49
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.49
         }
       ]
     },
@@ -32677,7 +33125,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 12.53,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -32958,6 +33406,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 12.53
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 12.53
         }
       ]
     },
@@ -32971,7 +33423,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 442.87,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -33188,6 +33640,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 442.87
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 442.87
         }
       ]
     },
@@ -33201,7 +33657,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 9,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -33482,6 +33938,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 9
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 9
         }
       ]
     },
@@ -33495,7 +33955,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.5,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -33776,6 +34236,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 8.5
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 8.5
         }
       ]
     },
@@ -33789,7 +34253,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 55.69,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -34062,6 +34526,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 55.69
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 55.69
         }
       ]
     },
@@ -34075,7 +34543,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.63,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -34348,6 +34816,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 8.63
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 8.63
         }
       ]
     },
@@ -34361,7 +34833,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 2.03,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -34642,6 +35114,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 2.03
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 2.03
         }
       ]
     },
@@ -34655,7 +35131,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 71.98,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T19:16:17+00:00",
@@ -34840,6 +35316,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 71.98
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 71.98
         }
       ]
     },
@@ -34853,7 +35333,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 9.15,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -35134,6 +35614,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 9.15
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 9.15
         }
       ]
     },
@@ -35147,7 +35631,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 159.99,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -35428,6 +35912,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 159.99
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 159.99
         }
       ]
     },
@@ -35441,7 +35929,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.4,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -35722,6 +36210,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 8.4
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 8.4
         }
       ]
     },
@@ -35735,7 +36227,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -35961,7 +36453,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 96.89,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T19:16:17+00:00",
@@ -36234,6 +36726,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 96.89
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 96.89
         }
       ]
     },
@@ -36247,7 +36743,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -36260,7 +36756,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 36.37,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -36525,6 +37021,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 36.37
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 36.37
         }
       ]
     },
@@ -36538,7 +37038,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 103.31,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -36767,6 +37267,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 103.31
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 103.31
         }
       ]
     },
@@ -36780,7 +37284,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 5,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -37061,6 +37565,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 5
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 5
         }
       ]
     },
@@ -37074,7 +37582,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 49.7,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -37351,6 +37859,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 49.7
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 49.7
         }
       ]
     },
@@ -37364,7 +37876,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 9.01,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -37645,6 +38157,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 9.01
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 9.01
         }
       ]
     },
@@ -37657,8 +38173,8 @@
       "blurb": "Skin Momentum pour UMP-45, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 3.87,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 3.89,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -37939,6 +38455,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 3.87
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 3.89
         }
       ]
     },
@@ -37952,7 +38472,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 179.68,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -38205,6 +38725,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 179.68
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 179.68
         }
       ]
     },
@@ -38218,7 +38742,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 27.79,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -38499,6 +39023,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 27.79
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 27.79
         }
       ]
     },
@@ -38512,7 +39040,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 43.69,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -38721,6 +39249,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 43.69
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 43.69
         }
       ]
     },
@@ -38734,7 +39266,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 90.16,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -39015,6 +39547,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 90.16
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 90.16
         }
       ]
     },
@@ -39028,7 +39564,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 20.37,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -39189,6 +39725,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 20.37
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 20.37
         }
       ]
     },
@@ -39202,7 +39742,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 5.94,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -39483,6 +40023,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 5.94
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 5.94
         }
       ]
     },
@@ -39496,7 +40040,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.26,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -39677,6 +40221,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.26
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.26
         }
       ]
     },
@@ -39690,7 +40238,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 64.4,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -39967,6 +40515,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 64.4
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 64.4
         }
       ]
     },
@@ -39980,7 +40532,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -40158,7 +40710,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -40387,8 +40939,8 @@
       "blurb": "Skin Dragonfire pour SSG 08, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 237.03,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 245.67,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -40669,6 +41221,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 237.03
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 245.67
         }
       ]
     },
@@ -40682,7 +41238,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T17:26:14+00:00",
@@ -40960,7 +41516,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 6.79,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -41241,6 +41797,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 6.79
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 6.79
         }
       ]
     },
@@ -41254,7 +41814,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.28,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -41535,6 +42095,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.28
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.28
         }
       ]
     },
@@ -41548,7 +42112,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 7.95,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -41813,6 +42377,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 7.95
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 7.95
         }
       ]
     },
@@ -41825,8 +42393,8 @@
       "blurb": "Skin Bloodsport pour SCAR-20, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 10.84,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "skinport_price": 10.61,
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -42107,6 +42675,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 10.84
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 10.61
         }
       ]
     },
@@ -42120,7 +42692,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 10.24,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -42401,6 +42973,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 10.24
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 10.24
         }
       ]
     },
@@ -42414,7 +42990,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -42624,7 +43200,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.28,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -42905,6 +43481,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.28
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.28
         }
       ]
     },
@@ -42918,7 +43498,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -43199,6 +43779,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 8
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 8
         }
       ]
     },
@@ -43212,7 +43796,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -43225,7 +43809,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -43291,7 +43875,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.97,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -43572,6 +44156,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 0.97
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 0.97
         }
       ]
     },
@@ -43585,7 +44173,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -43598,7 +44186,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.28,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -43815,6 +44403,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.28
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.28
         }
       ]
     },
@@ -43828,7 +44420,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -43841,7 +44433,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 53.33,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -44122,6 +44714,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 53.33
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 53.33
         }
       ]
     },
@@ -44135,7 +44731,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 66.6,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -44400,6 +44996,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 66.6
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 66.6
         }
       ]
     },
@@ -44413,7 +45013,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.11,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -44694,6 +45294,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.11
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.11
         }
       ]
     },
@@ -44707,7 +45311,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T19:16:17+00:00",
@@ -44901,7 +45505,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 4.45,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -45182,6 +45786,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 4.45
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 4.45
         }
       ]
     },
@@ -45195,7 +45803,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 28.4,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -45476,6 +46084,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 28.4
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 28.4
         }
       ]
     },
@@ -45489,7 +46101,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 6.27,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -45766,6 +46378,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 6.27
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 6.27
         }
       ]
     },
@@ -45779,7 +46395,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     },
     {
@@ -45792,7 +46408,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 4.39,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -46073,6 +46689,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 4.39
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 4.39
         }
       ]
     },
@@ -46086,7 +46706,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.5,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -46367,6 +46987,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 8.5
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 8.5
         }
       ]
     },
@@ -46380,7 +47004,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.78,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -46657,6 +47281,10 @@
         {
           "t": "2026-07-27T09:32:26+00:00",
           "p": 1.78
+        },
+        {
+          "t": "2026-07-27T14:11:26+00:00",
+          "p": 1.78
         }
       ]
     },
@@ -46670,7 +47298,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-07-27T09:32:26+00:00",
+      "last_checked": "2026-07-27T14:11:26+00:00",
       "history": []
     }
   ]
