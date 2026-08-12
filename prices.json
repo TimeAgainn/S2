@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T18:48:01+00:00",
+  "generated_at": "2026-08-12T01:06:24+00:00",
   "items": [
     {
       "id": "breakout",
@@ -8,15 +8,11 @@
       "category": "Caisses",
       "status": "Gel des drops : déc. 2025",
       "blurb": "Contient le Couteau Papillon. Caisse d'opération discontinuée depuis 2016 ; offre définitivement figée depuis le gel Valve de décembre 2025.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 10.4,
+      "steam_volume": "1,516",
       "skinport_price": 5.7,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 5.08
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 5.08
@@ -372,6 +368,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 5.7
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 10.4
         }
       ]
     },
@@ -382,15 +382,11 @@
       "category": "Caisses",
       "status": "Gel des drops : déc. 2025",
       "blurb": "Contient les 5 couteaux originaux (Karambit, M9 Bayonet, Bayonet, Flip, Gut) en finitions Fade / Crimson Web / Case Hardened, plus AWP Asiimov et AK-47 Redline.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 5.21,
+      "steam_volume": "1,247",
       "skinport_price": 2.94,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 3.1
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 3.1
@@ -746,6 +742,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.94
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 5.21
         }
       ]
     },
@@ -756,15 +756,11 @@
       "category": "Caisses",
       "status": "Sortie du pool actif : mars 2026",
       "blurb": "Partage le pool de gants d'Operation Broken Fang pour une fraction du prix. Vient tout juste de sortir du pool actif — rareté toute récente.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 0.39,
+      "steam_volume": "22,567",
       "skinport_price": 0.1,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.16
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.16
@@ -1120,6 +1116,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.1
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.39
         }
       ]
     },
@@ -1130,15 +1130,11 @@
       "category": "Caisses",
       "status": "Référence",
       "blurb": "La toute première caisse de gants. Sert de point de comparaison : plus chère que les autres, pas une caisse d'opération.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 14.54,
+      "steam_volume": "1,459",
       "skinport_price": 8.92,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 8.09
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 8.09
@@ -1494,6 +1490,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 8.92
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 14.54
         }
       ]
     },
@@ -1504,15 +1504,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse d'opération historique, l'une des plus rares du jeu.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 78.01,
+      "steam_volume": "20",
       "skinport_price": 49.79,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 53.83
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 53.83
@@ -1868,6 +1864,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 49.79
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 78.01
         }
       ]
     },
@@ -1878,15 +1878,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse d'opération contenant le Bowie Knife et le Butterfly Knife.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 7.09,
+      "steam_volume": "164",
       "skinport_price": 4.3,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 4.55
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 4.55
@@ -2242,6 +2238,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 4.3
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 7.09
         }
       ]
     },
@@ -2252,15 +2252,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Première caisse de la série Chroma, gants non inclus (avant leur introduction).",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 6.18,
+      "steam_volume": "735",
       "skinport_price": 3.47,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 3.7
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 3.7
@@ -2616,6 +2612,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 3.47
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 6.18
         }
       ]
     },
@@ -2626,15 +2626,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Suite de la série Chroma, skins à finition colorée type Doppler/Gamma.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 4.97,
+      "steam_volume": "2,281",
       "skinport_price": 2.7,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 3
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 3
@@ -2990,6 +2986,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.7
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 4.97
         }
       ]
     },
@@ -3000,15 +3000,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Dernière caisse Chroma avant l'arrivée des gants sur le marché.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 4.34,
+      "steam_volume": "4,284",
       "skinport_price": 2.39,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 2.01
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 2.01
@@ -3364,6 +3360,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.39
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 4.34
         }
       ]
     },
@@ -3374,15 +3374,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Falchion Knife.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 2.39,
+      "steam_volume": "1,613",
       "skinport_price": 1.29,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.3
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.3
@@ -3738,6 +3734,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1.29
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 2.39
         }
       ]
     },
@@ -3748,15 +3748,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit les Shadow Daggers.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 2.36,
+      "steam_volume": "1,258",
       "skinport_price": 1.24,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.01
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.01
@@ -4112,6 +4108,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1.24
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 2.36
         }
       ]
     },
@@ -4122,15 +4122,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Bowie Knife et le R8 Revolver.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 2.02,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 3.69,
+      "steam_volume": "1,685",
+      "skinport_price": 2.07,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.65
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.65
@@ -4486,6 +4482,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.02
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 3.69
         }
       ]
     },
@@ -4496,15 +4496,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Gamma Doppler et les couteaux finition Ultraviolet.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 3.96,
+      "steam_volume": "2,283",
       "skinport_price": 2.28,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.82
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.82
@@ -4860,6 +4856,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.28
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 3.96
         }
       ]
     },
@@ -4870,15 +4870,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Suite de la série Gamma.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 3.97,
+      "steam_volume": "2,585",
       "skinport_price": 2.18,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.8
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.8
@@ -5234,6 +5230,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.18
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 3.97
         }
       ]
     },
@@ -5244,15 +5244,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Première caisse sans vote communautaire, sélection Valve.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 4.87,
+      "steam_volume": "2,030",
       "skinport_price": 2.7,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 2.19
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 2.19
@@ -5608,6 +5604,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.7
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 4.87
         }
       ]
     },
@@ -5618,15 +5618,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Suite de la série Spectrum.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 3.77,
+      "steam_volume": "3,915",
       "skinport_price": 2.17,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 2.22
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 2.1
@@ -5982,6 +5978,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.17
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 3.77
         }
       ]
     },
@@ -5992,15 +5992,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Talon Knife et les Bloodhound Gloves.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 39.88,
+      "steam_volume": "50",
       "skinport_price": 26.5,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 25.42
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 25.42
@@ -6356,6 +6352,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 26.5
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 39.88
         }
       ]
     },
@@ -6366,15 +6366,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Ursus Knife, votée par la communauté.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 0.31,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 0.81,
+      "steam_volume": "4,939",
+      "skinport_price": 0.39,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.32
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.32
@@ -6730,6 +6726,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.31
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.81
         }
       ]
     },
@@ -6740,15 +6740,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Navaja Knife et les Hand Wraps.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 2.04,
+      "steam_volume": "3,286",
       "skinport_price": 1.25,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.03
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.03
@@ -7104,6 +7100,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1.25
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 2.04
         }
       ]
     },
@@ -7114,15 +7114,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Nomad Knife, en lien avec le mode Danger Zone.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 1.66,
+      "steam_volume": "5,420",
       "skinport_price": 0.77,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.85
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.85
@@ -7478,6 +7474,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.77
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1.66
         }
       ]
     },
@@ -7488,15 +7488,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse d'entrée de gamme sans nouveau couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 1.8,
+      "steam_volume": "5,411",
       "skinport_price": 1.05,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.87
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.87
@@ -7852,6 +7848,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1.05
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1.8
         }
       ]
     },
@@ -7862,15 +7862,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Suite de la série Prisma.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 1.75,
+      "steam_volume": "7,910",
       "skinport_price": 0.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1
@@ -8226,6 +8222,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1.75
         }
       ]
     },
@@ -8236,15 +8236,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse anniversaire des 20 ans de la licence Counter-Strike.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 1.34,
+      "steam_volume": "3,405",
       "skinport_price": 0.79,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.81
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.81
@@ -8600,6 +8596,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.79
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1.34
         }
       ]
     },
@@ -8610,15 +8610,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Paracord Knife et le Survival Knife.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 6.12,
+      "steam_volume": "223",
       "skinport_price": 3.94,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 3.98
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 3.98
@@ -8974,6 +8970,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 3.94
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 6.12
         }
       ]
     },
@@ -8984,15 +8984,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Kukri Knife.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 0.69,
+      "steam_volume": "23,078",
       "skinport_price": 0.3,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.22
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.22
@@ -9348,6 +9344,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.3
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.69
         }
       ]
     },
@@ -9358,15 +9358,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Skeleton Knife et les Hydra Gloves.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 5,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 8.11,
+      "steam_volume": "358",
+      "skinport_price": 4.82,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 5.3
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 5.3
@@ -9722,6 +9718,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 5
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 8.11
         }
       ]
     },
@@ -9732,15 +9732,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Thématique infiltration, sans nouveau couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 0.6,
+      "steam_volume": "8,768",
       "skinport_price": 0.3,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.36
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.36
@@ -10096,6 +10092,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.3
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.6
         }
       ]
     },
@@ -10106,15 +10106,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Dernière caisse liée à une Operation payante.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 11.47,
+      "steam_volume": "182",
       "skinport_price": 7.4,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 7.95
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 7.95
@@ -10470,6 +10466,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 7.4
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 11.47
         }
       ]
     },
@@ -10480,15 +10480,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse à thème onirique, sans nouveau couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 1.57,
+      "steam_volume": "96,335",
       "skinport_price": 0.75,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.75
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.75
@@ -10844,6 +10840,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.75
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1.57
         }
       ]
     },
@@ -10854,15 +10854,11 @@
       "category": "Caisses",
       "status": "En pool actif",
       "blurb": "L'une des caisses les plus récentes encore en circulation active.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 0.31,
+      "steam_volume": "75,849",
       "skinport_price": 0.21,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.24
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.24
@@ -11218,6 +11214,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.21
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.31
         }
       ]
     },
@@ -11228,15 +11228,11 @@
       "category": "Caisses",
       "status": "En pool actif",
       "blurb": "Caisse récente à thème électrique, encore dans le pool de drop actuel.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 0.2,
+      "steam_volume": "94,970",
       "skinport_price": 0.14,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.15
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.15
@@ -11592,6 +11588,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.14
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.2
         }
       ]
     },
@@ -11602,15 +11602,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Toute première caisse jamais sortie sur CS:GO.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 58.69,
+      "steam_volume": "7",
       "skinport_price": 38.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-16T18:56:42+00:00",
-          "p": 46.11
-        },
         {
           "t": "2026-07-17T01:49:34+00:00",
           "p": 46.11
@@ -11966,6 +11962,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 38.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 58.69
         }
       ]
     },
@@ -11976,15 +11976,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse hivernale historique, très rare.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 14.66,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 19.87,
+      "steam_volume": "55",
+      "skinport_price": 14.57,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 17.71
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 17.71
@@ -12340,6 +12336,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 14.66
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 19.87
         }
       ]
     },
@@ -12350,15 +12350,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Caisse hivernale contenant le M9 Bayonet.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 12.5,
+      "steam_volume": "83",
       "skinport_price": 8.4,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 8.94
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 8.94
@@ -12714,6 +12710,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 8.4
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 12.5
         }
       ]
     },
@@ -12724,15 +12724,11 @@
       "category": "Caisses",
       "status": "Hors pool de drop",
       "blurb": "Introduit le Huntsman Knife.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 11.35,
+      "steam_volume": "78",
       "skinport_price": 6.21,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 6.91
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 6.91
@@ -13088,6 +13084,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 6.21
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 11.35
         }
       ]
     },
@@ -13101,12 +13101,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 939,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 963.13
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 963.13
@@ -13462,6 +13458,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 939
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 939
         }
       ]
     },
@@ -13473,14 +13473,10 @@
       "status": "Vanilla",
       "blurb": "Couteau M9 Bayonet, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
       "steam_price": null,
-      "steam_volume": null,
+      "steam_volume": "1",
       "skinport_price": 700.2,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 599
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 599
@@ -13836,6 +13832,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 700.2
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 700.2
         }
       ]
     },
@@ -13846,15 +13846,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Bayonet, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 323.26,
+      "steam_volume": "3",
       "skinport_price": 225,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 176.92
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 176.92
@@ -14210,6 +14206,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 225
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 323.26
         }
       ]
     },
@@ -14220,15 +14220,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Flip Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 242.68,
+      "steam_volume": "1",
       "skinport_price": 194.37,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 184.05
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 184.05
@@ -14584,6 +14580,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 194.37
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 242.68
         }
       ]
     },
@@ -14594,15 +14594,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Gut Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 72.93,
+      "steam_volume": "1",
       "skinport_price": 67.09,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 59.5
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 59.5
@@ -14958,6 +14954,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 67.09
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 72.93
         }
       ]
     },
@@ -14968,15 +14968,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Huntsman Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 169.69,
+      "steam_volume": "2",
       "skinport_price": 119.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T07:59:50+00:00",
-          "p": 112.05
-        },
         {
           "t": "2026-07-19T12:55:36+00:00",
           "p": 112.05
@@ -15332,6 +15328,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 119.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 169.69
         }
       ]
     },
@@ -15342,15 +15342,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Falchion Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 133.92,
+      "steam_volume": "1",
       "skinport_price": 99.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 106
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 106
@@ -15706,6 +15702,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 99.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 133.92
         }
       ]
     },
@@ -15716,15 +15716,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Bowie Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 121.01,
+      "steam_volume": "3",
       "skinport_price": 83.36,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 90.21
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 90.21
@@ -16080,6 +16076,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 83.36
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 121.01
         }
       ]
     },
@@ -16093,12 +16093,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1100,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1219.06
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1341.3
@@ -16454,6 +16450,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1100
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1100
         }
       ]
     },
@@ -16464,15 +16464,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Shadow Daggers, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 93.58,
+      "steam_volume": "4",
       "skinport_price": 58.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 61.95
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 61.95
@@ -16828,6 +16824,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 58.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 93.58
         }
       ]
     },
@@ -16838,15 +16838,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Navaja Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 52.9,
+      "steam_volume": "27",
       "skinport_price": 36.69,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 36.99
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 36.79
@@ -17202,6 +17198,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 36.69
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 52.9
         }
       ]
     },
@@ -17212,15 +17212,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Stiletto Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 260.01,
+      "steam_volume": "6",
       "skinport_price": 171.08,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 185.67
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 184.89
@@ -17576,6 +17572,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 171.08
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 260.01
         }
       ]
     },
@@ -17586,15 +17586,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Talon Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 426.66,
+      "steam_volume": "2",
       "skinport_price": 285.8,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 300
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 300
@@ -17950,6 +17946,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 285.8
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 426.66
         }
       ]
     },
@@ -17960,15 +17960,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Ursus Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 102.67,
+      "steam_volume": "6",
       "skinport_price": 73.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 87.99
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 87.99
@@ -18324,6 +18320,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 73.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 102.67
         }
       ]
     },
@@ -18334,15 +18334,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Classic Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 254.43,
+      "steam_volume": "4",
       "skinport_price": 171,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 177.99
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 170
@@ -18698,6 +18694,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 171
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 254.43
         }
       ]
     },
@@ -18708,15 +18708,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Paracord Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 66.36,
+      "steam_volume": "23",
       "skinport_price": 44.69,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 49.41
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 49.41
@@ -19072,6 +19068,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 44.69
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 66.36
         }
       ]
     },
@@ -19082,15 +19082,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Survival Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 63.28,
+      "steam_volume": "27",
       "skinport_price": 45.79,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 47.5
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 47.5
@@ -19446,6 +19442,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 45.79
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 63.28
         }
       ]
     },
@@ -19456,15 +19456,11 @@
       "category": "Couteaux",
       "status": "Vanilla",
       "blurb": "Couteau Nomad Knife, finition Vanilla (sans pattern spécial) — sert de prix plancher pour ce type de couteau.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 173.42,
+      "steam_volume": "12",
       "skinport_price": 124.34,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 125
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 120
@@ -19820,6 +19816,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 124.34
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 173.42
         }
       ]
     },
@@ -19833,12 +19833,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 220,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 215.47
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 215.47
@@ -20194,6 +20190,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 220
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 220
         }
       ]
     },
@@ -20207,12 +20207,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 90,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 91.94
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 94.04
@@ -20568,6 +20564,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 90
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 90
         }
       ]
     },
@@ -20581,7 +20581,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -20594,7 +20594,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -20607,7 +20607,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -20620,7 +20620,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -20633,7 +20633,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -20646,7 +20646,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -20659,7 +20659,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -20669,15 +20669,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Redline pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 35.96,
+      "steam_volume": "85",
       "skinport_price": 23,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 24.6
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 24.6
@@ -21033,6 +21029,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 23
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 35.96
         }
       ]
     },
@@ -21043,15 +21043,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Asiimov pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 52.8,
+      "steam_volume": "44",
       "skinport_price": 32.87,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 35
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 34.98
@@ -21407,6 +21403,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 32.87
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 52.8
         }
       ]
     },
@@ -21417,15 +21417,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Fire Serpent pour AK-47, condition Field-Tested.",
-      "steam_price": null,
+      "steam_price": 946.29,
       "steam_volume": null,
-      "skinport_price": 638.38,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 611.33,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 665.43
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 665.43
@@ -21781,6 +21777,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 638.38
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 946.29
         }
       ]
     },
@@ -21791,15 +21791,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Vulcan pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 239.5,
+      "steam_volume": "3",
       "skinport_price": 157.04,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 165.15
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 165.15
@@ -22155,6 +22151,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 157.04
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 239.5
         }
       ]
     },
@@ -22165,15 +22165,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Bloodsport pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 148.85,
+      "steam_volume": "7",
       "skinport_price": 110,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 115.47
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 115.47
@@ -22529,6 +22525,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 110
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 148.85
         }
       ]
     },
@@ -22539,15 +22539,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Wasteland Rebel pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 94.76,
+      "steam_volume": "5",
       "skinport_price": 65,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 69.19
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 69.19
@@ -22903,6 +22899,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 65
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 94.76
         }
       ]
     },
@@ -22913,15 +22913,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Neon Rider pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 35.3,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 56.72,
+      "steam_volume": "31",
+      "skinport_price": 31.67,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 39.25
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 39.25
@@ -23277,6 +23273,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 35.3
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 56.72
         }
       ]
     },
@@ -23287,15 +23287,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Fuel Injector pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 189.75,
+      "steam_volume": "4",
       "skinport_price": 140.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 140.45
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 140.45
@@ -23651,6 +23647,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 140.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 189.75
         }
       ]
     },
@@ -23661,15 +23661,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Point Disarray pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 11.54,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 15.98,
+      "steam_volume": "124",
+      "skinport_price": 10.83,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 11.43
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 11.43
@@ -24025,6 +24021,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 11.54
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 15.98
         }
       ]
     },
@@ -24035,15 +24035,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Case Hardened pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 198.62,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 287.5,
+      "steam_volume": "2",
+      "skinport_price": 194.68,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 193.94
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 193.94
@@ -24399,6 +24395,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 198.62
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 287.5
         }
       ]
     },
@@ -24409,15 +24409,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Frontside Misty pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 18.49,
+      "steam_volume": "96",
       "skinport_price": 13,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 11.36
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 11.36
@@ -24773,6 +24769,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 13
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 18.49
         }
       ]
     },
@@ -24783,15 +24783,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin The Empress pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 124.8,
+      "steam_volume": "12",
       "skinport_price": 83,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 80.15
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 80.15
@@ -25147,6 +25143,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 83
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 124.8
         }
       ]
     },
@@ -25157,15 +25157,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Nightwish pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 83.95,
+      "steam_volume": "96",
       "skinport_price": 52.1,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 52.85
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 52.85
@@ -25521,6 +25517,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 52.1
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 83.95
         }
       ]
     },
@@ -25531,15 +25531,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Legion of Anubis pour AK-47, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 26.78,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 41.93,
+      "steam_volume": "46",
+      "skinport_price": 24.06,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 30
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 30
@@ -25895,6 +25891,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 26.78
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 41.93
         }
       ]
     },
@@ -25905,10 +25905,10 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Jet Set pour AK-47, condition Field-Tested.",
-      "steam_price": null,
+      "steam_price": 471.7,
       "steam_volume": null,
-      "skinport_price": 300.94,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 309.51,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -26261,6 +26261,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 300.94
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 471.7
         }
       ]
     },
@@ -26274,7 +26278,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -26614,14 +26618,10 @@
       "status": "Field-Tested",
       "blurb": "Skin Asiimov pour M4A4, condition Field-Tested.",
       "steam_price": null,
-      "steam_volume": null,
+      "steam_volume": "4",
       "skinport_price": 184.62,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 200
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 200
@@ -26977,6 +26977,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 184.62
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 184.62
         }
       ]
     },
@@ -26987,15 +26991,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Neo-Noir pour M4A4, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 40.95,
+      "steam_volume": "38",
       "skinport_price": 24.11,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 27.54
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 27.54
@@ -27351,6 +27351,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 24.11
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 40.95
         }
       ]
     },
@@ -27364,7 +27368,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -27377,7 +27381,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -27388,14 +27392,10 @@
       "status": "Field-Tested",
       "blurb": "Skin The Emperor pour M4A4, condition Field-Tested.",
       "steam_price": null,
-      "steam_volume": null,
+      "steam_volume": "21",
       "skinport_price": 43.82,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 45
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 45
@@ -27751,6 +27751,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 43.82
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 43.82
         }
       ]
     },
@@ -27761,15 +27765,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Desolate Space pour M4A4, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 15.77,
+      "steam_volume": "111",
       "skinport_price": 10,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 10.62
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 10.26
@@ -28125,6 +28125,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 10
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 15.77
         }
       ]
     },
@@ -28135,15 +28139,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin In Living Color pour M4A4, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 40.48,
+      "steam_volume": "21",
       "skinport_price": 28.14,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 26.59
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 28.41
@@ -28499,6 +28499,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 28.14
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 40.48
         }
       ]
     },
@@ -28509,15 +28513,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Buzz Kill pour M4A4, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 319.65,
+      "steam_volume": "1",
       "skinport_price": 230.13,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 270.61
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 264.95
@@ -28873,6 +28873,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 230.13
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 319.65
         }
       ]
     },
@@ -28883,15 +28887,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Hyper Beast pour M4A1-S, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 149.5,
+      "steam_volume": "10",
       "skinport_price": 97.94,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 85
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 85
@@ -29247,6 +29247,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 97.94
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 149.5
         }
       ]
     },
@@ -29257,15 +29261,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Printstream pour M4A1-S, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 254.77,
+      "steam_volume": "7",
       "skinport_price": 169,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 140.9
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 140.9
@@ -29621,6 +29621,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 169
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 254.77
         }
       ]
     },
@@ -29631,15 +29635,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Golden Coil pour M4A1-S, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 75.4,
+      "steam_volume": "9",
       "skinport_price": 56,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 47.57
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 47.57
@@ -29995,6 +29995,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 56
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 75.4
         }
       ]
     },
@@ -30008,7 +30012,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -30018,15 +30022,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Player Two pour M4A1-S, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 67.59,
+      "steam_volume": "25",
       "skinport_price": 43.39,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 45
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 45
@@ -30382,6 +30382,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 43.39
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 67.59
         }
       ]
     },
@@ -30392,15 +30396,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Cyrex pour M4A1-S, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 228.5,
+      "steam_volume": "9",
       "skinport_price": 154.57,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 164.55
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 164.55
@@ -30756,6 +30756,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 154.57
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 228.5
         }
       ]
     },
@@ -30769,7 +30773,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -30780,14 +30784,10 @@
       "status": "Field-Tested",
       "blurb": "Skin Decimator pour M4A1-S, condition Field-Tested.",
       "steam_price": null,
-      "steam_volume": null,
+      "steam_volume": "81",
       "skinport_price": 9.83,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 9.6
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 9.6
@@ -31143,6 +31143,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 9.83
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 9.83
         }
       ]
     },
@@ -31156,7 +31160,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -31169,7 +31173,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 5844.39,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -31498,6 +31502,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 5844.39
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 5844.39
         }
       ]
     },
@@ -31508,15 +31516,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Asiimov pour AWP, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 151.24,
+      "steam_volume": "14",
       "skinport_price": 70,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 104.38
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 104.38
@@ -31872,6 +31876,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 70
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 151.24
         }
       ]
     },
@@ -31885,7 +31893,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -31898,7 +31906,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -31909,14 +31917,10 @@
       "status": "Field-Tested",
       "blurb": "Skin Neo-Noir pour AWP, condition Field-Tested.",
       "steam_price": null,
-      "steam_volume": null,
+      "steam_volume": "42",
       "skinport_price": 29.6,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 33.65
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 33.65
@@ -32272,6 +32276,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 29.6
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 29.6
         }
       ]
     },
@@ -32282,15 +32290,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Hyper Beast pour AWP, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
+      "steam_price": 44.85,
+      "steam_volume": "24",
       "skinport_price": 29.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 28.01
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 28.01
@@ -32646,6 +32650,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 29.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 44.85
         }
       ]
     },
@@ -32656,15 +32664,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Wildfire pour AWP, condition Field-Tested.",
-      "steam_price": null,
-      "steam_volume": null,
-      "skinport_price": 39,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "steam_price": 55.26,
+      "steam_volume": "24",
+      "skinport_price": 39.52,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 41.88
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 41.88
@@ -33020,6 +33024,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 39
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 55.26
         }
       ]
     },
@@ -33030,15 +33038,11 @@
       "category": "Armes",
       "status": "Field-Tested",
       "blurb": "Skin Man-o'-war pour AWP, condition Field-Tested.",
-      "steam_price": null,
+      "steam_price": 154.99,
       "steam_volume": null,
       "skinport_price": 102.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 105
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 105
@@ -33394,6 +33398,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 102.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 154.99
         }
       ]
     },
@@ -33407,12 +33415,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 31.86,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 34.12
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 34.12
@@ -33768,6 +33772,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 31.86
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 31.86
         }
       ]
     },
@@ -33781,12 +33789,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 10.94,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 10
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 10
@@ -34142,6 +34146,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 10.94
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 10.94
         }
       ]
     },
@@ -34155,12 +34163,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 29.59,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 27.42
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 27.42
@@ -34516,6 +34520,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 29.59
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 29.59
         }
       ]
     },
@@ -34529,12 +34537,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 11.39,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 11.07
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 11.07
@@ -34890,6 +34894,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 11.39
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 11.39
         }
       ]
     },
@@ -34903,7 +34911,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -34915,13 +34923,9 @@
       "blurb": "Skin Printstream pour Desert Eagle, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 29.7,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 26.72,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 29.3
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 29.3
@@ -35277,6 +35281,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 29.7
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 26.72
         }
       ]
     },
@@ -35289,13 +35297,9 @@
       "blurb": "Skin Code Red pour Desert Eagle, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 37,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 38.04,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 39.25
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 39.25
@@ -35651,6 +35655,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 37
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 38.04
         }
       ]
     },
@@ -35664,12 +35672,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 15.67,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 13.28
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 13.28
@@ -36025,6 +36029,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 15.67
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 15.67
         }
       ]
     },
@@ -36038,12 +36046,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 55,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 59.68
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 59.68
@@ -36399,6 +36403,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 55
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 55
         }
       ]
     },
@@ -36412,7 +36420,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -36425,7 +36433,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -36437,13 +36445,9 @@
       "blurb": "Skin Mecha Industries pour Desert Eagle, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 4.53,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 4.31,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 4.21
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 4.21
@@ -36799,6 +36803,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 4.53
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 4.31
         }
       ]
     },
@@ -36812,7 +36820,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -36824,13 +36832,9 @@
       "blurb": "Skin Water Elemental pour Glock-18, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 15.52,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 16.23,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 15.5
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 15.5
@@ -37186,6 +37190,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 15.52
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 16.23
         }
       ]
     },
@@ -37198,13 +37206,9 @@
       "blurb": "Skin Neo-Noir pour Glock-18, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 30.97,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 31.17,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 29.1
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 29.1
@@ -37560,6 +37564,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 30.97
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 31.17
         }
       ]
     },
@@ -37573,12 +37581,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 44,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 41.2
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 41.2
@@ -37934,6 +37938,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 44
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 44
         }
       ]
     },
@@ -37947,12 +37955,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.81,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.75
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.75
@@ -38308,6 +38312,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.81
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.81
         }
       ]
     },
@@ -38320,13 +38328,9 @@
       "blurb": "Skin Wasteland Rebel pour Glock-18, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 95.38,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 102.24,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-18T12:53:09+00:00",
-          "p": 104.81
-        },
         {
           "t": "2026-07-18T18:47:36+00:00",
           "p": 104.81
@@ -38682,6 +38686,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 95.38
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 102.24
         }
       ]
     },
@@ -38695,12 +38703,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 59,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 61.5
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 61.5
@@ -39056,6 +39060,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 59
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 59
         }
       ]
     },
@@ -39069,12 +39077,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 83.26,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 56.87
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 56.87
@@ -39430,6 +39434,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 83.26
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 83.26
         }
       ]
     },
@@ -39443,12 +39451,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 43.48,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 49.27
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 49.27
@@ -39804,6 +39808,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 43.48
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 43.48
         }
       ]
     },
@@ -39817,12 +39825,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 32.97,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 30.96
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 30.96
@@ -40178,6 +40182,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 32.97
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 32.97
         }
       ]
     },
@@ -40191,12 +40199,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 2.65,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 2.61
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 2.61
@@ -40552,6 +40556,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.65
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 2.65
         }
       ]
     },
@@ -40565,12 +40573,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.42,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.4
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.4
@@ -40926,6 +40930,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.42
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.42
         }
       ]
     },
@@ -40939,12 +40947,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 10.74,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 9.13
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 9.13
@@ -41300,6 +41304,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 10.74
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 10.74
         }
       ]
     },
@@ -41313,7 +41321,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-12T12:57:43+00:00",
@@ -41687,12 +41695,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 33.59,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-18T01:30:08+00:00",
-          "p": 36.83
-        },
         {
           "t": "2026-07-18T12:53:09+00:00",
           "p": 36.91
@@ -42048,6 +42052,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 33.59
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 33.59
         }
       ]
     },
@@ -42061,12 +42069,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 15.63,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-15T18:55:53+00:00",
-          "p": 19.29
-        },
         {
           "t": "2026-07-17T01:49:34+00:00",
           "p": 14.07
@@ -42422,6 +42426,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 15.63
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 15.63
         }
       ]
     },
@@ -42435,12 +42443,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.52,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.59
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.59
@@ -42796,6 +42800,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.52
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.52
         }
       ]
     },
@@ -42809,12 +42817,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 9.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 9.94
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 9.94
@@ -43170,6 +43174,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 9.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 9.99
         }
       ]
     },
@@ -43183,12 +43191,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 266.78,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 309.1
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 309.1
@@ -43544,6 +43548,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 266.78
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 266.78
         }
       ]
     },
@@ -43557,12 +43565,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 9.42,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 8.01
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 8.01
@@ -43918,6 +43922,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 9.42
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 9.42
         }
       ]
     },
@@ -43930,13 +43938,9 @@
       "blurb": "Skin Fuel Injector pour Tec-9, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 8.76,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 9.44,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 10
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 10
@@ -44292,6 +44296,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 8.76
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 9.44
         }
       ]
     },
@@ -44305,12 +44313,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 51.48,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 32.71
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 32.71
@@ -44666,6 +44670,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 51.48
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 51.48
         }
       ]
     },
@@ -44679,12 +44687,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.66,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T01:47:33+00:00",
-          "p": 10.05
-        },
         {
           "t": "2026-07-19T07:59:50+00:00",
           "p": 10.05
@@ -45040,6 +45044,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 8.66
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 8.66
         }
       ]
     },
@@ -45053,12 +45061,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 2.02,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 2.03
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 2.03
@@ -45414,6 +45418,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 2.02
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 2.02
         }
       ]
     },
@@ -45427,12 +45435,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 65,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-13T19:12:47+00:00",
-          "p": 89.81
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 69.85
@@ -45788,6 +45792,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 65
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 65
         }
       ]
     },
@@ -45801,12 +45809,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 9,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 10.42
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 10.42
@@ -46162,6 +46166,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 9
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 9
         }
       ]
     },
@@ -46175,12 +46183,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 138,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 145
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 145
@@ -46536,6 +46540,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 138
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 138
         }
       ]
     },
@@ -46549,12 +46557,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.05,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 8.8
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 8.5
@@ -46910,6 +46914,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 8.05
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 8.05
         }
       ]
     },
@@ -46923,7 +46931,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -47237,12 +47245,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 96.47,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 78.56
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 78.56
@@ -47598,6 +47602,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 96.47
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 96.47
         }
       ]
     },
@@ -47611,7 +47619,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -47624,12 +47632,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 34.15,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 33
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 33
@@ -47985,6 +47989,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 34.15
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 34.15
         }
       ]
     },
@@ -47997,13 +48005,9 @@
       "blurb": "Skin Bulldozer pour MP9, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 79.75,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-18T01:30:08+00:00",
-          "p": 89.9
-        },
         {
           "t": "2026-07-18T12:53:09+00:00",
           "p": 89.96
@@ -48359,6 +48363,10 @@
         {
           "t": "2026-08-11T12:41:28+00:00",
           "p": 128.98
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 79.75
         }
       ]
     },
@@ -48372,12 +48380,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 5.24,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 5
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 5
@@ -48733,6 +48737,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 5.24
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 5.24
         }
       ]
     },
@@ -48746,12 +48754,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 46.69,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 43.89
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 43.89
@@ -49107,6 +49111,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 46.69
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 46.69
         }
       ]
     },
@@ -49120,12 +49128,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 9.2,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 10.34
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 9.5
@@ -49481,6 +49485,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 9.2
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 9.2
         }
       ]
     },
@@ -49494,12 +49502,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 3.19,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 3.66
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 3.66
@@ -49855,6 +49859,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 3.19
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 3.19
         }
       ]
     },
@@ -49868,12 +49876,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 163.5,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-17T07:52:46+00:00",
-          "p": 194.98
-        },
         {
           "t": "2026-07-17T13:06:10+00:00",
           "p": 194.98
@@ -50229,6 +50233,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 163.5
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 163.5
         }
       ]
     },
@@ -50242,12 +50250,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 24.89,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 29.61
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 29.61
@@ -50603,6 +50607,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 24.89
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 24.89
         }
       ]
     },
@@ -50616,12 +50624,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 44,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-12T08:00:47+00:00",
-          "p": 67.35
-        },
         {
           "t": "2026-07-12T12:57:43+00:00",
           "p": 67.35
@@ -50977,6 +50981,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 44
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 44
         }
       ]
     },
@@ -50990,12 +50998,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 90,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 98.43
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 98.43
@@ -51351,6 +51355,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 90
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 90
         }
       ]
     },
@@ -51364,7 +51372,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -51634,12 +51642,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 6.51,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 7
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 7
@@ -51995,6 +51999,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 6.51
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 6.51
         }
       ]
     },
@@ -52008,12 +52016,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.95,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-13T01:52:20+00:00",
-          "p": 1.4
-        },
         {
           "t": "2026-07-13T08:50:05+00:00",
           "p": 1.77
@@ -52369,6 +52373,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.95
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.95
         }
       ]
     },
@@ -52382,12 +52390,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 64.99,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 67.67
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 67.67
@@ -52743,6 +52747,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 64.99
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 64.99
         }
       ]
     },
@@ -52756,7 +52764,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-10T16:35:47+00:00",
@@ -53102,12 +53110,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 4.74,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-11T01:47:36+00:00",
-          "p": 6.32
-        },
         {
           "t": "2026-07-11T07:40:59+00:00",
           "p": 6.29
@@ -53463,6 +53467,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 4.74
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 4.74
         }
       ]
     },
@@ -53476,12 +53484,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 217.75,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 228.67
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 228.67
@@ -53837,6 +53841,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 217.75
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 217.75
         }
       ]
     },
@@ -53850,12 +53858,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 90.09,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-16T07:56:33+00:00",
-          "p": 92.01
-        },
         {
           "t": "2026-07-16T13:21:22+00:00",
           "p": 92.01
@@ -54211,6 +54215,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 90.09
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 90.09
         }
       ]
     },
@@ -54224,12 +54232,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 6.6,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 6.39
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 6.39
@@ -54585,6 +54589,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 6.6
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 6.6
         }
       ]
     },
@@ -54597,13 +54605,9 @@
       "blurb": "Skin Orange Crash pour G3SG1, condition Field-Tested.",
       "steam_price": null,
       "steam_volume": null,
-      "skinport_price": 0.29,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "skinport_price": 0.32,
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.27
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.27
@@ -54959,6 +54963,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.29
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.32
         }
       ]
     },
@@ -54972,12 +54980,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 7.62,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-18T18:47:36+00:00",
-          "p": 7.55
-        },
         {
           "t": "2026-07-19T01:47:33+00:00",
           "p": 7.55
@@ -55333,6 +55337,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 7.62
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 7.62
         }
       ]
     },
@@ -55346,12 +55354,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.48,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 8.42
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 8.42
@@ -55707,6 +55711,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 8.48
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 8.48
         }
       ]
     },
@@ -55720,12 +55728,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 10.5,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 10.47
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 10.47
@@ -56081,6 +56085,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 10.5
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 10.5
         }
       ]
     },
@@ -56094,12 +56102,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 10,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-11T07:40:59+00:00",
-          "p": 13.01
-        },
         {
           "t": "2026-07-11T12:56:41+00:00",
           "p": 13.01
@@ -56455,6 +56459,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 10
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 10
         }
       ]
     },
@@ -56468,12 +56476,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.11
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.11
@@ -56829,6 +56833,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1
         }
       ]
     },
@@ -56842,12 +56850,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 7.78,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 8.58
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 8.58
@@ -57203,6 +57207,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 7.78
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 7.78
         }
       ]
     },
@@ -57216,7 +57224,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -57229,7 +57237,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-10T21:00:34+00:00",
@@ -57379,12 +57387,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 0.82,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 0.82
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 0.82
@@ -57740,6 +57744,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 0.82
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 0.82
         }
       ]
     },
@@ -57753,7 +57761,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -57766,12 +57774,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.38,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.2
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.2
@@ -58127,6 +58131,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1.38
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1.38
         }
       ]
     },
@@ -58140,7 +58148,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -58153,12 +58161,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 71.26,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 60
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 60
@@ -58514,6 +58518,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 71.26
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 71.26
         }
       ]
     },
@@ -58527,12 +58535,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 67.21,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T01:47:33+00:00",
-          "p": 70.67
-        },
         {
           "t": "2026-07-19T07:59:50+00:00",
           "p": 75.6
@@ -58888,6 +58892,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 67.21
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 67.21
         }
       ]
     },
@@ -58901,12 +58909,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.02,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.18
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.18
@@ -59262,6 +59266,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1.02
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1.02
         }
       ]
     },
@@ -59275,7 +59283,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
         {
           "t": "2026-07-10T19:16:17+00:00",
@@ -59637,12 +59645,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 4.37,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 4.94
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 4.94
@@ -59998,6 +60002,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 4.37
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 4.37
         }
       ]
     },
@@ -60011,12 +60019,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 24.63,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 26.9
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 26.9
@@ -60372,6 +60376,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 24.63
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 24.63
         }
       ]
     },
@@ -60385,12 +60393,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 5.5,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-18T12:53:09+00:00",
-          "p": 6.1
-        },
         {
           "t": "2026-07-18T18:47:36+00:00",
           "p": 5.41
@@ -60746,6 +60750,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 5.5
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 5.5
         }
       ]
     },
@@ -60759,7 +60767,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     },
     {
@@ -60772,12 +60780,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 4,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 3.67
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 3.67
@@ -61133,6 +61137,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 4
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 4
         }
       ]
     },
@@ -61146,12 +61154,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 8.47,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 8.01
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 8.01
@@ -61507,6 +61511,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 8.47
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 8.47
         }
       ]
     },
@@ -61520,12 +61528,8 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": 1.55,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": [
-        {
-          "t": "2026-07-19T12:55:36+00:00",
-          "p": 1.72
-        },
         {
           "t": "2026-07-19T18:51:57+00:00",
           "p": 1.72
@@ -61881,6 +61885,10 @@
         {
           "t": "2026-08-11T18:48:01+00:00",
           "p": 1.55
+        },
+        {
+          "t": "2026-08-12T01:06:24+00:00",
+          "p": 1.55
         }
       ]
     },
@@ -61894,7 +61902,7 @@
       "steam_price": null,
       "steam_volume": null,
       "skinport_price": null,
-      "last_checked": "2026-08-11T18:48:01+00:00",
+      "last_checked": "2026-08-12T01:06:24+00:00",
       "history": []
     }
   ]
